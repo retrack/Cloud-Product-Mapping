@@ -1,12 +1,15 @@
 {
+  "_comment": "Ordered category list. \"brief\": true marks the categories shown on the brief poster.",
   "categories": [
     {
       "id": "ai-ml",
-      "name": "AI & ML"
+      "name": "AI & ML",
+      "brief": true
     },
     {
       "id": "ai-genai",
-      "name": "AI – Generative AI"
+      "name": "AI – Generative AI",
+      "brief": true
     },
     {
       "id": "application-mgmt",
@@ -26,15 +29,18 @@
     },
     {
       "id": "compute-container",
-      "name": "Compute – Container"
+      "name": "Compute – Container",
+      "brief": true
     },
     {
       "id": "compute-faas",
-      "name": "Compute – FaaS"
+      "name": "Compute – FaaS",
+      "brief": true
     },
     {
       "id": "compute-server",
-      "name": "Compute – Server"
+      "name": "Compute – Server",
+      "brief": true
     },
     {
       "id": "cost",
@@ -42,7 +48,8 @@
     },
     {
       "id": "data-analytics",
-      "name": "Data – Analytics"
+      "name": "Data – Analytics",
+      "brief": true
     },
     {
       "id": "data-big-data",
@@ -50,7 +57,8 @@
     },
     {
       "id": "data-database",
-      "name": "Data – Database"
+      "name": "Data – Database",
+      "brief": true
     },
     {
       "id": "data-data-lake",
@@ -58,11 +66,13 @@
     },
     {
       "id": "data-dwh",
-      "name": "Data – DWH"
+      "name": "Data – DWH",
+      "brief": true
     },
     {
       "id": "devops",
-      "name": "DevOps"
+      "name": "DevOps",
+      "brief": true
     },
     {
       "id": "email",
@@ -82,7 +92,8 @@
     },
     {
       "id": "identity",
-      "name": "Identity"
+      "name": "Identity",
+      "brief": true
     },
     {
       "id": "iot",
@@ -90,7 +101,8 @@
     },
     {
       "id": "key-secret",
-      "name": "Key & Secret"
+      "name": "Key & Secret",
+      "brief": true
     },
     {
       "id": "logging",
@@ -98,7 +110,8 @@
     },
     {
       "id": "messaging",
-      "name": "Messaging"
+      "name": "Messaging",
+      "brief": true
     },
     {
       "id": "migration",
@@ -106,11 +119,13 @@
     },
     {
       "id": "monitoring",
-      "name": "Monitoring"
+      "name": "Monitoring",
+      "brief": true
     },
     {
       "id": "network-cdn",
-      "name": "Network – CDN"
+      "name": "Network – CDN",
+      "brief": true
     },
     {
       "id": "network-connection",
@@ -118,15 +133,18 @@
     },
     {
       "id": "network-core",
-      "name": "Network – Core"
+      "name": "Network – Core",
+      "brief": true
     },
     {
       "id": "network-dns",
-      "name": "Network – DNS"
+      "name": "Network – DNS",
+      "brief": true
     },
     {
       "id": "network-lb",
-      "name": "Network – LB"
+      "name": "Network – LB",
+      "brief": true
     },
     {
       "id": "network-misc",
@@ -154,7 +172,8 @@
     },
     {
       "id": "storage",
-      "name": "Storage"
+      "name": "Storage",
+      "brief": true
     },
     {
       "id": "workflow",

@@ -14,6 +14,7 @@ The mapping below is generated from the JSON files in [`data/`](data/). Edit tho
 python3 scripts/build.py                               # all providers enabled in data/providers.json
 python3 scripts/build.py --providers aws,azure,exoscale  # only these providers, in this order
 python3 scripts/build.py --exclude oracle              # everything except Oracle
+python3 scripts/render.py                              # PNG + PDF posters (dark and light, full and brief)
 ```
 
 Exoscale entries tagged _(Marketplace)_ are partner offerings from the [Exoscale Marketplace](https://www.exoscale.com/marketplace/); _(Roadmap)_ marks planned services, and _(Workaround)_ means no managed service exists but the use case can be covered with Exoscale building blocks plus open-source tooling. An [AWS → Exoscale service crosswalk](#aws--exoscale-service-crosswalk) follows the category mapping.
@@ -26,9 +27,10 @@ If you find this repository helpful, consider supporting me on Patreon:
 
 ![Cloud Product Mapping](CloudProductMappingBrief.png)
 
-The images and PDFs below are the original static edition (AWS, Azure, GCP, OCI).
+Download the full mapping: [PNG dark](CloudProductMapping.png) · [PNG light](CloudProductMapping-light.png) · [PDF dark](Cloud%20Product%20Mapping.pdf) · [PDF light](Cloud%20Product%20Mapping%20-%20light.pdf).
+Brief version: [PNG dark](CloudProductMappingBrief.png) · [PNG light](CloudProductMappingBrief-light.png) · [PDF dark](Cloud%20Product%20Mapping%20-%20Brief.pdf) · [PDF light](Cloud%20Product%20Mapping%20-%20Brief%20-%20light.pdf).
 
-Download the full mapping in the [PDF version](Cloud%20Product%20Mapping.pdf) or [PNG version](CloudProductMapping.png).
+The posters are generated from the same data ([`docs/poster.html`](docs/poster.html), [`docs/poster-brief.html`](docs/poster-brief.html)) using each provider's official architecture icons; re-export them with `python3 scripts/render.py` (needs Chromium or Chrome). Icons come from the official sets: [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/), [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/), [Google Cloud icons](https://cloud.google.com/icons), [OCI graphics for diagrams](https://docs.oracle.com/iaas/Content/General/Reference/graphicsfordiagrams.htm) (exported with `scripts/extract_oci_icons.py`) and the [Exoscale icon library](https://community.exoscale.com/tools/icon-table/). They are trademarks of their respective owners. Categories shown in the brief version are flagged with `"brief": true` in [`data/categories.json`](data/categories.json).
 
 ## Bonus 1: Monitoring Cheat Sheet
 
@@ -52,19 +54,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Comprehend](https://aws.amazon.com/comprehend/) | [Forecast](https://aws.amazon.com/forecast/) | [Lex](https://aws.amazon.com/lex/) | [Neuron](https://aws.amazon.com/ai/machine-learning/neuron/) | [Personalize](https://aws.amazon.com/personalize/) | [Polly](https://aws.amazon.com/polly/) | [PyTorch](https://aws.amazon.com/pytorch/) | [Rekognition](https://aws.amazon.com/rekognition/) | [SageMaker AI](https://aws.amazon.com/sagemaker/ai/) | [TensorFlow](https://aws.amazon.com/tensorflow/) | [Textract](https://aws.amazon.com/textract/) | [Transcribe](https://aws.amazon.com/transcribe/) | [Translate](https://aws.amazon.com/translate/)
+[<img src="icons/aws/amazon-comprehend.svg" width="16" height="16" alt=""> Comprehend](https://aws.amazon.com/comprehend/) | [<img src="icons/aws/amazon-forecast.svg" width="16" height="16" alt=""> Forecast](https://aws.amazon.com/forecast/) | [<img src="icons/aws/amazon-lex.svg" width="16" height="16" alt=""> Lex](https://aws.amazon.com/lex/) | [<img src="icons/aws/aws-neuron.svg" width="16" height="16" alt=""> Neuron](https://aws.amazon.com/ai/machine-learning/neuron/) | [<img src="icons/aws/amazon-personalize.svg" width="16" height="16" alt=""> Personalize](https://aws.amazon.com/personalize/) | [<img src="icons/aws/amazon-polly.svg" width="16" height="16" alt=""> Polly](https://aws.amazon.com/polly/) | [<img src="icons/aws/pytorch-on-aws.svg" width="16" height="16" alt=""> PyTorch](https://aws.amazon.com/pytorch/) | [<img src="icons/aws/amazon-rekognition.svg" width="16" height="16" alt=""> Rekognition](https://aws.amazon.com/rekognition/) | [<img src="icons/aws/amazon-sagemaker-ai.svg" width="16" height="16" alt=""> SageMaker AI](https://aws.amazon.com/sagemaker/ai/) | [<img src="icons/aws/tensorflow-on-aws.svg" width="16" height="16" alt=""> TensorFlow](https://aws.amazon.com/tensorflow/) | [<img src="icons/aws/amazon-textract.svg" width="16" height="16" alt=""> Textract](https://aws.amazon.com/textract/) | [<img src="icons/aws/amazon-transcribe.svg" width="16" height="16" alt=""> Transcribe](https://aws.amazon.com/transcribe/) | [<img src="icons/aws/amazon-translate.svg" width="16" height="16" alt=""> Translate](https://aws.amazon.com/translate/)
 
 ### **Azure**
 
-[Azure AI Bot Service](https://azure.microsoft.com/en-us/products/ai-services/ai-bot-service/) | [Azure AI Search](https://azure.microsoft.com/en-us/products/ai-services/ai-search/) | [Azure Content Understanding (incl. Document Intelligence)](https://azure.microsoft.com/en-us/products/ai-foundry/tools/content-understanding) | [Azure Language](https://azure.microsoft.com/en-us/products/ai-foundry/tools/language) | [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning/) | [Azure Speech](https://azure.microsoft.com/en-us/products/ai-foundry/tools/speech) | [Azure Translator](https://azure.microsoft.com/en-us/products/ai-foundry/tools/translator) | [Azure Vision](https://azure.microsoft.com/en-us/products/ai-foundry/tools/vision) | [Foundry Tools (formerly Azure AI services)](https://azure.microsoft.com/en-us/products/ai-foundry/tools)
+[<img src="icons/azure/bot-services.svg" width="16" height="16" alt=""> Azure AI Bot Service](https://azure.microsoft.com/en-us/products/ai-services/ai-bot-service/) | [<img src="icons/azure/cognitive-search.svg" width="16" height="16" alt=""> Azure AI Search](https://azure.microsoft.com/en-us/products/ai-services/ai-search/) | [<img src="icons/azure/form-recognizers.svg" width="16" height="16" alt=""> Azure Content Understanding (incl. Document Intelligence)](https://azure.microsoft.com/en-us/products/ai-foundry/tools/content-understanding) | [<img src="icons/azure/language.svg" width="16" height="16" alt=""> Azure Language](https://azure.microsoft.com/en-us/products/ai-foundry/tools/language) | [<img src="icons/azure/azure-machine-learning.svg" width="16" height="16" alt=""> Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning/) | [<img src="icons/azure/speech-services.svg" width="16" height="16" alt=""> Azure Speech](https://azure.microsoft.com/en-us/products/ai-foundry/tools/speech) | [<img src="icons/azure/translator-text.svg" width="16" height="16" alt=""> Azure Translator](https://azure.microsoft.com/en-us/products/ai-foundry/tools/translator) | [<img src="icons/azure/computer-vision.svg" width="16" height="16" alt=""> Azure Vision](https://azure.microsoft.com/en-us/products/ai-foundry/tools/vision) | [<img src="icons/azure/cognitive-services.svg" width="16" height="16" alt=""> Foundry Tools (formerly Azure AI services)](https://azure.microsoft.com/en-us/products/ai-foundry/tools)
 
 ### **GCP**
 
-[Cloud TPU](https://cloud.google.com/tpu) | [CX Agent Studio (formerly Dialogflow)](https://cloud.google.com/gemini-enterprise-cx/cx-agent-studio) | [Document AI](https://cloud.google.com/document-ai) | [Gemini Enterprise Agent Platform (formerly Vertex AI)](https://cloud.google.com/products/gemini-enterprise-agent-platform) | [Natural Language AI](https://cloud.google.com/natural-language) | [Speech-to-Text](https://cloud.google.com/speech-to-text) | [Text-to-Speech](https://cloud.google.com/text-to-speech) | [Translation AI](https://cloud.google.com/translate) | [Video AI](https://cloud.google.com/video-intelligence) | [Vision AI](https://cloud.google.com/vision)
+[<img src="icons/gcp/cloud-tpu.svg" width="16" height="16" alt=""> Cloud TPU](https://cloud.google.com/tpu) | [<img src="icons/gcp/dialogflow-cx.svg" width="16" height="16" alt=""> CX Agent Studio (formerly Dialogflow)](https://cloud.google.com/gemini-enterprise-cx/cx-agent-studio) | [<img src="icons/gcp/document-ai.svg" width="16" height="16" alt=""> Document AI](https://cloud.google.com/document-ai) | [<img src="icons/gcp/vertex-ai.svg" width="16" height="16" alt=""> Gemini Enterprise Agent Platform (formerly Vertex AI)](https://cloud.google.com/products/gemini-enterprise-agent-platform) | [<img src="icons/gcp/natural-language-ai.svg" width="16" height="16" alt=""> Natural Language AI](https://cloud.google.com/natural-language) | [<img src="icons/gcp/speech-to-text.svg" width="16" height="16" alt=""> Speech-to-Text](https://cloud.google.com/speech-to-text) | [<img src="icons/gcp/text-to-speech.svg" width="16" height="16" alt=""> Text-to-Speech](https://cloud.google.com/text-to-speech) | [<img src="icons/gcp/translation-ai.svg" width="16" height="16" alt=""> Translation AI](https://cloud.google.com/translate) | [<img src="icons/gcp/video-ai.svg" width="16" height="16" alt=""> Video AI](https://cloud.google.com/video-intelligence) | [<img src="icons/gcp/vision-ai.svg" width="16" height="16" alt=""> Vision AI](https://cloud.google.com/vision)
 
 ### **Oracle**
 
-[Data Science](https://www.oracle.com/artificial-intelligence/data-science/) | [Digital Assistant](https://www.oracle.com/chatbots/) | [Document Understanding](https://www.oracle.com/artificial-intelligence/document-understanding/) | [Language](https://www.oracle.com/artificial-intelligence/language/) | [Speech](https://www.oracle.com/artificial-intelligence/speech/) | [Vision](https://www.oracle.com/artificial-intelligence/vision/)
+[<img src="icons/oracle/data-science.svg" width="16" height="16" alt=""> Data Science](https://www.oracle.com/artificial-intelligence/data-science/) | [<img src="icons/oracle/digital-assistant.svg" width="16" height="16" alt=""> Digital Assistant](https://www.oracle.com/chatbots/) | [<img src="icons/oracle/artificial-intelligence.svg" width="16" height="16" alt=""> Document Understanding](https://www.oracle.com/artificial-intelligence/document-understanding/) | [<img src="icons/oracle/artificial-intelligence.svg" width="16" height="16" alt=""> Language](https://www.oracle.com/artificial-intelligence/language/) | [<img src="icons/oracle/artificial-intelligence.svg" width="16" height="16" alt=""> Speech](https://www.oracle.com/artificial-intelligence/speech/) | [<img src="icons/oracle/artificial-intelligence.svg" width="16" height="16" alt=""> Vision](https://www.oracle.com/artificial-intelligence/vision/)
 
 ### **Exoscale**
 
@@ -75,19 +77,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Bedrock](https://aws.amazon.com/bedrock/) | [Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/) | [Nova](https://aws.amazon.com/nova/)
+[<img src="icons/aws/amazon-bedrock.svg" width="16" height="16" alt=""> Bedrock](https://aws.amazon.com/bedrock/) | [<img src="icons/aws/amazon-bedrock-agentcore.svg" width="16" height="16" alt=""> Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/) | [<img src="icons/aws/amazon-nova.svg" width="16" height="16" alt=""> Nova](https://aws.amazon.com/nova/)
 
 ### **Azure**
 
-[Azure OpenAI in Foundry Models](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/) | [Content Safety](https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety/) | [Microsoft Foundry](https://azure.microsoft.com/en-us/products/ai-foundry/)
+[<img src="icons/azure/azure-openai.svg" width="16" height="16" alt=""> Azure OpenAI in Foundry Models](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/) | [<img src="icons/azure/content-safety.svg" width="16" height="16" alt=""> Content Safety](https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety/) | [<img src="icons/azure/ai-foundry.svg" width="16" height="16" alt=""> Microsoft Foundry](https://azure.microsoft.com/en-us/products/ai-foundry/)
 
 ### **GCP**
 
-[Gemini Enterprise](https://cloud.google.com/gemini-enterprise) | [Gemini Enterprise Agent Platform (formerly Vertex AI)](https://cloud.google.com/products/gemini-enterprise-agent-platform)
+[Gemini Enterprise](https://cloud.google.com/gemini-enterprise) | [<img src="icons/gcp/vertex-ai.svg" width="16" height="16" alt=""> Gemini Enterprise Agent Platform (formerly Vertex AI)](https://cloud.google.com/products/gemini-enterprise-agent-platform)
 
 ### **Oracle**
 
-[Enterprise AI (Generative AI & AI Agents)](https://www.oracle.com/artificial-intelligence/enterprise-ai/)
+[<img src="icons/oracle/artificial-intelligence.svg" width="16" height="16" alt=""> Enterprise AI (Generative AI & AI Agents)](https://www.oracle.com/artificial-intelligence/enterprise-ai/)
 
 ### **Exoscale**
 
@@ -98,19 +100,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Amplify](https://aws.amazon.com/amplify/) | [API Gateway](https://aws.amazon.com/api-gateway/) | [App Runner](https://aws.amazon.com/apprunner/) | [AppSync](https://aws.amazon.com/appsync/) | [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) | [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/)
+[<img src="icons/aws/aws-amplify.svg" width="16" height="16" alt=""> Amplify](https://aws.amazon.com/amplify/) | [<img src="icons/aws/amazon-api-gateway.svg" width="16" height="16" alt=""> API Gateway](https://aws.amazon.com/api-gateway/) | [<img src="icons/aws/aws-app-runner.svg" width="16" height="16" alt=""> App Runner](https://aws.amazon.com/apprunner/) | [<img src="icons/aws/aws-appsync.svg" width="16" height="16" alt=""> AppSync](https://aws.amazon.com/appsync/) | [<img src="icons/aws/aws-elastic-beanstalk.svg" width="16" height="16" alt=""> Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) | [<img src="icons/aws/aws-serverless-application-repository.svg" width="16" height="16" alt=""> Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/)
 
 ### **Azure**
 
-[API Management](https://azure.microsoft.com/en-us/products/api-management/) | [App Service](https://azure.microsoft.com/en-us/products/app-service/) | [Azure Maps](https://azure.microsoft.com/en-us/products/azure-maps/) | [Static Web Apps](https://azure.microsoft.com/en-us/products/app-service/static/)
+[<img src="icons/azure/api-management-services.svg" width="16" height="16" alt=""> API Management](https://azure.microsoft.com/en-us/products/api-management/) | [<img src="icons/azure/app-services.svg" width="16" height="16" alt=""> App Service](https://azure.microsoft.com/en-us/products/app-service/) | [<img src="icons/azure/azure-maps-accounts.svg" width="16" height="16" alt=""> Azure Maps](https://azure.microsoft.com/en-us/products/azure-maps/) | [<img src="icons/azure/static-apps.svg" width="16" height="16" alt=""> Static Web Apps](https://azure.microsoft.com/en-us/products/app-service/static/)
 
 ### **GCP**
 
-[API Gateway](https://docs.cloud.google.com/api-gateway/docs) | [Apigee](https://cloud.google.com/apigee) | [App Engine](https://cloud.google.com/appengine) | [Cloud APIs](https://cloud.google.com/apis)
+[<img src="icons/gcp/api-gateway.svg" width="16" height="16" alt=""> API Gateway](https://docs.cloud.google.com/api-gateway/docs) | [<img src="icons/gcp/apigee.svg" width="16" height="16" alt=""> Apigee](https://cloud.google.com/apigee) | [<img src="icons/gcp/app-engine.svg" width="16" height="16" alt=""> App Engine](https://cloud.google.com/appengine) | [<img src="icons/gcp/cloud-apis.svg" width="16" height="16" alt=""> Cloud APIs](https://cloud.google.com/apis)
 
 ### **Oracle**
 
-[APEX Application Development](https://www.oracle.com/application-development/apex/) | [API Management (API Gateway)](https://www.oracle.com/cloud/cloud-native/api-management/) | [WebLogic Server for OCI](https://docs.oracle.com/en/cloud/paas/weblogic-cloud/index.html) | [WebLogic Server for OKE](https://docs.oracle.com/en/cloud/paas/weblogic-container/index.html)
+[<img src="icons/oracle/apex.svg" width="16" height="16" alt=""> APEX Application Development](https://www.oracle.com/application-development/apex/) | [<img src="icons/oracle/api-gateway.svg" width="16" height="16" alt=""> API Management (API Gateway)](https://www.oracle.com/cloud/cloud-native/api-management/) | [WebLogic Server for OCI](https://docs.oracle.com/en/cloud/paas/weblogic-cloud/index.html) | [WebLogic Server for OKE](https://docs.oracle.com/en/cloud/paas/weblogic-container/index.html)
 
 ### **Exoscale**
 
@@ -121,11 +123,11 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Amplify](https://aws.amazon.com/amplify/) | [Device Farm](https://aws.amazon.com/device-farm/) | [Publisher Services](https://aps.amazon.com/aps/services/mobile-app-developers/)
+[<img src="icons/aws/aws-amplify.svg" width="16" height="16" alt=""> Amplify](https://aws.amazon.com/amplify/) | [<img src="icons/aws/aws-device-farm.svg" width="16" height="16" alt=""> Device Farm](https://aws.amazon.com/device-farm/) | [Publisher Services](https://aps.amazon.com/aps/services/mobile-app-developers/)
 
 ### **Azure**
 
-[Notification Hubs](https://azure.microsoft.com/en-us/products/notification-hubs/)
+[<img src="icons/azure/notification-hubs.svg" width="16" height="16" alt=""> Notification Hubs](https://azure.microsoft.com/en-us/products/notification-hubs/)
 
 ### **GCP**
 
@@ -133,26 +135,26 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **Oracle**
 
-[Visual Builder](https://www.oracle.com/application-development/visual-builder/)
+[<img src="icons/oracle/visual-builder.svg" width="16" height="16" alt=""> Visual Builder](https://www.oracle.com/application-development/visual-builder/)
 
 
 ## **Automation**
 
 ### **AWS**
 
-[Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) | [CloudFormation](https://aws.amazon.com/cloudformation/) | [Systems Manager](https://aws.amazon.com/systems-manager/)
+[<img src="icons/aws/aws-cloud-development-kit.svg" width="16" height="16" alt=""> Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) | [<img src="icons/aws/aws-cloudformation.svg" width="16" height="16" alt=""> CloudFormation](https://aws.amazon.com/cloudformation/) | [<img src="icons/aws/aws-systems-manager.svg" width="16" height="16" alt=""> Systems Manager](https://aws.amazon.com/systems-manager/)
 
 ### **Azure**
 
-[Automation](https://azure.microsoft.com/en-us/products/automation/) | [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
+[<img src="icons/azure/automation-accounts.svg" width="16" height="16" alt=""> Automation](https://azure.microsoft.com/en-us/products/automation/) | [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
 
 ### **GCP**
 
-[Infrastructure Manager](https://docs.cloud.google.com/infrastructure-manager/docs)
+[<img src="icons/gcp/deployment-manager.svg" width="16" height="16" alt=""> Infrastructure Manager](https://docs.cloud.google.com/infrastructure-manager/docs)
 
 ### **Oracle**
 
-[OS Management Hub](https://www.oracle.com/cloud/compute/os-management/) | [Resource Manager](https://www.oracle.com/cloud/cloud-native/resource-manager/)
+[OS Management Hub](https://www.oracle.com/cloud/compute/os-management/) | [<img src="icons/oracle/resource-manager.svg" width="16" height="16" alt=""> Resource Manager](https://www.oracle.com/cloud/cloud-native/resource-manager/)
 
 ### **Exoscale**
 
@@ -163,19 +165,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Artifact](https://aws.amazon.com/artifact/) | [Audit Manager](https://aws.amazon.com/audit-manager/) | [Compliance Center](https://aws.amazon.com/financial-services/security-compliance/compliance-center/) | [Config](https://aws.amazon.com/config/)
+[<img src="icons/aws/aws-artifact.svg" width="16" height="16" alt=""> Artifact](https://aws.amazon.com/artifact/) | [<img src="icons/aws/aws-audit-manager.svg" width="16" height="16" alt=""> Audit Manager](https://aws.amazon.com/audit-manager/) | [Compliance Center](https://aws.amazon.com/financial-services/security-compliance/compliance-center/) | [<img src="icons/aws/aws-config.svg" width="16" height="16" alt=""> Config](https://aws.amazon.com/config/)
 
 ### **Azure**
 
-[Azure Policy](https://azure.microsoft.com/en-us/products/azure-policy/) | [Microsoft Purview Compliance Manager](https://learn.microsoft.com/en-us/purview/compliance-manager) | [Trust Center](https://www.microsoft.com/en-us/trust-center)
+[<img src="icons/azure/policy.svg" width="16" height="16" alt=""> Azure Policy](https://azure.microsoft.com/en-us/products/azure-policy/) | [<img src="icons/azure/compliance-center.svg" width="16" height="16" alt=""> Microsoft Purview Compliance Manager](https://learn.microsoft.com/en-us/purview/compliance-manager) | [Trust Center](https://www.microsoft.com/en-us/trust-center)
 
 ### **GCP**
 
-[Assured Workloads](https://cloud.google.com/security/products/assured-workloads) | [Compliance Reports Manager](https://cloud.google.com/security/compliance/compliance-reports-manager)
+[<img src="icons/gcp/assured-workloads.svg" width="16" height="16" alt=""> Assured Workloads](https://cloud.google.com/security/products/assured-workloads) | [Compliance Reports Manager](https://cloud.google.com/security/compliance/compliance-reports-manager)
 
 ### **Oracle**
 
-[OCI Cloud Guard](https://www.oracle.com/security/cloud-security/cloud-guard/) | [Security Zones](https://www.oracle.com/security/cloud-security/security-zones/)
+[<img src="icons/oracle/cloud-guard.svg" width="16" height="16" alt=""> OCI Cloud Guard](https://www.oracle.com/security/cloud-security/cloud-guard/) | [<img src="icons/oracle/security-zone.svg" width="16" height="16" alt=""> Security Zones](https://www.oracle.com/security/cloud-security/security-zones/)
 
 ### **Exoscale**
 
@@ -186,19 +188,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) | [Elastic Container Service (ECS)](https://aws.amazon.com/ecs/) | [Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) | [Fargate](https://aws.amazon.com/fargate/) | [Red Hat OpenShift Service on AWS (ROSA)](https://aws.amazon.com/rosa/)
+[<img src="icons/aws/amazon-elastic-container-registry.svg" width="16" height="16" alt=""> Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) | [<img src="icons/aws/amazon-elastic-container-service.svg" width="16" height="16" alt=""> Elastic Container Service (ECS)](https://aws.amazon.com/ecs/) | [<img src="icons/aws/amazon-elastic-kubernetes-service.svg" width="16" height="16" alt=""> Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) | [<img src="icons/aws/aws-fargate.svg" width="16" height="16" alt=""> Fargate](https://aws.amazon.com/fargate/) | [<img src="icons/aws/red-hat-openshift-service-on-aws.svg" width="16" height="16" alt=""> Red Hat OpenShift Service on AWS (ROSA)](https://aws.amazon.com/rosa/)
 
 ### **Azure**
 
-[Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/products/kubernetes-service/) | [Azure Red Hat OpenShift](https://azure.microsoft.com/en-us/products/openshift/) | [Container Apps](https://azure.microsoft.com/en-us/products/container-apps/) | [Container Instances](https://azure.microsoft.com/en-us/products/container-instances/) | [Container Registry](https://azure.microsoft.com/en-us/products/container-registry/)
+[<img src="icons/azure/kubernetes-services.svg" width="16" height="16" alt=""> Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/products/kubernetes-service/) | [<img src="icons/azure/azure-red-hat-openshift.svg" width="16" height="16" alt=""> Azure Red Hat OpenShift](https://azure.microsoft.com/en-us/products/openshift/) | [<img src="icons/azure/container-apps-environments.svg" width="16" height="16" alt=""> Container Apps](https://azure.microsoft.com/en-us/products/container-apps/) | [<img src="icons/azure/container-instances.svg" width="16" height="16" alt=""> Container Instances](https://azure.microsoft.com/en-us/products/container-instances/) | [<img src="icons/azure/container-registries.svg" width="16" height="16" alt=""> Container Registry](https://azure.microsoft.com/en-us/products/container-registry/)
 
 ### **GCP**
 
-[Artifact Registry](https://docs.cloud.google.com/artifact-registry/docs) | [Cloud Run](https://cloud.google.com/run) | [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine) | [Migrate to Containers](https://cloud.google.com/products/cloud-migration/containers)
+[<img src="icons/gcp/artifact-registry.svg" width="16" height="16" alt=""> Artifact Registry](https://docs.cloud.google.com/artifact-registry/docs) | [<img src="icons/gcp/cloud-run.svg" width="16" height="16" alt=""> Cloud Run](https://cloud.google.com/run) | [<img src="icons/gcp/gke.svg" width="16" height="16" alt=""> Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine) | [<img src="icons/gcp/migrate-to-containers.svg" width="16" height="16" alt=""> Migrate to Containers](https://cloud.google.com/products/cloud-migration/containers)
 
 ### **Oracle**
 
-[Container Instances](https://www.oracle.com/cloud/cloud-native/container-instances/) | [Container Registry](https://www.oracle.com/cloud/cloud-native/container-registry/) | [Kubernetes Engine (OKE)](https://www.oracle.com/cloud/cloud-native/kubernetes-engine/)
+[<img src="icons/oracle/container.svg" width="16" height="16" alt=""> Container Instances](https://www.oracle.com/cloud/cloud-native/container-instances/) | [<img src="icons/oracle/container-registry.svg" width="16" height="16" alt=""> Container Registry](https://www.oracle.com/cloud/cloud-native/container-registry/) | [<img src="icons/oracle/oke.svg" width="16" height="16" alt=""> Kubernetes Engine (OKE)](https://www.oracle.com/cloud/cloud-native/kubernetes-engine/)
 
 ### **Exoscale**
 
@@ -209,19 +211,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Lambda](https://aws.amazon.com/lambda/)
+[<img src="icons/aws/aws-lambda.svg" width="16" height="16" alt=""> Lambda](https://aws.amazon.com/lambda/)
 
 ### **Azure**
 
-[Azure Functions](https://azure.microsoft.com/en-us/products/functions/)
+[<img src="icons/azure/function-apps.svg" width="16" height="16" alt=""> Azure Functions](https://azure.microsoft.com/en-us/products/functions/)
 
 ### **GCP**
 
-[Cloud Run functions](https://cloud.google.com/functions)
+[<img src="icons/gcp/cloud-functions.svg" width="16" height="16" alt=""> Cloud Run functions](https://cloud.google.com/functions)
 
 ### **Oracle**
 
-[OCI Functions](https://www.oracle.com/cloud/cloud-native/functions/)
+[<img src="icons/oracle/functions.svg" width="16" height="16" alt=""> OCI Functions](https://www.oracle.com/cloud/cloud-native/functions/)
 
 ### **Exoscale**
 
@@ -232,19 +234,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Auto Scaling](https://aws.amazon.com/autoscaling/) | [Batch](https://aws.amazon.com/batch/) | [Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/) | [Elastic VMware Service (EVS)](https://aws.amazon.com/evs/) | [Lightsail](https://aws.amazon.com/lightsail/)
+[<img src="icons/aws/aws-auto-scaling.svg" width="16" height="16" alt=""> Auto Scaling](https://aws.amazon.com/autoscaling/) | [<img src="icons/aws/aws-batch.svg" width="16" height="16" alt=""> Batch](https://aws.amazon.com/batch/) | [<img src="icons/aws/amazon-ec2.svg" width="16" height="16" alt=""> Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/) | [<img src="icons/aws/amazon-elastic-vmware-service.svg" width="16" height="16" alt=""> Elastic VMware Service (EVS)](https://aws.amazon.com/evs/) | [<img src="icons/aws/amazon-lightsail.svg" width="16" height="16" alt=""> Lightsail](https://aws.amazon.com/lightsail/)
 
 ### **Azure**
 
-[Azure VMware Solution](https://azure.microsoft.com/en-us/products/azure-vmware/) | [Batch](https://azure.microsoft.com/en-us/products/batch/) | [Virtual Machine Scale Sets](https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets/) | [Virtual Machines](https://azure.microsoft.com/en-us/products/virtual-machines/)
+[<img src="icons/azure/azure-vmware-solution.svg" width="16" height="16" alt=""> Azure VMware Solution](https://azure.microsoft.com/en-us/products/azure-vmware/) | [<img src="icons/azure/batch-accounts.svg" width="16" height="16" alt=""> Batch](https://azure.microsoft.com/en-us/products/batch/) | [<img src="icons/azure/vm-scale-sets.svg" width="16" height="16" alt=""> Virtual Machine Scale Sets](https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets/) | [<img src="icons/azure/virtual-machine.svg" width="16" height="16" alt=""> Virtual Machines](https://azure.microsoft.com/en-us/products/virtual-machines/)
 
 ### **GCP**
 
-[Batch](https://cloud.google.com/batch) | [Compute Engine](https://cloud.google.com/products/compute) | [VMware Engine](https://cloud.google.com/vmware-engine)
+[<img src="icons/gcp/batch.svg" width="16" height="16" alt=""> Batch](https://cloud.google.com/batch) | [<img src="icons/gcp/compute-engine.svg" width="16" height="16" alt=""> Compute Engine](https://cloud.google.com/products/compute) | [<img src="icons/gcp/vmware-engine.svg" width="16" height="16" alt=""> VMware Engine](https://cloud.google.com/vmware-engine)
 
 ### **Oracle**
 
-[Compute](https://www.oracle.com/cloud/compute/) | [Oracle Cloud VMware Solution](https://www.oracle.com/cloud/compute/vmware/)
+[<img src="icons/oracle/vm.svg" width="16" height="16" alt=""> Compute](https://www.oracle.com/cloud/compute/) | [Oracle Cloud VMware Solution](https://www.oracle.com/cloud/compute/vmware/)
 
 ### **Exoscale**
 
@@ -255,15 +257,15 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Billing](https://aws.amazon.com/aws-cost-management/aws-billing/) | [Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/) | [Cost Anomaly Detection](https://aws.amazon.com/aws-cost-management/aws-cost-anomaly-detection/) | [Cost Categories](https://aws.amazon.com/aws-cost-management/aws-cost-categories/) | [Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) | [Pricing Calculator](https://calculator.aws/#/) | [Savings Plans](https://aws.amazon.com/savingsplans/)
+[<img src="icons/aws/category-cloud-financial-management.svg" width="16" height="16" alt=""> Billing](https://aws.amazon.com/aws-cost-management/aws-billing/) | [<img src="icons/aws/aws-budgets.svg" width="16" height="16" alt=""> Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/) | [<img src="icons/aws/aws-cost-explorer.svg" width="16" height="16" alt=""> Cost Anomaly Detection](https://aws.amazon.com/aws-cost-management/aws-cost-anomaly-detection/) | [<img src="icons/aws/category-cloud-financial-management.svg" width="16" height="16" alt=""> Cost Categories](https://aws.amazon.com/aws-cost-management/aws-cost-categories/) | [<img src="icons/aws/aws-cost-explorer.svg" width="16" height="16" alt=""> Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) | [<img src="icons/aws/category-cloud-financial-management.svg" width="16" height="16" alt=""> Pricing Calculator](https://calculator.aws/#/) | [<img src="icons/aws/savings-plans.svg" width="16" height="16" alt=""> Savings Plans](https://aws.amazon.com/savingsplans/)
 
 ### **Azure**
 
-[Advisor](https://azure.microsoft.com/en-us/products/advisor/) | [Cost Management and Billing](https://azure.microsoft.com/en-us/products/cost-management/) | [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
+[<img src="icons/azure/advisor.svg" width="16" height="16" alt=""> Advisor](https://azure.microsoft.com/en-us/products/advisor/) | [<img src="icons/azure/cost-management-and-billing.svg" width="16" height="16" alt=""> Cost Management and Billing](https://azure.microsoft.com/en-us/products/cost-management/) | [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
 
 ### **GCP**
 
-[Active Assist (Recommender)](https://docs.cloud.google.com/recommender/docs/whatis-activeassist) | [Cost Management](https://cloud.google.com/cost-management) | [Pricing Calculator](https://cloud.google.com/products/calculator)
+[Active Assist (Recommender)](https://docs.cloud.google.com/recommender/docs/whatis-activeassist) | [<img src="icons/gcp/billing.svg" width="16" height="16" alt=""> Cost Management](https://cloud.google.com/cost-management) | [Pricing Calculator](https://cloud.google.com/products/calculator)
 
 ### **Oracle**
 
@@ -278,19 +280,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Athena](https://aws.amazon.com/athena/) | [CloudSearch](https://aws.amazon.com/cloudsearch/) | [Data Firehose](https://aws.amazon.com/firehose/) | [Kinesis Data Streams](https://aws.amazon.com/kinesis/data-streams/) | [Managed Service for Apache Flink](https://aws.amazon.com/managed-service-apache-flink/) | [OpenSearch Service](https://aws.amazon.com/opensearch-service/) | [Quick (formerly QuickSight)](https://aws.amazon.com/quick/) | [SageMaker Unified Studio](https://aws.amazon.com/sagemaker/unified-studio/)
+[<img src="icons/aws/amazon-athena.svg" width="16" height="16" alt=""> Athena](https://aws.amazon.com/athena/) | [<img src="icons/aws/amazon-cloudsearch.svg" width="16" height="16" alt=""> CloudSearch](https://aws.amazon.com/cloudsearch/) | [<img src="icons/aws/amazon-data-firehose.svg" width="16" height="16" alt=""> Data Firehose](https://aws.amazon.com/firehose/) | [<img src="icons/aws/amazon-kinesis-data-streams.svg" width="16" height="16" alt=""> Kinesis Data Streams](https://aws.amazon.com/kinesis/data-streams/) | [<img src="icons/aws/amazon-managed-service-for-apache-flink.svg" width="16" height="16" alt=""> Managed Service for Apache Flink](https://aws.amazon.com/managed-service-apache-flink/) | [<img src="icons/aws/amazon-opensearch-service.svg" width="16" height="16" alt=""> OpenSearch Service](https://aws.amazon.com/opensearch-service/) | [<img src="icons/aws/amazon-quick.svg" width="16" height="16" alt=""> Quick (formerly QuickSight)](https://aws.amazon.com/quick/) | [<img src="icons/aws/amazon-sagemaker.svg" width="16" height="16" alt=""> SageMaker Unified Studio](https://aws.amazon.com/sagemaker/unified-studio/)
 
 ### **Azure**
 
-[Analysis Services](https://azure.microsoft.com/en-us/products/analysis-services/) | [Azure Databricks](https://azure.microsoft.com/en-us/products/databricks/) | [Data Explorer](https://azure.microsoft.com/en-us/products/data-explorer/) | [Microsoft Fabric](https://www.microsoft.com/en-us/microsoft-fabric) | [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) | [Stream Analytics](https://azure.microsoft.com/en-us/products/stream-analytics/) | [Synapse Analytics](https://azure.microsoft.com/en-us/products/synapse-analytics/)
+[<img src="icons/azure/analysis-services.svg" width="16" height="16" alt=""> Analysis Services](https://azure.microsoft.com/en-us/products/analysis-services/) | [<img src="icons/azure/azure-databricks.svg" width="16" height="16" alt=""> Azure Databricks](https://azure.microsoft.com/en-us/products/databricks/) | [<img src="icons/azure/azure-data-explorer-clusters.svg" width="16" height="16" alt=""> Data Explorer](https://azure.microsoft.com/en-us/products/data-explorer/) | [Microsoft Fabric](https://www.microsoft.com/en-us/microsoft-fabric) | [<img src="icons/azure/power-bi-embedded.svg" width="16" height="16" alt=""> Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) | [<img src="icons/azure/stream-analytics-jobs.svg" width="16" height="16" alt=""> Stream Analytics](https://azure.microsoft.com/en-us/products/stream-analytics/) | [<img src="icons/azure/azure-synapse-analytics.svg" width="16" height="16" alt=""> Synapse Analytics](https://azure.microsoft.com/en-us/products/synapse-analytics/)
 
 ### **GCP**
 
-[BigQuery](https://cloud.google.com/bigquery) | [Data Studio (formerly Looker Studio)](https://cloud.google.com/data-studio) | [Dataflow](https://cloud.google.com/products/dataflow) | [Knowledge Catalog (formerly Dataplex)](https://cloud.google.com/products/knowledge-catalog) | [Looker](https://cloud.google.com/looker)
+[<img src="icons/gcp/bigquery.svg" width="16" height="16" alt=""> BigQuery](https://cloud.google.com/bigquery) | [<img src="icons/gcp/data-studio.svg" width="16" height="16" alt=""> Data Studio (formerly Looker Studio)](https://cloud.google.com/data-studio) | [<img src="icons/gcp/dataflow.svg" width="16" height="16" alt=""> Dataflow](https://cloud.google.com/products/dataflow) | [<img src="icons/gcp/dataplex.svg" width="16" height="16" alt=""> Knowledge Catalog (formerly Dataplex)](https://cloud.google.com/products/knowledge-catalog) | [<img src="icons/gcp/looker.svg" width="16" height="16" alt=""> Looker](https://cloud.google.com/looker)
 
 ### **Oracle**
 
-[Analytics Cloud](https://www.oracle.com/analytics/) | [Fusion Data Intelligence (formerly Fusion Analytics Warehouse)](https://www.oracle.com/fusion-data-intelligence/) | [Search with OpenSearch](https://www.oracle.com/cloud/search/)
+[Analytics Cloud](https://www.oracle.com/analytics/) | [Fusion Data Intelligence (formerly Fusion Analytics Warehouse)](https://www.oracle.com/fusion-data-intelligence/) | [<img src="icons/oracle/opensearch.svg" width="16" height="16" alt=""> Search with OpenSearch](https://www.oracle.com/cloud/search/)
 
 ### **Exoscale**
 
@@ -301,19 +303,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[EMR](https://aws.amazon.com/emr/)
+[<img src="icons/aws/amazon-emr.svg" width="16" height="16" alt=""> EMR](https://aws.amazon.com/emr/)
 
 ### **Azure**
 
-[HDInsight](https://azure.microsoft.com/en-us/products/hdinsight/)
+[<img src="icons/azure/hd-insight-clusters.svg" width="16" height="16" alt=""> HDInsight](https://azure.microsoft.com/en-us/products/hdinsight/)
 
 ### **GCP**
 
-[Managed Service for Apache Spark (formerly Dataproc)](https://cloud.google.com/products/managed-service-for-apache-spark)
+[<img src="icons/gcp/dataproc.svg" width="16" height="16" alt=""> Managed Service for Apache Spark (formerly Dataproc)](https://cloud.google.com/products/managed-service-for-apache-spark)
 
 ### **Oracle**
 
-[Big Data Service](https://www.oracle.com/big-data/big-data-service/) | [Data Flow](https://www.oracle.com/big-data/data-flow/)
+[<img src="icons/oracle/big-data.svg" width="16" height="16" alt=""> Big Data Service](https://www.oracle.com/big-data/big-data-service/) | [<img src="icons/oracle/data-flow.svg" width="16" height="16" alt=""> Data Flow](https://www.oracle.com/big-data/data-flow/)
 
 ### **Exoscale**
 
@@ -324,19 +326,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Aurora](https://aws.amazon.com/rds/aurora/) | [Aurora DSQL](https://aws.amazon.com/rds/aurora/dsql/) | [DocumentDB](https://aws.amazon.com/documentdb/) | [DynamoDB](https://aws.amazon.com/dynamodb/) | [ElastiCache](https://aws.amazon.com/elasticache/) | [Keyspaces (for Apache Cassandra)](https://aws.amazon.com/keyspaces/) | [MemoryDB](https://aws.amazon.com/memorydb/) | [Neptune](https://aws.amazon.com/neptune/) | [RDS](https://aws.amazon.com/rds/) | [SimpleDB](https://aws.amazon.com/simpledb/) | [Timestream](https://aws.amazon.com/timestream/)
+[<img src="icons/aws/amazon-aurora.svg" width="16" height="16" alt=""> Aurora](https://aws.amazon.com/rds/aurora/) | [<img src="icons/aws/amazon-aurora.svg" width="16" height="16" alt=""> Aurora DSQL](https://aws.amazon.com/rds/aurora/dsql/) | [<img src="icons/aws/amazon-documentdb.svg" width="16" height="16" alt=""> DocumentDB](https://aws.amazon.com/documentdb/) | [<img src="icons/aws/amazon-dynamodb.svg" width="16" height="16" alt=""> DynamoDB](https://aws.amazon.com/dynamodb/) | [<img src="icons/aws/amazon-elasticache.svg" width="16" height="16" alt=""> ElastiCache](https://aws.amazon.com/elasticache/) | [<img src="icons/aws/amazon-keyspaces.svg" width="16" height="16" alt=""> Keyspaces (for Apache Cassandra)](https://aws.amazon.com/keyspaces/) | [<img src="icons/aws/amazon-memorydb.svg" width="16" height="16" alt=""> MemoryDB](https://aws.amazon.com/memorydb/) | [<img src="icons/aws/amazon-neptune.svg" width="16" height="16" alt=""> Neptune](https://aws.amazon.com/neptune/) | [<img src="icons/aws/amazon-rds.svg" width="16" height="16" alt=""> RDS](https://aws.amazon.com/rds/) | [<img src="icons/aws/category-databases.svg" width="16" height="16" alt=""> SimpleDB](https://aws.amazon.com/simpledb/) | [<img src="icons/aws/amazon-timestream.svg" width="16" height="16" alt=""> Timestream](https://aws.amazon.com/timestream/)
 
 ### **Azure**
 
-[Azure Managed Redis](https://azure.microsoft.com/en-us/products/managed-redis/) | [Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database/) | [Azure SQL Database serverless](https://learn.microsoft.com/en-us/azure/azure-sql/database/serverless-tier-overview) | [Azure SQL Managed Instance](https://azure.microsoft.com/en-us/products/azure-sql/managed-instance/) | [Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db/) | [Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/) | [Database for PostgreSQL](https://azure.microsoft.com/en-us/products/postgresql/) | [SQL Server on Azure VMs](https://azure.microsoft.com/en-us/products/virtual-machines/sql-server/)
+[<img src="icons/azure/azure-managed-redis.svg" width="16" height="16" alt=""> Azure Managed Redis](https://azure.microsoft.com/en-us/products/managed-redis/) | [<img src="icons/azure/sql-database.svg" width="16" height="16" alt=""> Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database/) | [<img src="icons/azure/sql-database.svg" width="16" height="16" alt=""> Azure SQL Database serverless](https://learn.microsoft.com/en-us/azure/azure-sql/database/serverless-tier-overview) | [<img src="icons/azure/sql-managed-instance.svg" width="16" height="16" alt=""> Azure SQL Managed Instance](https://azure.microsoft.com/en-us/products/azure-sql/managed-instance/) | [<img src="icons/azure/azure-cosmos-db.svg" width="16" height="16" alt=""> Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db/) | [<img src="icons/azure/azure-database-mysql-server.svg" width="16" height="16" alt=""> Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/) | [<img src="icons/azure/azure-database-postgresql-server.svg" width="16" height="16" alt=""> Database for PostgreSQL](https://azure.microsoft.com/en-us/products/postgresql/) | [<img src="icons/azure/azure-sql-vm.svg" width="16" height="16" alt=""> SQL Server on Azure VMs](https://azure.microsoft.com/en-us/products/virtual-machines/sql-server/)
 
 ### **GCP**
 
-[AlloyDB for PostgreSQL](https://cloud.google.com/products/alloydb) | [Bigtable](https://cloud.google.com/bigtable) | [Cloud SQL](https://cloud.google.com/sql) | [Firestore](https://cloud.google.com/products/firestore) | [Memorystore](https://cloud.google.com/memorystore) | [Spanner](https://cloud.google.com/spanner)
+[<img src="icons/gcp/alloydb.svg" width="16" height="16" alt=""> AlloyDB for PostgreSQL](https://cloud.google.com/products/alloydb) | [<img src="icons/gcp/bigtable.svg" width="16" height="16" alt=""> Bigtable](https://cloud.google.com/bigtable) | [<img src="icons/gcp/cloud-sql.svg" width="16" height="16" alt=""> Cloud SQL](https://cloud.google.com/sql) | [<img src="icons/gcp/firestore.svg" width="16" height="16" alt=""> Firestore](https://cloud.google.com/products/firestore) | [<img src="icons/gcp/memorystore.svg" width="16" height="16" alt=""> Memorystore](https://cloud.google.com/memorystore) | [<img src="icons/gcp/spanner.svg" width="16" height="16" alt=""> Spanner](https://cloud.google.com/spanner)
 
 ### **Oracle**
 
-[Autonomous AI Database](https://www.oracle.com/autonomous-database/) | [Autonomous AI JSON Database](https://www.oracle.com/autonomous-database/autonomous-json-database/) | [Autonomous AI Transaction Processing](https://www.oracle.com/autonomous-database/autonomous-transaction-processing/) | [Base Database Service](https://www.oracle.com/database/base-database-service/) | [Database with PostgreSQL](https://www.oracle.com/cloud/postgresql/) | [Exadata Database Service](https://www.oracle.com/engineered-systems/exadata/database-service/) | [MySQL HeatWave](https://www.oracle.com/mysql/) | [NoSQL Database](https://www.oracle.com/database/nosql/) | [OCI Cache](https://www.oracle.com/cloud/cache/) | [Oracle AI Database@AWS](https://www.oracle.com/cloud/aws/) | [Oracle AI Database@Azure](https://www.oracle.com/cloud/azure/oracle-database-at-azure/) | [Oracle AI Database@Google Cloud](https://www.oracle.com/cloud/google/oracle-database-at-google-cloud/)
+[<img src="icons/oracle/autonomous-db.svg" width="16" height="16" alt=""> Autonomous AI Database](https://www.oracle.com/autonomous-database/) | [<img src="icons/oracle/autonomous-db.svg" width="16" height="16" alt=""> Autonomous AI JSON Database](https://www.oracle.com/autonomous-database/autonomous-json-database/) | [<img src="icons/oracle/atp.svg" width="16" height="16" alt=""> Autonomous AI Transaction Processing](https://www.oracle.com/autonomous-database/autonomous-transaction-processing/) | [<img src="icons/oracle/db-system.svg" width="16" height="16" alt=""> Base Database Service](https://www.oracle.com/database/base-database-service/) | [<img src="icons/oracle/database.svg" width="16" height="16" alt=""> Database with PostgreSQL](https://www.oracle.com/cloud/postgresql/) | [<img src="icons/oracle/exadata.svg" width="16" height="16" alt=""> Exadata Database Service](https://www.oracle.com/engineered-systems/exadata/database-service/) | [<img src="icons/oracle/mysql.svg" width="16" height="16" alt=""> MySQL HeatWave](https://www.oracle.com/mysql/) | [<img src="icons/oracle/nosql.svg" width="16" height="16" alt=""> NoSQL Database](https://www.oracle.com/database/nosql/) | [<img src="icons/oracle/database.svg" width="16" height="16" alt=""> OCI Cache](https://www.oracle.com/cloud/cache/) | [<img src="icons/oracle/exadata.svg" width="16" height="16" alt=""> Oracle AI Database@AWS](https://www.oracle.com/cloud/aws/) | [<img src="icons/oracle/exadata.svg" width="16" height="16" alt=""> Oracle AI Database@Azure](https://www.oracle.com/cloud/azure/oracle-database-at-azure/) | [<img src="icons/oracle/exadata.svg" width="16" height="16" alt=""> Oracle AI Database@Google Cloud](https://www.oracle.com/cloud/google/oracle-database-at-google-cloud/)
 
 ### **Exoscale**
 
@@ -347,19 +349,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Data Lakes on AWS (S3)](https://aws.amazon.com/big-data/datalakes-and-analytics/datalakes/) | [Lake Formation](https://aws.amazon.com/lake-formation/) | [S3 Tables](https://aws.amazon.com/s3/features/tables/)
+[<img src="icons/aws/amazon-simple-storage-service.svg" width="16" height="16" alt=""> Data Lakes on AWS (S3)](https://aws.amazon.com/big-data/datalakes-and-analytics/datalakes/) | [<img src="icons/aws/aws-lake-formation.svg" width="16" height="16" alt=""> Lake Formation](https://aws.amazon.com/lake-formation/) | [<img src="icons/aws/amazon-simple-storage-service-s3-tables.svg" width="16" height="16" alt=""> S3 Tables](https://aws.amazon.com/s3/features/tables/)
 
 ### **Azure**
 
-[Data Lake Storage](https://azure.microsoft.com/en-us/products/storage/data-lake-storage/) | [OneLake (Microsoft Fabric)](https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview)
+[<img src="icons/azure/data-lake-storage-gen1.svg" width="16" height="16" alt=""> Data Lake Storage](https://azure.microsoft.com/en-us/products/storage/data-lake-storage/) | [OneLake (Microsoft Fabric)](https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview)
 
 ### **GCP**
 
-[Cloud Storage](https://cloud.google.com/storage) | [Data Lakehouse Solution](https://cloud.google.com/solutions/data-lakehouse) | [Lakehouse for Apache Iceberg (BigLake)](https://cloud.google.com/products/lakehouse)
+[<img src="icons/gcp/cloud-storage.svg" width="16" height="16" alt=""> Cloud Storage](https://cloud.google.com/storage) | [Data Lakehouse Solution](https://cloud.google.com/solutions/data-lakehouse) | [Lakehouse for Apache Iceberg (BigLake)](https://cloud.google.com/products/lakehouse)
 
 ### **Oracle**
 
-[Autonomous AI Lakehouse](https://www.oracle.com/autonomous-database/autonomous-ai-lakehouse/) | [MySQL HeatWave Lakehouse](https://www.oracle.com/mysql/lakehouse/)
+[<img src="icons/oracle/adw.svg" width="16" height="16" alt=""> Autonomous AI Lakehouse](https://www.oracle.com/autonomous-database/autonomous-ai-lakehouse/) | [<img src="icons/oracle/mysql.svg" width="16" height="16" alt=""> MySQL HeatWave Lakehouse](https://www.oracle.com/mysql/lakehouse/)
 
 ### **Exoscale**
 
@@ -370,19 +372,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Redshift](https://aws.amazon.com/redshift/)
+[<img src="icons/aws/amazon-redshift.svg" width="16" height="16" alt=""> Redshift](https://aws.amazon.com/redshift/)
 
 ### **Azure**
 
-[Fabric Data Warehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing) | [Synapse Analytics](https://azure.microsoft.com/en-us/products/synapse-analytics/)
+[Fabric Data Warehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing) | [<img src="icons/azure/azure-synapse-analytics.svg" width="16" height="16" alt=""> Synapse Analytics](https://azure.microsoft.com/en-us/products/synapse-analytics/)
 
 ### **GCP**
 
-[BigQuery](https://cloud.google.com/bigquery)
+[<img src="icons/gcp/bigquery.svg" width="16" height="16" alt=""> BigQuery](https://cloud.google.com/bigquery)
 
 ### **Oracle**
 
-[Autonomous AI Database](https://www.oracle.com/autonomous-database/) | [Autonomous AI Lakehouse (formerly Autonomous Data Warehouse)](https://www.oracle.com/autonomous-database/autonomous-ai-lakehouse/) | [MySQL HeatWave](https://www.oracle.com/mysql/)
+[<img src="icons/oracle/autonomous-db.svg" width="16" height="16" alt=""> Autonomous AI Database](https://www.oracle.com/autonomous-database/) | [<img src="icons/oracle/adw.svg" width="16" height="16" alt=""> Autonomous AI Lakehouse (formerly Autonomous Data Warehouse)](https://www.oracle.com/autonomous-database/autonomous-ai-lakehouse/) | [<img src="icons/oracle/mysql.svg" width="16" height="16" alt=""> MySQL HeatWave](https://www.oracle.com/mysql/)
 
 ### **Exoscale**
 
@@ -393,19 +395,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[CodeArtifact](https://aws.amazon.com/codeartifact/) | [CodeBuild](https://aws.amazon.com/codebuild/) | [CodeCommit](https://aws.amazon.com/codecommit/) | [CodeDeploy](https://aws.amazon.com/codedeploy/) | [CodeGuru Profiler](https://aws.amazon.com/codeguru/profiler/) | [CodePipeline](https://aws.amazon.com/codepipeline/) | [DevOps Guru](https://aws.amazon.com/devops-guru/) | [Fault Injection Service (FIS)](https://aws.amazon.com/fis/) | [Kiro](https://kiro.dev/) | [Q Developer](https://aws.amazon.com/q/developer/)
+[<img src="icons/aws/aws-codeartifact.svg" width="16" height="16" alt=""> CodeArtifact](https://aws.amazon.com/codeartifact/) | [<img src="icons/aws/aws-codebuild.svg" width="16" height="16" alt=""> CodeBuild](https://aws.amazon.com/codebuild/) | [<img src="icons/aws/aws-codecommit.svg" width="16" height="16" alt=""> CodeCommit](https://aws.amazon.com/codecommit/) | [<img src="icons/aws/aws-codedeploy.svg" width="16" height="16" alt=""> CodeDeploy](https://aws.amazon.com/codedeploy/) | [<img src="icons/aws/amazon-codeguru.svg" width="16" height="16" alt=""> CodeGuru Profiler](https://aws.amazon.com/codeguru/profiler/) | [<img src="icons/aws/aws-codepipeline.svg" width="16" height="16" alt=""> CodePipeline](https://aws.amazon.com/codepipeline/) | [<img src="icons/aws/amazon-devops-guru.svg" width="16" height="16" alt=""> DevOps Guru](https://aws.amazon.com/devops-guru/) | [<img src="icons/aws/aws-fault-injection-service.svg" width="16" height="16" alt=""> Fault Injection Service (FIS)](https://aws.amazon.com/fis/) | [Kiro](https://kiro.dev/) | [<img src="icons/aws/amazon-q.svg" width="16" height="16" alt=""> Q Developer](https://aws.amazon.com/q/developer/)
 
 ### **Azure**
 
-[Azure App Testing (formerly Azure Load Testing)](https://azure.microsoft.com/en-us/products/app-testing/) | [Azure Artifacts](https://azure.microsoft.com/en-us/products/devops/artifacts/) | [Azure Boards](https://azure.microsoft.com/en-us/products/devops/boards/) | [Azure Chaos Studio](https://azure.microsoft.com/en-us/products/chaos-studio/) | [Azure Pipelines](https://azure.microsoft.com/en-us/products/devops/pipelines/) | [Azure Repos](https://azure.microsoft.com/en-us/products/devops/repos/) | [Azure Test Plans](https://azure.microsoft.com/en-us/products/devops/test-plans/) | [GitHub](https://github.com/) | [GitHub Copilot](https://github.com/features/copilot)
+[<img src="icons/azure/azure-app-testing.svg" width="16" height="16" alt=""> Azure App Testing (formerly Azure Load Testing)](https://azure.microsoft.com/en-us/products/app-testing/) | [<img src="icons/azure/azure-devops.svg" width="16" height="16" alt=""> Azure Artifacts](https://azure.microsoft.com/en-us/products/devops/artifacts/) | [<img src="icons/azure/azure-devops.svg" width="16" height="16" alt=""> Azure Boards](https://azure.microsoft.com/en-us/products/devops/boards/) | [<img src="icons/azure/azure-chaos-studio.svg" width="16" height="16" alt=""> Azure Chaos Studio](https://azure.microsoft.com/en-us/products/chaos-studio/) | [<img src="icons/azure/azure-devops.svg" width="16" height="16" alt=""> Azure Pipelines](https://azure.microsoft.com/en-us/products/devops/pipelines/) | [<img src="icons/azure/azure-devops.svg" width="16" height="16" alt=""> Azure Repos](https://azure.microsoft.com/en-us/products/devops/repos/) | [<img src="icons/azure/azure-devops.svg" width="16" height="16" alt=""> Azure Test Plans](https://azure.microsoft.com/en-us/products/devops/test-plans/) | [GitHub](https://github.com/) | [GitHub Copilot](https://github.com/features/copilot)
 
 ### **GCP**
 
-[Artifact Registry](https://docs.cloud.google.com/artifact-registry/docs) | [Binary Authorization](https://docs.cloud.google.com/binary-authorization/docs) | [Cloud Build](https://cloud.google.com/build) | [Cloud Deploy](https://cloud.google.com/deploy) | [Cloud Source Repositories](https://docs.cloud.google.com/source-repositories/docs) | [Cloud Workstations](https://cloud.google.com/workstations) | [Gemini Code Assist](https://codeassist.google/) | [Google Cloud Observability](https://cloud.google.com/products/observability) | [Secure Source Manager](https://cloud.google.com/products/secure-source-manager)
+[<img src="icons/gcp/artifact-registry.svg" width="16" height="16" alt=""> Artifact Registry](https://docs.cloud.google.com/artifact-registry/docs) | [<img src="icons/gcp/binary-authorization.svg" width="16" height="16" alt=""> Binary Authorization](https://docs.cloud.google.com/binary-authorization/docs) | [<img src="icons/gcp/cloud-build.svg" width="16" height="16" alt=""> Cloud Build](https://cloud.google.com/build) | [<img src="icons/gcp/cloud-deploy.svg" width="16" height="16" alt=""> Cloud Deploy](https://cloud.google.com/deploy) | [Cloud Source Repositories](https://docs.cloud.google.com/source-repositories/docs) | [Cloud Workstations](https://cloud.google.com/workstations) | [Gemini Code Assist](https://codeassist.google/) | [<img src="icons/gcp/observability.svg" width="16" height="16" alt=""> Google Cloud Observability](https://cloud.google.com/products/observability) | [Secure Source Manager](https://cloud.google.com/products/secure-source-manager)
 
 ### **Oracle**
 
-[DevOps Service](https://www.oracle.com/cloud/cloud-native/devops-service/) | [Visual Builder Studio](https://www.oracle.com/application-development/visual-builder-studio/)
+[<img src="icons/oracle/devops.svg" width="16" height="16" alt=""> DevOps Service](https://www.oracle.com/cloud/cloud-native/devops-service/) | [<img src="icons/oracle/visual-builder.svg" width="16" height="16" alt=""> Visual Builder Studio](https://www.oracle.com/application-development/visual-builder-studio/)
 
 ### **Exoscale**
 
@@ -416,11 +418,11 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Simple Email Service (SES)](https://aws.amazon.com/ses/)
+[<img src="icons/aws/amazon-simple-email-service.svg" width="16" height="16" alt=""> Simple Email Service (SES)](https://aws.amazon.com/ses/)
 
 ### **Azure**
 
-[Communication Services (Email)](https://azure.microsoft.com/en-us/products/communication-services/) | [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365)
+[<img src="icons/azure/azure-communication-services.svg" width="16" height="16" alt=""> Communication Services (Email)](https://azure.microsoft.com/en-us/products/communication-services/) | [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365)
 
 ### **GCP**
 
@@ -428,26 +430,26 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **Oracle**
 
-[Email Delivery](https://docs.oracle.com/en-us/iaas/Content/Email/Concepts/overview.htm)
+[<img src="icons/oracle/email-delivery.svg" width="16" height="16" alt=""> Email Delivery](https://docs.oracle.com/en-us/iaas/Content/Email/Concepts/overview.htm)
 
 
 ## **ETL**
 
 ### **AWS**
 
-[AppFlow](https://aws.amazon.com/appflow/) | [Glue](https://aws.amazon.com/glue/)
+[<img src="icons/aws/amazon-appflow.svg" width="16" height="16" alt=""> AppFlow](https://aws.amazon.com/appflow/) | [<img src="icons/aws/aws-glue.svg" width="16" height="16" alt=""> Glue](https://aws.amazon.com/glue/)
 
 ### **Azure**
 
-[Data Factory](https://azure.microsoft.com/en-us/products/data-factory/) | [Microsoft Purview](https://www.microsoft.com/en-us/security/business/microsoft-purview)
+[<img src="icons/azure/data-factories.svg" width="16" height="16" alt=""> Data Factory](https://azure.microsoft.com/en-us/products/data-factory/) | [Microsoft Purview](https://www.microsoft.com/en-us/security/business/microsoft-purview)
 
 ### **GCP**
 
-[Cloud Data Fusion](https://cloud.google.com/data-fusion) | [Datastream](https://cloud.google.com/datastream)
+[<img src="icons/gcp/data-fusion.svg" width="16" height="16" alt=""> Cloud Data Fusion](https://cloud.google.com/data-fusion) | [<img src="icons/gcp/datastream.svg" width="16" height="16" alt=""> Datastream](https://cloud.google.com/datastream)
 
 ### **Oracle**
 
-[Data Integration](https://www.oracle.com/integration/data-integration/) | [GoldenGate](https://www.oracle.com/integration/goldengate/) | [Oracle Integration](https://www.oracle.com/integration/application-integration/)
+[<img src="icons/oracle/data-integration.svg" width="16" height="16" alt=""> Data Integration](https://www.oracle.com/integration/data-integration/) | [<img src="icons/oracle/goldengate.svg" width="16" height="16" alt=""> GoldenGate](https://www.oracle.com/integration/goldengate/) | [<img src="icons/oracle/integration.svg" width="16" height="16" alt=""> Oracle Integration](https://www.oracle.com/integration/application-integration/)
 
 ### **Exoscale**
 
@@ -458,19 +460,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Firewall Manager](https://aws.amazon.com/firewall-manager/) | [Network Firewall](https://aws.amazon.com/network-firewall/) | [Web Application Firewall (WAF)](https://aws.amazon.com/waf/)
+[<img src="icons/aws/aws-firewall-manager.svg" width="16" height="16" alt=""> Firewall Manager](https://aws.amazon.com/firewall-manager/) | [<img src="icons/aws/aws-network-firewall.svg" width="16" height="16" alt=""> Network Firewall](https://aws.amazon.com/network-firewall/) | [<img src="icons/aws/aws-waf.svg" width="16" height="16" alt=""> Web Application Firewall (WAF)](https://aws.amazon.com/waf/)
 
 ### **Azure**
 
-[Azure Firewall](https://azure.microsoft.com/en-us/products/azure-firewall/) | [Firewall Manager](https://azure.microsoft.com/en-us/products/firewall-manager/) | [Web Application Firewall](https://azure.microsoft.com/en-us/products/web-application-firewall/)
+[<img src="icons/azure/firewalls.svg" width="16" height="16" alt=""> Azure Firewall](https://azure.microsoft.com/en-us/products/azure-firewall/) | [<img src="icons/azure/azure-firewall-manager.svg" width="16" height="16" alt=""> Firewall Manager](https://azure.microsoft.com/en-us/products/firewall-manager/) | [<img src="icons/azure/web-application-firewall-policies-waf.svg" width="16" height="16" alt=""> Web Application Firewall](https://azure.microsoft.com/en-us/products/web-application-firewall/)
 
 ### **GCP**
 
-[Cloud Armor](https://cloud.google.com/security/products/armor) | [Cloud Firewall (Cloud NGFW)](https://cloud.google.com/security/products/firewall)
+[<img src="icons/gcp/cloud-armor.svg" width="16" height="16" alt=""> Cloud Armor](https://cloud.google.com/security/products/armor) | [<img src="icons/gcp/cloud-firewall.svg" width="16" height="16" alt=""> Cloud Firewall (Cloud NGFW)](https://cloud.google.com/security/products/firewall)
 
 ### **Oracle**
 
-[Network Firewall](https://www.oracle.com/cloud/networking/network-firewall/) | [OCI Web Application Firewall](https://www.oracle.com/security/cloud-security/web-application-firewall/)
+[<img src="icons/oracle/firewall.svg" width="16" height="16" alt=""> Network Firewall](https://www.oracle.com/cloud/networking/network-firewall/) | [<img src="icons/oracle/waf.svg" width="16" height="16" alt=""> OCI Web Application Firewall](https://www.oracle.com/security/cloud-security/web-application-firewall/)
 
 ### **Exoscale**
 
@@ -481,19 +483,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[ECS Anywhere](https://aws.amazon.com/ecs/anywhere/) | [EKS Anywhere](https://aws.amazon.com/eks/eks-anywhere/) | [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) | [Outposts](https://aws.amazon.com/outposts/) | [Wavelength](https://aws.amazon.com/wavelength/)
+[<img src="icons/aws/amazon-ecs-anywhere.svg" width="16" height="16" alt=""> ECS Anywhere](https://aws.amazon.com/ecs/anywhere/) | [<img src="icons/aws/amazon-eks-anywhere.svg" width="16" height="16" alt=""> EKS Anywhere](https://aws.amazon.com/eks/eks-anywhere/) | [<img src="icons/aws/aws-local-zones.svg" width="16" height="16" alt=""> Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) | [<img src="icons/aws/aws-outposts-family.svg" width="16" height="16" alt=""> Outposts](https://aws.amazon.com/outposts/) | [<img src="icons/aws/aws-wavelength.svg" width="16" height="16" alt=""> Wavelength](https://aws.amazon.com/wavelength/)
 
 ### **Azure**
 
-[Azure Arc](https://azure.microsoft.com/en-us/products/azure-arc/) | [Azure Local (formerly Azure Stack HCI)](https://azure.microsoft.com/en-us/products/local/) | [Azure Stack Edge](https://azure.microsoft.com/en-us/products/azure-stack/edge/) | [Azure Stack Hub](https://azure.microsoft.com/en-us/products/azure-stack/hub/)
+[<img src="icons/azure/azure-arc.svg" width="16" height="16" alt=""> Azure Arc](https://azure.microsoft.com/en-us/products/azure-arc/) | [<img src="icons/azure/azure-local.svg" width="16" height="16" alt=""> Azure Local (formerly Azure Stack HCI)](https://azure.microsoft.com/en-us/products/local/) | [Azure Stack Edge](https://azure.microsoft.com/en-us/products/azure-stack/edge/) | [Azure Stack Hub](https://azure.microsoft.com/en-us/products/azure-stack/hub/)
 
 ### **GCP**
 
-[GKE Multi-Cloud (formerly Anthos)](https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs) | [Google Distributed Cloud](https://cloud.google.com/distributed-cloud)
+[<img src="icons/gcp/anthos.svg" width="16" height="16" alt=""> GKE Multi-Cloud (formerly Anthos)](https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs) | [<img src="icons/gcp/distributed-cloud.svg" width="16" height="16" alt=""> Google Distributed Cloud](https://cloud.google.com/distributed-cloud)
 
 ### **Oracle**
 
-[Cloud@Customer](https://www.oracle.com/cloud/cloud-at-customer/) | [Dedicated Region Cloud@Customer](https://www.oracle.com/cloud/cloud-at-customer/dedicated-region/) | [Exadata Cloud@Customer](https://www.oracle.com/engineered-systems/exadata/cloud-at-customer/) | [Roving Edge Infrastructure](https://docs.oracle.com/en-us/iaas/Content/Rover/overview.htm)
+[Cloud@Customer](https://www.oracle.com/cloud/cloud-at-customer/) | [<img src="icons/oracle/dedicated-region.svg" width="16" height="16" alt=""> Dedicated Region Cloud@Customer](https://www.oracle.com/cloud/cloud-at-customer/dedicated-region/) | [<img src="icons/oracle/exadata-cc.svg" width="16" height="16" alt=""> Exadata Cloud@Customer](https://www.oracle.com/engineered-systems/exadata/cloud-at-customer/) | [<img src="icons/oracle/roving-edge.svg" width="16" height="16" alt=""> Roving Edge Infrastructure](https://docs.oracle.com/en-us/iaas/Content/Rover/overview.htm)
 
 ### **Exoscale**
 
@@ -504,19 +506,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Cognito](https://aws.amazon.com/cognito/) | [Directory Service](https://aws.amazon.com/directoryservice/) | [IAM Identity Center](https://aws.amazon.com/iam/identity-center/) | [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) | [Resource Access Manager (RAM)](https://aws.amazon.com/ram/) | [Verified Permissions](https://aws.amazon.com/verified-permissions/)
+[<img src="icons/aws/amazon-cognito.svg" width="16" height="16" alt=""> Cognito](https://aws.amazon.com/cognito/) | [<img src="icons/aws/aws-directory-service.svg" width="16" height="16" alt=""> Directory Service](https://aws.amazon.com/directoryservice/) | [<img src="icons/aws/aws-iam-identity-center.svg" width="16" height="16" alt=""> IAM Identity Center](https://aws.amazon.com/iam/identity-center/) | [<img src="icons/aws/aws-identity-and-access-management.svg" width="16" height="16" alt=""> Identity and Access Management (IAM)](https://aws.amazon.com/iam/) | [<img src="icons/aws/aws-resource-access-manager.svg" width="16" height="16" alt=""> Resource Access Manager (RAM)](https://aws.amazon.com/ram/) | [<img src="icons/aws/amazon-verified-permissions.svg" width="16" height="16" alt=""> Verified Permissions](https://aws.amazon.com/verified-permissions/)
 
 ### **Azure**
 
-[Microsoft Entra Domain Services](https://learn.microsoft.com/en-us/entra/identity/domain-services/overview) | [Microsoft Entra External ID (formerly Azure AD B2C)](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-external-id) | [Microsoft Entra ID (formerly Azure AD)](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id)
+[<img src="icons/azure/entra-domain-services.svg" width="16" height="16" alt=""> Microsoft Entra Domain Services](https://learn.microsoft.com/en-us/entra/identity/domain-services/overview) | [<img src="icons/azure/external-id.svg" width="16" height="16" alt=""> Microsoft Entra External ID (formerly Azure AD B2C)](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-external-id) | [Microsoft Entra ID (formerly Azure AD)](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id)
 
 ### **GCP**
 
-[Access Transparency and Access Approval](https://cloud.google.com/security/products/access-transparency) | [Cloud Identity](https://docs.cloud.google.com/identity/docs) | [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs) | [Identity Platform](https://docs.cloud.google.com/identity-platform/docs)
+[Access Transparency and Access Approval](https://cloud.google.com/security/products/access-transparency) | [Cloud Identity](https://docs.cloud.google.com/identity/docs) | [<img src="icons/gcp/iam.svg" width="16" height="16" alt=""> Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs) | [<img src="icons/gcp/identity-platform.svg" width="16" height="16" alt=""> Identity Platform](https://docs.cloud.google.com/identity-platform/docs)
 
 ### **Oracle**
 
-[Identity and Access Management with Identity Domains](https://docs.oracle.com/en-us/iaas/Content/Identity/home.htm)
+[<img src="icons/oracle/iam.svg" width="16" height="16" alt=""> Identity and Access Management with Identity Domains](https://docs.oracle.com/en-us/iaas/Content/Identity/home.htm)
 
 ### **Exoscale**
 
@@ -527,11 +529,11 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[IoT Core](https://aws.amazon.com/iot-core/) | [IoT Device Management](https://aws.amazon.com/iot-device-management/) | [IoT Greengrass](https://aws.amazon.com/greengrass/) | [IoT SiteWise](https://aws.amazon.com/iot-sitewise/)
+[<img src="icons/aws/aws-iot-core.svg" width="16" height="16" alt=""> IoT Core](https://aws.amazon.com/iot-core/) | [<img src="icons/aws/aws-iot-device-management.svg" width="16" height="16" alt=""> IoT Device Management](https://aws.amazon.com/iot-device-management/) | [<img src="icons/aws/aws-iot-greengrass.svg" width="16" height="16" alt=""> IoT Greengrass](https://aws.amazon.com/greengrass/) | [<img src="icons/aws/aws-iot-sitewise.svg" width="16" height="16" alt=""> IoT SiteWise](https://aws.amazon.com/iot-sitewise/)
 
 ### **Azure**
 
-[Azure IoT Operations](https://azure.microsoft.com/en-us/products/iot-operations/) | [Digital Twins](https://azure.microsoft.com/en-us/products/digital-twins/) | [IoT Edge](https://azure.microsoft.com/en-us/products/iot-edge/) | [IoT Hub](https://azure.microsoft.com/en-us/products/iot-hub/)
+[<img src="icons/azure/azure-iot-operations.svg" width="16" height="16" alt=""> Azure IoT Operations](https://azure.microsoft.com/en-us/products/iot-operations/) | [<img src="icons/azure/digital-twins.svg" width="16" height="16" alt=""> Digital Twins](https://azure.microsoft.com/en-us/products/digital-twins/) | [<img src="icons/azure/iot-edge.svg" width="16" height="16" alt=""> IoT Edge](https://azure.microsoft.com/en-us/products/iot-edge/) | [<img src="icons/azure/iot-hub.svg" width="16" height="16" alt=""> IoT Hub](https://azure.microsoft.com/en-us/products/iot-hub/)
 
 ### **Oracle**
 
@@ -546,19 +548,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Certificate Manager (ACM)](https://aws.amazon.com/certificate-manager/) | [CloudHSM](https://aws.amazon.com/cloudhsm/) | [Key Management Service (KMS)](https://aws.amazon.com/kms/) | [Private Certificate Authority](https://aws.amazon.com/private-ca/) | [Secrets Manager](https://aws.amazon.com/secrets-manager/)
+[<img src="icons/aws/aws-certificate-manager.svg" width="16" height="16" alt=""> Certificate Manager (ACM)](https://aws.amazon.com/certificate-manager/) | [<img src="icons/aws/aws-cloudhsm.svg" width="16" height="16" alt=""> CloudHSM](https://aws.amazon.com/cloudhsm/) | [<img src="icons/aws/aws-key-management-service.svg" width="16" height="16" alt=""> Key Management Service (KMS)](https://aws.amazon.com/kms/) | [<img src="icons/aws/aws-private-certificate-authority.svg" width="16" height="16" alt=""> Private Certificate Authority](https://aws.amazon.com/private-ca/) | [<img src="icons/aws/aws-secrets-manager.svg" width="16" height="16" alt=""> Secrets Manager](https://aws.amazon.com/secrets-manager/)
 
 ### **Azure**
 
-[Azure Cloud HSM](https://learn.microsoft.com/en-us/azure/cloud-hsm/overview) | [Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) | [Key Vault Managed HSM](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview)
+[<img src="icons/azure/dedicated-hsm.svg" width="16" height="16" alt=""> Azure Cloud HSM](https://learn.microsoft.com/en-us/azure/cloud-hsm/overview) | [<img src="icons/azure/key-vaults.svg" width="16" height="16" alt=""> Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) | [<img src="icons/azure/key-vaults.svg" width="16" height="16" alt=""> Key Vault Managed HSM](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview)
 
 ### **GCP**
 
-[Certificate Authority Service](https://cloud.google.com/security/products/certificate-authority-service) | [Cloud Key Management](https://cloud.google.com/security/products/security-key-management) | [Secret Manager](https://cloud.google.com/security/products/secret-manager)
+[<img src="icons/gcp/certificate-authority-service.svg" width="16" height="16" alt=""> Certificate Authority Service](https://cloud.google.com/security/products/certificate-authority-service) | [<img src="icons/gcp/cloud-kms.svg" width="16" height="16" alt=""> Cloud Key Management](https://cloud.google.com/security/products/security-key-management) | [<img src="icons/gcp/secret-manager.svg" width="16" height="16" alt=""> Secret Manager](https://cloud.google.com/security/products/secret-manager)
 
 ### **Oracle**
 
-[Certificates](https://docs.oracle.com/en-us/iaas/Content/certificates/home.htm) | [Vault](https://www.oracle.com/security/cloud-security/key-management/)
+[<img src="icons/oracle/certificates.svg" width="16" height="16" alt=""> Certificates](https://docs.oracle.com/en-us/iaas/Content/certificates/home.htm) | [<img src="icons/oracle/vault.svg" width="16" height="16" alt=""> Vault](https://www.oracle.com/security/cloud-security/key-management/)
 
 ### **Exoscale**
 
@@ -569,19 +571,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[CloudTrail](https://aws.amazon.com/cloudtrail/) | [CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
+[<img src="icons/aws/aws-cloudtrail.svg" width="16" height="16" alt=""> CloudTrail](https://aws.amazon.com/cloudtrail/) | [<img src="icons/aws/amazon-cloudwatch-logs.svg" width="16" height="16" alt=""> CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
 
 ### **Azure**
 
-[Activity Log](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log) | [Azure Monitor Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs) | [Microsoft Entra Audit Logs](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-audit-logs) | [Resource Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/resource-logs)
+[<img src="icons/azure/activity-log.svg" width="16" height="16" alt=""> Activity Log](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log) | [<img src="icons/azure/log-analytics-workspaces.svg" width="16" height="16" alt=""> Azure Monitor Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs) | [Microsoft Entra Audit Logs](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-audit-logs) | [<img src="icons/azure/diagnostics-settings.svg" width="16" height="16" alt=""> Resource Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/resource-logs)
 
 ### **GCP**
 
-[Cloud Audit Logs](https://docs.cloud.google.com/logging/docs/audit) | [Cloud Logging](https://cloud.google.com/logging)
+[<img src="icons/gcp/cloud-audit-logs.svg" width="16" height="16" alt=""> Cloud Audit Logs](https://docs.cloud.google.com/logging/docs/audit) | [<img src="icons/gcp/cloud-logging.svg" width="16" height="16" alt=""> Cloud Logging](https://cloud.google.com/logging)
 
 ### **Oracle**
 
-[Audit](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm) | [Log Analytics](https://www.oracle.com/manageability/log-analytics/) | [Logging](https://www.oracle.com/application-development/logging/)
+[<img src="icons/oracle/audit.svg" width="16" height="16" alt=""> Audit](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm) | [<img src="icons/oracle/logging-analytics.svg" width="16" height="16" alt=""> Log Analytics](https://www.oracle.com/manageability/log-analytics/) | [<img src="icons/oracle/logging.svg" width="16" height="16" alt=""> Logging](https://www.oracle.com/application-development/logging/)
 
 ### **Exoscale**
 
@@ -592,19 +594,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[End User Messaging](https://aws.amazon.com/end-user-messaging/) | [EventBridge](https://aws.amazon.com/eventbridge/) | [Managed Streaming for Apache Kafka (MSK)](https://aws.amazon.com/msk/) | [MQ](https://aws.amazon.com/amazon-mq/) | [Simple Notification Service (SNS)](https://aws.amazon.com/sns/) | [Simple Queue Service (SQS)](https://aws.amazon.com/sqs/)
+[<img src="icons/aws/aws-end-user-messaging.svg" width="16" height="16" alt=""> End User Messaging](https://aws.amazon.com/end-user-messaging/) | [<img src="icons/aws/amazon-eventbridge.svg" width="16" height="16" alt=""> EventBridge](https://aws.amazon.com/eventbridge/) | [<img src="icons/aws/amazon-managed-streaming-for-apache-kafka.svg" width="16" height="16" alt=""> Managed Streaming for Apache Kafka (MSK)](https://aws.amazon.com/msk/) | [<img src="icons/aws/amazon-mq.svg" width="16" height="16" alt=""> MQ](https://aws.amazon.com/amazon-mq/) | [<img src="icons/aws/amazon-simple-notification-service.svg" width="16" height="16" alt=""> Simple Notification Service (SNS)](https://aws.amazon.com/sns/) | [<img src="icons/aws/amazon-simple-queue-service.svg" width="16" height="16" alt=""> Simple Queue Service (SQS)](https://aws.amazon.com/sqs/)
 
 ### **Azure**
 
-[Event Grid](https://azure.microsoft.com/en-us/products/event-grid/) | [Event Hubs](https://azure.microsoft.com/en-us/products/event-hubs/) | [Service Bus](https://azure.microsoft.com/en-us/products/service-bus/)
+[<img src="icons/azure/event-grid-topics.svg" width="16" height="16" alt=""> Event Grid](https://azure.microsoft.com/en-us/products/event-grid/) | [<img src="icons/azure/event-hubs.svg" width="16" height="16" alt=""> Event Hubs](https://azure.microsoft.com/en-us/products/event-hubs/) | [<img src="icons/azure/azure-service-bus.svg" width="16" height="16" alt=""> Service Bus](https://azure.microsoft.com/en-us/products/service-bus/)
 
 ### **GCP**
 
-[Eventarc](https://docs.cloud.google.com/eventarc/docs) | [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) | [Managed Service for Apache Kafka](https://cloud.google.com/products/managed-service-for-apache-kafka) | [Pub/Sub](https://cloud.google.com/pubsub)
+[<img src="icons/gcp/eventarc.svg" width="16" height="16" alt=""> Eventarc](https://docs.cloud.google.com/eventarc/docs) | [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) | [Managed Service for Apache Kafka](https://cloud.google.com/products/managed-service-for-apache-kafka) | [<img src="icons/gcp/pubsub.svg" width="16" height="16" alt=""> Pub/Sub](https://cloud.google.com/pubsub)
 
 ### **Oracle**
 
-[Events](https://www.oracle.com/cloud/events-service/) | [Notifications](https://www.oracle.com/cloud/cloud-native/notifications/) | [Queue](https://www.oracle.com/cloud/queue/) | [Streaming](https://www.oracle.com/cloud/streaming/)
+[<img src="icons/oracle/events.svg" width="16" height="16" alt=""> Events](https://www.oracle.com/cloud/events-service/) | [<img src="icons/oracle/notifications.svg" width="16" height="16" alt=""> Notifications](https://www.oracle.com/cloud/cloud-native/notifications/) | [<img src="icons/oracle/queue.svg" width="16" height="16" alt=""> Queue](https://www.oracle.com/cloud/queue/) | [<img src="icons/oracle/streaming.svg" width="16" height="16" alt=""> Streaming](https://www.oracle.com/cloud/streaming/)
 
 ### **Exoscale**
 
@@ -615,19 +617,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Application Migration Service](https://aws.amazon.com/application-migration-service/) | [Data Transfer Terminal](https://aws.amazon.com/data-transfer-terminal/) | [Database Migration Service (DMS)](https://aws.amazon.com/dms/) | [DataSync](https://aws.amazon.com/datasync/) | [Snowball Edge](https://aws.amazon.com/snowball/) | [Transfer Family](https://aws.amazon.com/aws-transfer-family/) | [Transform](https://aws.amazon.com/transform/)
+[<img src="icons/aws/aws-application-migration-service.svg" width="16" height="16" alt=""> Application Migration Service](https://aws.amazon.com/application-migration-service/) | [<img src="icons/aws/aws-data-transfer-terminal.svg" width="16" height="16" alt=""> Data Transfer Terminal](https://aws.amazon.com/data-transfer-terminal/) | [<img src="icons/aws/aws-database-migration-service.svg" width="16" height="16" alt=""> Database Migration Service (DMS)](https://aws.amazon.com/dms/) | [<img src="icons/aws/aws-datasync.svg" width="16" height="16" alt=""> DataSync](https://aws.amazon.com/datasync/) | [<img src="icons/aws/aws-snowball-edge.svg" width="16" height="16" alt=""> Snowball Edge](https://aws.amazon.com/snowball/) | [<img src="icons/aws/aws-transfer-family.svg" width="16" height="16" alt=""> Transfer Family](https://aws.amazon.com/aws-transfer-family/) | [<img src="icons/aws/aws-transform.svg" width="16" height="16" alt=""> Transform](https://aws.amazon.com/transform/)
 
 ### **Azure**
 
-[Azure Migrate](https://azure.microsoft.com/en-us/products/azure-migrate/) | [Data Box](https://azure.microsoft.com/en-us/products/databox/) | [Database Migration Service](https://azure.microsoft.com/en-us/products/database-migration/) | [File Sync](https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction) | [Import/Export](https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-service)
+[<img src="icons/azure/azure-migrate.svg" width="16" height="16" alt=""> Azure Migrate](https://azure.microsoft.com/en-us/products/azure-migrate/) | [<img src="icons/azure/data-box.svg" width="16" height="16" alt=""> Data Box](https://azure.microsoft.com/en-us/products/databox/) | [<img src="icons/azure/azure-database-migration-services.svg" width="16" height="16" alt=""> Database Migration Service](https://azure.microsoft.com/en-us/products/database-migration/) | [<img src="icons/azure/storage-sync-services.svg" width="16" height="16" alt=""> File Sync](https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction) | [<img src="icons/azure/import-export-jobs.svg" width="16" height="16" alt=""> Import/Export](https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-service)
 
 ### **GCP**
 
-[Database Migration Service](https://cloud.google.com/database-migration) | [Migrate to Virtual Machines](https://cloud.google.com/products/cloud-migration/virtual-machines) | [Migration Center](https://docs.cloud.google.com/migration-center/docs) | [Storage Transfer Service](https://cloud.google.com/storage-transfer-service) | [Transfer Appliance](https://docs.cloud.google.com/transfer-appliance/docs/4.0/overview)
+[<img src="icons/gcp/database-migration-service.svg" width="16" height="16" alt=""> Database Migration Service](https://cloud.google.com/database-migration) | [<img src="icons/gcp/migrate-to-vms.svg" width="16" height="16" alt=""> Migrate to Virtual Machines](https://cloud.google.com/products/cloud-migration/virtual-machines) | [Migration Center](https://docs.cloud.google.com/migration-center/docs) | [<img src="icons/gcp/storage-transfer-service.svg" width="16" height="16" alt=""> Storage Transfer Service](https://cloud.google.com/storage-transfer-service) | [<img src="icons/gcp/transfer-appliance.svg" width="16" height="16" alt=""> Transfer Appliance](https://docs.cloud.google.com/transfer-appliance/docs/4.0/overview)
 
 ### **Oracle**
 
-[Data Transfer (Roving Edge Infrastructure)](https://docs.oracle.com/en-us/iaas/Content/Rover/overview.htm) | [Database Migration Service](https://www.oracle.com/database/cloud-migration/) | [Oracle Cloud Migrations](https://docs.oracle.com/en-us/iaas/Content/cloud-migration/home.htm) | [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/)
+[<img src="icons/oracle/roving-edge.svg" width="16" height="16" alt=""> Data Transfer (Roving Edge Infrastructure)](https://docs.oracle.com/en-us/iaas/Content/Rover/overview.htm) | [Database Migration Service](https://www.oracle.com/database/cloud-migration/) | [Oracle Cloud Migrations](https://docs.oracle.com/en-us/iaas/Content/cloud-migration/home.htm) | [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/)
 
 ### **Exoscale**
 
@@ -638,19 +640,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[CloudWatch](https://aws.amazon.com/cloudwatch/) | [Managed Grafana](https://aws.amazon.com/grafana/) | [Managed Service for Prometheus](https://aws.amazon.com/prometheus/) | [X-Ray](https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html)
+[<img src="icons/aws/amazon-cloudwatch.svg" width="16" height="16" alt=""> CloudWatch](https://aws.amazon.com/cloudwatch/) | [<img src="icons/aws/amazon-managed-grafana.svg" width="16" height="16" alt=""> Managed Grafana](https://aws.amazon.com/grafana/) | [<img src="icons/aws/amazon-managed-service-for-prometheus.svg" width="16" height="16" alt=""> Managed Service for Prometheus](https://aws.amazon.com/prometheus/) | [<img src="icons/aws/aws-x-ray.svg" width="16" height="16" alt=""> X-Ray](https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html)
 
 ### **Azure**
 
-[Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) | [Azure Monitor](https://azure.microsoft.com/en-us/products/monitor/) | [Managed Grafana](https://azure.microsoft.com/en-us/products/managed-grafana/) | [Managed Prometheus](https://learn.microsoft.com/en-us/azure/azure-monitor/metrics/prometheus-metrics-overview) | [Network Watcher](https://azure.microsoft.com/en-us/products/network-watcher/)
+[<img src="icons/azure/application-insights.svg" width="16" height="16" alt=""> Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) | [<img src="icons/azure/monitor.svg" width="16" height="16" alt=""> Azure Monitor](https://azure.microsoft.com/en-us/products/monitor/) | [<img src="icons/azure/azure-managed-grafana.svg" width="16" height="16" alt=""> Managed Grafana](https://azure.microsoft.com/en-us/products/managed-grafana/) | [<img src="icons/azure/promethus.svg" width="16" height="16" alt=""> Managed Prometheus](https://learn.microsoft.com/en-us/azure/azure-monitor/metrics/prometheus-metrics-overview) | [<img src="icons/azure/network-watcher.svg" width="16" height="16" alt=""> Network Watcher](https://azure.microsoft.com/en-us/products/network-watcher/)
 
 ### **GCP**
 
-[Cloud Monitoring](https://cloud.google.com/monitoring) | [Cloud Trace](https://docs.cloud.google.com/trace/docs) | [Error Reporting](https://docs.cloud.google.com/error-reporting/docs/grouping-errors) | [Firebase Performance Monitoring](https://firebase.google.com/docs/perf-mon) | [Managed Service for Prometheus](https://cloud.google.com/managed-prometheus) | [Network Intelligence Center](https://cloud.google.com/network-intelligence-center)
+[<img src="icons/gcp/cloud-monitoring.svg" width="16" height="16" alt=""> Cloud Monitoring](https://cloud.google.com/monitoring) | [<img src="icons/gcp/cloud-trace.svg" width="16" height="16" alt=""> Cloud Trace](https://docs.cloud.google.com/trace/docs) | [<img src="icons/gcp/error-reporting.svg" width="16" height="16" alt=""> Error Reporting](https://docs.cloud.google.com/error-reporting/docs/grouping-errors) | [Firebase Performance Monitoring](https://firebase.google.com/docs/perf-mon) | [<img src="icons/gcp/cloud-monitoring.svg" width="16" height="16" alt=""> Managed Service for Prometheus](https://cloud.google.com/managed-prometheus) | [<img src="icons/gcp/network-intelligence-center.svg" width="16" height="16" alt=""> Network Intelligence Center](https://cloud.google.com/network-intelligence-center)
 
 ### **Oracle**
 
-[Application Performance Monitoring](https://www.oracle.com/manageability/application-performance-monitoring/) | [Console Dashboards](https://docs.oracle.com/en-us/iaas/Content/Dashboards/home.htm) | [Inter-Region Latency](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/inter_region_latency.htm) | [Management Agent](https://docs.oracle.com/en-us/iaas/management-agents/home.htm) | [Monitoring](https://www.oracle.com/cloud/cloud-native/monitoring/) | [Network Visualizer](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/network_visualizer.htm) | [Virtual Test Access Points](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm)
+[<img src="icons/oracle/apm.svg" width="16" height="16" alt=""> Application Performance Monitoring](https://www.oracle.com/manageability/application-performance-monitoring/) | [Console Dashboards](https://docs.oracle.com/en-us/iaas/Content/Dashboards/home.htm) | [Inter-Region Latency](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/inter_region_latency.htm) | [Management Agent](https://docs.oracle.com/en-us/iaas/management-agents/home.htm) | [<img src="icons/oracle/monitoring.svg" width="16" height="16" alt=""> Monitoring](https://www.oracle.com/cloud/cloud-native/monitoring/) | [Network Visualizer](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/network_visualizer.htm) | [<img src="icons/oracle/vtap.svg" width="16" height="16" alt=""> Virtual Test Access Points](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm)
 
 ### **Exoscale**
 
@@ -661,15 +663,15 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[CloudFront](https://aws.amazon.com/cloudfront/)
+[<img src="icons/aws/amazon-cloudfront.svg" width="16" height="16" alt=""> CloudFront](https://aws.amazon.com/cloudfront/)
 
 ### **Azure**
 
-[Front Door](https://azure.microsoft.com/en-us/products/frontdoor/)
+[<img src="icons/azure/front-door-and-cdn-profiles.svg" width="16" height="16" alt=""> Front Door](https://azure.microsoft.com/en-us/products/frontdoor/)
 
 ### **GCP**
 
-[Cloud CDN](https://cloud.google.com/cdn)
+[<img src="icons/gcp/cloud-cdn.svg" width="16" height="16" alt=""> Cloud CDN](https://cloud.google.com/cdn)
 
 ### **Exoscale**
 
@@ -680,15 +682,15 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Cloud WAN](https://aws.amazon.com/cloud-wan/) | [Direct Connect](https://aws.amazon.com/directconnect/) | [PrivateLink](https://aws.amazon.com/privatelink/) | [Verified Access](https://aws.amazon.com/verified-access/) | [VPN](https://aws.amazon.com/vpn/)
+[<img src="icons/aws/aws-cloud-wan.svg" width="16" height="16" alt=""> Cloud WAN](https://aws.amazon.com/cloud-wan/) | [<img src="icons/aws/aws-direct-connect.svg" width="16" height="16" alt=""> Direct Connect](https://aws.amazon.com/directconnect/) | [<img src="icons/aws/aws-privatelink.svg" width="16" height="16" alt=""> PrivateLink](https://aws.amazon.com/privatelink/) | [<img src="icons/aws/aws-verified-access.svg" width="16" height="16" alt=""> Verified Access](https://aws.amazon.com/verified-access/) | [<img src="icons/aws/aws-site-to-site-vpn.svg" width="16" height="16" alt=""> VPN](https://aws.amazon.com/vpn/)
 
 ### **Azure**
 
-[ExpressRoute](https://azure.microsoft.com/en-us/products/expressroute/) | [Private Link](https://azure.microsoft.com/en-us/products/private-link/) | [Virtual WAN](https://azure.microsoft.com/en-us/products/virtual-wan/) | [VPN Gateway](https://azure.microsoft.com/en-us/products/vpn-gateway/)
+[<img src="icons/azure/expressroute-circuits.svg" width="16" height="16" alt=""> ExpressRoute](https://azure.microsoft.com/en-us/products/expressroute/) | [<img src="icons/azure/private-link.svg" width="16" height="16" alt=""> Private Link](https://azure.microsoft.com/en-us/products/private-link/) | [<img src="icons/azure/virtual-wans.svg" width="16" height="16" alt=""> Virtual WAN](https://azure.microsoft.com/en-us/products/virtual-wan/) | [<img src="icons/azure/virtual-network-gateways.svg" width="16" height="16" alt=""> VPN Gateway](https://azure.microsoft.com/en-us/products/vpn-gateway/)
 
 ### **GCP**
 
-[Cloud Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect) | [Cloud Router](https://docs.cloud.google.com/network-connectivity/docs/router) | [Cloud VPN](https://docs.cloud.google.com/network-connectivity/docs/vpn) | [Network Connectivity Center](https://cloud.google.com/network-connectivity-center) | [Private Service Connect](https://cloud.google.com/private-service-connect)
+[<img src="icons/gcp/cloud-interconnect.svg" width="16" height="16" alt=""> Cloud Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect) | [<img src="icons/gcp/cloud-router.svg" width="16" height="16" alt=""> Cloud Router](https://docs.cloud.google.com/network-connectivity/docs/router) | [<img src="icons/gcp/cloud-vpn.svg" width="16" height="16" alt=""> Cloud VPN](https://docs.cloud.google.com/network-connectivity/docs/vpn) | [<img src="icons/gcp/network-connectivity-center.svg" width="16" height="16" alt=""> Network Connectivity Center](https://cloud.google.com/network-connectivity-center) | [<img src="icons/gcp/private-service-connect.svg" width="16" height="16" alt=""> Private Service Connect](https://cloud.google.com/private-service-connect)
 
 ### **Oracle**
 
@@ -703,19 +705,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/)
+[<img src="icons/aws/amazon-virtual-private-cloud.svg" width="16" height="16" alt=""> Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/)
 
 ### **Azure**
 
-[Virtual Network](https://azure.microsoft.com/en-us/products/virtual-network/)
+[<img src="icons/azure/virtual-networks.svg" width="16" height="16" alt=""> Virtual Network](https://azure.microsoft.com/en-us/products/virtual-network/)
 
 ### **GCP**
 
-[Virtual Private Cloud (VPC)](https://cloud.google.com/vpc)
+[<img src="icons/gcp/vpc.svg" width="16" height="16" alt=""> Virtual Private Cloud (VPC)](https://cloud.google.com/vpc)
 
 ### **Oracle**
 
-[Local VCN Peering](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/localVCNpeering.htm) | [Remote VCN Peering](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/remoteVCNpeering.htm) | [Virtual Cloud Network](https://www.oracle.com/cloud/networking/virtual-cloud-network/)
+[Local VCN Peering](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/localVCNpeering.htm) | [<img src="icons/oracle/remote-peering-gateway.svg" width="16" height="16" alt=""> Remote VCN Peering](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/remoteVCNpeering.htm) | [<img src="icons/oracle/vcn.svg" width="16" height="16" alt=""> Virtual Cloud Network](https://www.oracle.com/cloud/networking/virtual-cloud-network/)
 
 ### **Exoscale**
 
@@ -726,19 +728,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Route 53](https://aws.amazon.com/route53/)
+[<img src="icons/aws/amazon-route-53.svg" width="16" height="16" alt=""> Route 53](https://aws.amazon.com/route53/)
 
 ### **Azure**
 
-[DNS](https://azure.microsoft.com/en-us/products/dns/) | [Traffic Manager](https://azure.microsoft.com/en-us/products/traffic-manager/)
+[<img src="icons/azure/dns-zones.svg" width="16" height="16" alt=""> DNS](https://azure.microsoft.com/en-us/products/dns/) | [<img src="icons/azure/traffic-manager-profiles.svg" width="16" height="16" alt=""> Traffic Manager](https://azure.microsoft.com/en-us/products/traffic-manager/)
 
 ### **GCP**
 
-[Cloud DNS](https://cloud.google.com/dns) | [Cloud Domains](https://docs.cloud.google.com/domains/docs)
+[<img src="icons/gcp/cloud-dns.svg" width="16" height="16" alt=""> Cloud DNS](https://cloud.google.com/dns) | [<img src="icons/gcp/cloud-domains.svg" width="16" height="16" alt=""> Cloud Domains](https://docs.cloud.google.com/domains/docs)
 
 ### **Oracle**
 
-[DNS](https://www.oracle.com/cloud/networking/dns/) | [Private DNS](https://docs.oracle.com/en-us/iaas/Content/DNS/Tasks/privatedns.htm) | [Traffic Management](https://docs.oracle.com/en-us/iaas/Content/TrafficManagement/Concepts/overview.htm)
+[<img src="icons/oracle/dns.svg" width="16" height="16" alt=""> DNS](https://www.oracle.com/cloud/networking/dns/) | [<img src="icons/oracle/dns.svg" width="16" height="16" alt=""> Private DNS](https://docs.oracle.com/en-us/iaas/Content/DNS/Tasks/privatedns.htm) | [<img src="icons/oracle/dns.svg" width="16" height="16" alt=""> Traffic Management](https://docs.oracle.com/en-us/iaas/Content/TrafficManagement/Concepts/overview.htm)
 
 ### **Exoscale**
 
@@ -749,19 +751,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/) | [Global Accelerator](https://aws.amazon.com/global-accelerator/)
+[<img src="icons/aws/elastic-load-balancing.svg" width="16" height="16" alt=""> Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/) | [<img src="icons/aws/aws-global-accelerator.svg" width="16" height="16" alt=""> Global Accelerator](https://aws.amazon.com/global-accelerator/)
 
 ### **Azure**
 
-[Application Gateway](https://azure.microsoft.com/en-us/products/application-gateway/) | [Cross-region Load Balancer](https://learn.microsoft.com/en-us/azure/load-balancer/cross-region-overview) | [Load Balancer](https://azure.microsoft.com/en-us/products/load-balancer/)
+[<img src="icons/azure/application-gateways.svg" width="16" height="16" alt=""> Application Gateway](https://azure.microsoft.com/en-us/products/application-gateway/) | [<img src="icons/azure/load-balancers.svg" width="16" height="16" alt=""> Cross-region Load Balancer](https://learn.microsoft.com/en-us/azure/load-balancer/cross-region-overview) | [<img src="icons/azure/load-balancers.svg" width="16" height="16" alt=""> Load Balancer](https://azure.microsoft.com/en-us/products/load-balancer/)
 
 ### **GCP**
 
-[Cloud Load Balancing](https://cloud.google.com/load-balancing) | [Cloud Service Mesh (formerly Traffic Director)](https://cloud.google.com/products/service-mesh)
+[<img src="icons/gcp/cloud-load-balancing.svg" width="16" height="16" alt=""> Cloud Load Balancing](https://cloud.google.com/load-balancing) | [<img src="icons/gcp/cloud-service-mesh.svg" width="16" height="16" alt=""> Cloud Service Mesh (formerly Traffic Director)](https://cloud.google.com/products/service-mesh)
 
 ### **Oracle**
 
-[Load Balancer](https://www.oracle.com/cloud/networking/flexible-load-balancer/) | [Network Load Balancer](https://www.oracle.com/cloud/networking/flexible-network-load-balancer/)
+[<img src="icons/oracle/load-balancer.svg" width="16" height="16" alt=""> Load Balancer](https://www.oracle.com/cloud/networking/flexible-load-balancer/) | [<img src="icons/oracle/load-balancer.svg" width="16" height="16" alt=""> Network Load Balancer](https://www.oracle.com/cloud/networking/flexible-network-load-balancer/)
 
 ### **Exoscale**
 
@@ -772,19 +774,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[NAT Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) | [Transit Gateway](https://aws.amazon.com/transit-gateway/) | [VPC Lattice](https://aws.amazon.com/vpc/lattice/)
+[<img src="icons/aws/amazon-vpc-nat-gateway.svg" width="16" height="16" alt=""> NAT Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) | [<img src="icons/aws/aws-transit-gateway.svg" width="16" height="16" alt=""> Transit Gateway](https://aws.amazon.com/transit-gateway/) | [<img src="icons/aws/amazon-vpc-lattice.svg" width="16" height="16" alt=""> VPC Lattice](https://aws.amazon.com/vpc/lattice/)
 
 ### **Azure**
 
-[NAT Gateway](https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview) | [Network Watcher](https://azure.microsoft.com/en-us/products/network-watcher/) | [Virtual Network Manager](https://azure.microsoft.com/en-us/products/virtual-network-manager/)
+[<img src="icons/azure/nat.svg" width="16" height="16" alt=""> NAT Gateway](https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview) | [<img src="icons/azure/network-watcher.svg" width="16" height="16" alt=""> Network Watcher](https://azure.microsoft.com/en-us/products/network-watcher/) | [<img src="icons/azure/network-managers.svg" width="16" height="16" alt=""> Virtual Network Manager](https://azure.microsoft.com/en-us/products/virtual-network-manager/)
 
 ### **GCP**
 
-[Cloud NAT](https://docs.cloud.google.com/nat/docs) | [Network Intelligence Center](https://cloud.google.com/network-intelligence-center) | [Network Service Tiers](https://docs.cloud.google.com/network-tiers/docs/overview)
+[<img src="icons/gcp/cloud-nat.svg" width="16" height="16" alt=""> Cloud NAT](https://docs.cloud.google.com/nat/docs) | [<img src="icons/gcp/network-intelligence-center.svg" width="16" height="16" alt=""> Network Intelligence Center](https://cloud.google.com/network-intelligence-center) | [<img src="icons/gcp/network-service-tiers.svg" width="16" height="16" alt=""> Network Service Tiers](https://docs.cloud.google.com/network-tiers/docs/overview)
 
 ### **Oracle**
 
-[Dynamic Routing Gateway](https://www.oracle.com/cloud/networking/dynamic-routing-gateway/) | [IP Address Insights](https://www.oracle.com/cloud/networking/ip-address-insights/) | [NAT Gateway](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/NATgateway.htm) | [Service Gateway](https://www.oracle.com/cloud/networking/service-gateway/) | [Web Application Acceleration](https://www.oracle.com/cloud/networking/web-application-accelerator/)
+[<img src="icons/oracle/drg.svg" width="16" height="16" alt=""> Dynamic Routing Gateway](https://www.oracle.com/cloud/networking/dynamic-routing-gateway/) | [IP Address Insights](https://www.oracle.com/cloud/networking/ip-address-insights/) | [<img src="icons/oracle/nat-gateway.svg" width="16" height="16" alt=""> NAT Gateway](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/NATgateway.htm) | [<img src="icons/oracle/service-gateway.svg" width="16" height="16" alt=""> Service Gateway](https://www.oracle.com/cloud/networking/service-gateway/) | [Web Application Acceleration](https://www.oracle.com/cloud/networking/web-application-accelerator/)
 
 ### **Exoscale**
 
@@ -795,11 +797,11 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Compute Optimizer](https://aws.amazon.com/compute-optimizer/) | [Cost Optimization Hub](https://aws.amazon.com/aws-cost-management/cost-optimization-hub/) | [Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+[<img src="icons/aws/aws-compute-optimizer.svg" width="16" height="16" alt=""> Compute Optimizer](https://aws.amazon.com/compute-optimizer/) | [<img src="icons/aws/category-cloud-financial-management.svg" width="16" height="16" alt=""> Cost Optimization Hub](https://aws.amazon.com/aws-cost-management/cost-optimization-hub/) | [<img src="icons/aws/aws-trusted-advisor.svg" width="16" height="16" alt=""> Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
 
 ### **Azure**
 
-[Advisor](https://azure.microsoft.com/en-us/products/advisor/)
+[<img src="icons/azure/advisor.svg" width="16" height="16" alt=""> Advisor](https://azure.microsoft.com/en-us/products/advisor/)
 
 ### **GCP**
 
@@ -807,26 +809,26 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **Oracle**
 
-[Cloud Advisor](https://www.oracle.com/cloud/cost-management-and-governance/cloud-advisor/) | [Ops Insights](https://www.oracle.com/manageability/ops-insights/)
+[<img src="icons/oracle/cloud-advisor.svg" width="16" height="16" alt=""> Cloud Advisor](https://www.oracle.com/cloud/cost-management-and-governance/cloud-advisor/) | [<img src="icons/oracle/ops-insights.svg" width="16" height="16" alt=""> Ops Insights](https://www.oracle.com/manageability/ops-insights/)
 
 
 ## **Queue**
 
 ### **AWS**
 
-[Simple Queue Service (SQS)](https://aws.amazon.com/sqs/)
+[<img src="icons/aws/amazon-simple-queue-service.svg" width="16" height="16" alt=""> Simple Queue Service (SQS)](https://aws.amazon.com/sqs/)
 
 ### **Azure**
 
-[Queue Storage](https://azure.microsoft.com/en-us/products/storage/queues/) | [Service Bus](https://azure.microsoft.com/en-us/products/service-bus/)
+[<img src="icons/azure/storage-queue.svg" width="16" height="16" alt=""> Queue Storage](https://azure.microsoft.com/en-us/products/storage/queues/) | [<img src="icons/azure/azure-service-bus.svg" width="16" height="16" alt=""> Service Bus](https://azure.microsoft.com/en-us/products/service-bus/)
 
 ### **GCP**
 
-[Cloud Tasks](https://docs.cloud.google.com/tasks/docs)
+[<img src="icons/gcp/cloud-tasks.svg" width="16" height="16" alt=""> Cloud Tasks](https://docs.cloud.google.com/tasks/docs)
 
 ### **Oracle**
 
-[Queue](https://www.oracle.com/cloud/queue/)
+[<img src="icons/oracle/queue.svg" width="16" height="16" alt=""> Queue](https://www.oracle.com/cloud/queue/)
 
 ### **Exoscale**
 
@@ -837,19 +839,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Account](https://aws.amazon.com/account/) | [Control Tower](https://aws.amazon.com/controltower/) | [Organizations](https://aws.amazon.com/organizations/) | [Resource Access Manager (RAM)](https://aws.amazon.com/ram/) | [Service Catalog](https://aws.amazon.com/servicecatalog/)
+[<img src="icons/aws/aws-organizations-account.svg" width="16" height="16" alt=""> Account](https://aws.amazon.com/account/) | [<img src="icons/aws/aws-control-tower.svg" width="16" height="16" alt=""> Control Tower](https://aws.amazon.com/controltower/) | [<img src="icons/aws/aws-organizations.svg" width="16" height="16" alt=""> Organizations](https://aws.amazon.com/organizations/) | [<img src="icons/aws/aws-resource-access-manager.svg" width="16" height="16" alt=""> Resource Access Manager (RAM)](https://aws.amazon.com/ram/) | [<img src="icons/aws/aws-service-catalog.svg" width="16" height="16" alt=""> Service Catalog](https://aws.amazon.com/servicecatalog/)
 
 ### **Azure**
 
-[Azure Resource Manager (ARM)](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) | [Management Groups](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview) | [Microsoft Entra Tenant](https://learn.microsoft.com/en-us/entra/fundamentals/create-new-tenant) | [Resource Graph](https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview) | [Resource Groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
+[Azure Resource Manager (ARM)](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) | [<img src="icons/azure/management-groups.svg" width="16" height="16" alt=""> Management Groups](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview) | [<img src="icons/azure/tenant-properties.svg" width="16" height="16" alt=""> Microsoft Entra Tenant](https://learn.microsoft.com/en-us/entra/fundamentals/create-new-tenant) | [<img src="icons/azure/resource-graph-explorer.svg" width="16" height="16" alt=""> Resource Graph](https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview) | [<img src="icons/azure/resource-groups.svg" width="16" height="16" alt=""> Resource Groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
 
 ### **GCP**
 
-[Cloud Asset Inventory](https://cloud.google.com/asset-inventory) | [Organization](https://docs.cloud.google.com/resource-manager/docs/creating-managing-organization) | [Projects](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects) | [Resource Manager](https://docs.cloud.google.com/resource-manager/docs)
+[<img src="icons/gcp/cloud-asset-inventory.svg" width="16" height="16" alt=""> Cloud Asset Inventory](https://cloud.google.com/asset-inventory) | [Organization](https://docs.cloud.google.com/resource-manager/docs/creating-managing-organization) | [<img src="icons/gcp/projects.svg" width="16" height="16" alt=""> Projects](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects) | [Resource Manager](https://docs.cloud.google.com/resource-manager/docs)
 
 ### **Oracle**
 
-[Compartments](https://docs.oracle.com/en-us/iaas/Content/Identity/compartments/managingcompartments.htm) | [Organization Management](https://docs.oracle.com/en-us/iaas/Content/General/organization/home.htm) | [Resource Manager](https://www.oracle.com/cloud/cloud-native/resource-manager/) | [Tagging](https://docs.oracle.com/en-us/iaas/Content/Tagging/home.htm)
+[<img src="icons/oracle/compartments.svg" width="16" height="16" alt=""> Compartments](https://docs.oracle.com/en-us/iaas/Content/Identity/compartments/managingcompartments.htm) | [<img src="icons/oracle/organization.svg" width="16" height="16" alt=""> Organization Management](https://docs.oracle.com/en-us/iaas/Content/General/organization/home.htm) | [<img src="icons/oracle/resource-manager.svg" width="16" height="16" alt=""> Resource Manager](https://www.oracle.com/cloud/cloud-native/resource-manager/) | [<img src="icons/oracle/tagging.svg" width="16" height="16" alt=""> Tagging](https://docs.oracle.com/en-us/iaas/Content/Tagging/home.htm)
 
 ### **Exoscale**
 
@@ -864,7 +866,7 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **Azure**
 
-[SAP on Azure](https://azure.microsoft.com/en-us/solutions/sap/)
+[<img src="icons/azure/azure-center-for-sap.svg" width="16" height="16" alt=""> SAP on Azure](https://azure.microsoft.com/en-us/solutions/sap/)
 
 ### **GCP**
 
@@ -879,19 +881,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Detective](https://aws.amazon.com/detective/) | [GuardDuty](https://aws.amazon.com/guardduty/) | [Inspector](https://aws.amazon.com/inspector/) | [Macie](https://aws.amazon.com/macie/) | [Security Hub](https://aws.amazon.com/security-hub/) | [Security Lake](https://aws.amazon.com/security-lake/) | [Shield](https://aws.amazon.com/shield/)
+[<img src="icons/aws/amazon-detective.svg" width="16" height="16" alt=""> Detective](https://aws.amazon.com/detective/) | [<img src="icons/aws/amazon-guardduty.svg" width="16" height="16" alt=""> GuardDuty](https://aws.amazon.com/guardduty/) | [<img src="icons/aws/amazon-inspector.svg" width="16" height="16" alt=""> Inspector](https://aws.amazon.com/inspector/) | [<img src="icons/aws/amazon-macie.svg" width="16" height="16" alt=""> Macie](https://aws.amazon.com/macie/) | [<img src="icons/aws/aws-security-hub.svg" width="16" height="16" alt=""> Security Hub](https://aws.amazon.com/security-hub/) | [<img src="icons/aws/amazon-security-lake.svg" width="16" height="16" alt=""> Security Lake](https://aws.amazon.com/security-lake/) | [<img src="icons/aws/aws-shield.svg" width="16" height="16" alt=""> Shield](https://aws.amazon.com/shield/)
 
 ### **Azure**
 
-[DDoS Protection](https://azure.microsoft.com/en-us/products/ddos-protection/) | [Defender for Cloud](https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-cloud) | [Defender for Cloud Apps](https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps) | [Microsoft Sentinel](https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-sentinel-siem)
+[<img src="icons/azure/ddos-protection-plans.svg" width="16" height="16" alt=""> DDoS Protection](https://azure.microsoft.com/en-us/products/ddos-protection/) | [<img src="icons/azure/microsoft-defender-for-cloud.svg" width="16" height="16" alt=""> Defender for Cloud](https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-cloud) | [Defender for Cloud Apps](https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps) | [<img src="icons/azure/azure-sentinel.svg" width="16" height="16" alt=""> Microsoft Sentinel](https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-sentinel-siem)
 
 ### **GCP**
 
-[Cloud Armor](https://cloud.google.com/security/products/armor) | [Google Security Operations (formerly Chronicle)](https://cloud.google.com/security/products/security-operations) | [Security Command Center](https://cloud.google.com/security/products/security-command-center) | [Sensitive Data Protection](https://cloud.google.com/security/products/sensitive-data-protection)
+[<img src="icons/gcp/cloud-armor.svg" width="16" height="16" alt=""> Cloud Armor](https://cloud.google.com/security/products/armor) | [<img src="icons/gcp/security-operations.svg" width="16" height="16" alt=""> Google Security Operations (formerly Chronicle)](https://cloud.google.com/security/products/security-operations) | [<img src="icons/gcp/security-command-center.svg" width="16" height="16" alt=""> Security Command Center](https://cloud.google.com/security/products/security-command-center) | [<img src="icons/gcp/sensitive-data-protection.svg" width="16" height="16" alt=""> Sensitive Data Protection](https://cloud.google.com/security/products/sensitive-data-protection)
 
 ### **Oracle**
 
-[Bastion](https://www.oracle.com/security/cloud-security/bastion/) | [Data Safe](https://www.oracle.com/security/database-security/data-safe/) | [OCI Cloud Guard](https://www.oracle.com/security/cloud-security/cloud-guard/) | [Vulnerability Scanning](https://www.oracle.com/security/cloud-security/vulnerability-scanning-service/)
+[<img src="icons/oracle/bastion.svg" width="16" height="16" alt=""> Bastion](https://www.oracle.com/security/cloud-security/bastion/) | [<img src="icons/oracle/data-safe.svg" width="16" height="16" alt=""> Data Safe](https://www.oracle.com/security/database-security/data-safe/) | [<img src="icons/oracle/cloud-guard.svg" width="16" height="16" alt=""> OCI Cloud Guard](https://www.oracle.com/security/cloud-security/cloud-guard/) | [<img src="icons/oracle/vulnerability-scanning.svg" width="16" height="16" alt=""> Vulnerability Scanning](https://www.oracle.com/security/cloud-security/vulnerability-scanning-service/)
 
 ### **Exoscale**
 
@@ -902,19 +904,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Backup](https://aws.amazon.com/backup/) | [Elastic Block Store (EBS)](https://aws.amazon.com/ebs/) | [Elastic File System (EFS)](https://aws.amazon.com/efs/) | [FSx](https://aws.amazon.com/fsx/) | [S3 Glacier storage classes](https://aws.amazon.com/s3/storage-classes/glacier/) | [Simple Storage Service (S3)](https://aws.amazon.com/s3/) | [Storage Gateway](https://aws.amazon.com/storagegateway/)
+[<img src="icons/aws/aws-backup.svg" width="16" height="16" alt=""> Backup](https://aws.amazon.com/backup/) | [<img src="icons/aws/amazon-elastic-block-store.svg" width="16" height="16" alt=""> Elastic Block Store (EBS)](https://aws.amazon.com/ebs/) | [<img src="icons/aws/amazon-efs.svg" width="16" height="16" alt=""> Elastic File System (EFS)](https://aws.amazon.com/efs/) | [<img src="icons/aws/amazon-fsx.svg" width="16" height="16" alt=""> FSx](https://aws.amazon.com/fsx/) | [<img src="icons/aws/amazon-simple-storage-service-glacier.svg" width="16" height="16" alt=""> S3 Glacier storage classes](https://aws.amazon.com/s3/storage-classes/glacier/) | [<img src="icons/aws/amazon-simple-storage-service.svg" width="16" height="16" alt=""> Simple Storage Service (S3)](https://aws.amazon.com/s3/) | [<img src="icons/aws/aws-storage-gateway.svg" width="16" height="16" alt=""> Storage Gateway](https://aws.amazon.com/storagegateway/)
 
 ### **Azure**
 
-[Azure Backup](https://azure.microsoft.com/en-us/products/backup/) | [Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs/) | [Confidential Ledger](https://azure.microsoft.com/en-us/products/azure-confidential-ledger/) | [Data Lake Storage](https://azure.microsoft.com/en-us/products/storage/data-lake-storage/) | [Disk Storage](https://azure.microsoft.com/en-us/products/storage/disks/) | [Elastic SAN](https://azure.microsoft.com/en-us/products/storage/elastic-san/) | [Files](https://azure.microsoft.com/en-us/products/storage/files/) | [Managed Lustre](https://azure.microsoft.com/en-us/products/managed-lustre/) | [NetApp Files](https://azure.microsoft.com/en-us/products/netapp/)
+[<img src="icons/azure/recovery-services-vaults.svg" width="16" height="16" alt=""> Azure Backup](https://azure.microsoft.com/en-us/products/backup/) | [<img src="icons/azure/blob-block.svg" width="16" height="16" alt=""> Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs/) | [<img src="icons/azure/confidential-ledgers.svg" width="16" height="16" alt=""> Confidential Ledger](https://azure.microsoft.com/en-us/products/azure-confidential-ledger/) | [<img src="icons/azure/data-lake-storage-gen1.svg" width="16" height="16" alt=""> Data Lake Storage](https://azure.microsoft.com/en-us/products/storage/data-lake-storage/) | [<img src="icons/azure/disks.svg" width="16" height="16" alt=""> Disk Storage](https://azure.microsoft.com/en-us/products/storage/disks/) | [<img src="icons/azure/elastic-san.svg" width="16" height="16" alt=""> Elastic SAN](https://azure.microsoft.com/en-us/products/storage/elastic-san/) | [<img src="icons/azure/azure-fileshares.svg" width="16" height="16" alt=""> Files](https://azure.microsoft.com/en-us/products/storage/files/) | [Managed Lustre](https://azure.microsoft.com/en-us/products/managed-lustre/) | [<img src="icons/azure/azure-netapp-files.svg" width="16" height="16" alt=""> NetApp Files](https://azure.microsoft.com/en-us/products/netapp/)
 
 ### **GCP**
 
-[Backup and DR Service](https://cloud.google.com/backup-disaster-recovery) | [Cloud Storage](https://cloud.google.com/storage) | [Filestore](https://cloud.google.com/filestore) | [Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/hyperdisks) | [Managed Lustre](https://cloud.google.com/products/managed-lustre) | [Persistent Disk](https://cloud.google.com/persistent-disk)
+[Backup and DR Service](https://cloud.google.com/backup-disaster-recovery) | [<img src="icons/gcp/cloud-storage.svg" width="16" height="16" alt=""> Cloud Storage](https://cloud.google.com/storage) | [<img src="icons/gcp/filestore.svg" width="16" height="16" alt=""> Filestore](https://cloud.google.com/filestore) | [<img src="icons/gcp/hyperdisk.svg" width="16" height="16" alt=""> Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/hyperdisks) | [Managed Lustre](https://cloud.google.com/products/managed-lustre) | [<img src="icons/gcp/persistent-disk.svg" width="16" height="16" alt=""> Persistent Disk](https://cloud.google.com/persistent-disk)
 
 ### **Oracle**
 
-[Archive Storage](https://www.oracle.com/cloud/storage/archive-storage/) | [Block Volume](https://www.oracle.com/cloud/storage/block-volumes/) | [File Storage](https://www.oracle.com/cloud/storage/file-storage/) | [File Storage with Lustre](https://www.oracle.com/cloud/storage/file-storage-with-lustre/) | [Object Storage](https://www.oracle.com/cloud/storage/object-storage/)
+[<img src="icons/oracle/object-storage.svg" width="16" height="16" alt=""> Archive Storage](https://www.oracle.com/cloud/storage/archive-storage/) | [<img src="icons/oracle/block-storage.svg" width="16" height="16" alt=""> Block Volume](https://www.oracle.com/cloud/storage/block-volumes/) | [<img src="icons/oracle/file-storage.svg" width="16" height="16" alt=""> File Storage](https://www.oracle.com/cloud/storage/file-storage/) | [<img src="icons/oracle/file-storage.svg" width="16" height="16" alt=""> File Storage with Lustre](https://www.oracle.com/cloud/storage/file-storage-with-lustre/) | [<img src="icons/oracle/object-storage.svg" width="16" height="16" alt=""> Object Storage](https://www.oracle.com/cloud/storage/object-storage/)
 
 ### **Exoscale**
 
@@ -925,19 +927,19 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### **AWS**
 
-[Managed Workflows for Apache Airflow (MWAA)](https://aws.amazon.com/managed-workflows-for-apache-airflow/) | [Simple Workflow Service (SWF)](https://aws.amazon.com/swf/) | [Step Functions](https://aws.amazon.com/step-functions/)
+[<img src="icons/aws/amazon-managed-workflows-for-apache-airflow.svg" width="16" height="16" alt=""> Managed Workflows for Apache Airflow (MWAA)](https://aws.amazon.com/managed-workflows-for-apache-airflow/) | [Simple Workflow Service (SWF)](https://aws.amazon.com/swf/) | [<img src="icons/aws/aws-step-functions.svg" width="16" height="16" alt=""> Step Functions](https://aws.amazon.com/step-functions/)
 
 ### **Azure**
 
-[Logic Apps](https://azure.microsoft.com/en-us/products/logic-apps/)
+[<img src="icons/azure/logic-apps.svg" width="16" height="16" alt=""> Logic Apps](https://azure.microsoft.com/en-us/products/logic-apps/)
 
 ### **GCP**
 
-[Application Integration](https://cloud.google.com/application-integration) | [Managed Service for Apache Airflow (formerly Cloud Composer)](https://cloud.google.com/products/managed-service-for-apache-airflow) | [Workflows](https://cloud.google.com/workflows)
+[Application Integration](https://cloud.google.com/application-integration) | [<img src="icons/gcp/cloud-composer.svg" width="16" height="16" alt=""> Managed Service for Apache Airflow (formerly Cloud Composer)](https://cloud.google.com/products/managed-service-for-apache-airflow) | [<img src="icons/gcp/workflows.svg" width="16" height="16" alt=""> Workflows](https://cloud.google.com/workflows)
 
 ### **Oracle**
 
-[Oracle Integration (Process Automation)](https://www.oracle.com/integration/application-integration/)
+[<img src="icons/oracle/integration.svg" width="16" height="16" alt=""> Oracle Integration (Process Automation)](https://www.oracle.com/integration/application-integration/)
 
 ### **Exoscale**
 

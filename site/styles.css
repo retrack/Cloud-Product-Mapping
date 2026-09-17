@@ -422,7 +422,7 @@ main { max-width: 1600px; margin: 0 auto; padding: 20px 24px 40px; }
   height: 18px;
   flex: none;
 }
-.product__icon svg { width: 18px; height: 18px; display: block; }
+.product__icon img { width: 18px; height: 18px; display: block; object-fit: contain; }
 .product__icon--dot::before {
   content: "";
   width: 6px;

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__HEADING__</title>
+<script>
+  // ?theme=light|dark (default dark). After layout, expose the poster size for
+  // scripts/render.py and size the printed page to the poster.
+  (function () {
+    var t = new URLSearchParams(location.search).get("theme");
+    document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+    window.addEventListener("load", function () {
+      var poster = document.querySelector(".poster");
+      var w = Math.ceil(poster.offsetWidth), h = Math.ceil(poster.offsetHeight);
+      document.documentElement.setAttribute("data-width", w);
+      document.documentElement.setAttribute("data-height", h);
+      var style = document.createElement("style");
+      style.textContent = "@page { size: " + w + "px " + h + "px; margin: 0; }";
+      document.head.appendChild(style);
+    });
+  })();
+</script>
+<style>
+/*__STYLES__*/
+</style>
+</head>
+<body>
+<div class="poster" style="--columns: __COLUMNS__">
+  <header class="poster__header">
+    <h1 class="poster__title"><strong>Cloud</strong> Product Mapping__TITLE_SUFFIX__</h1>
+    <p class="poster__subtitle">__SUBTITLE__</p>
+  </header>
+  <div class="grid">
+__GRID__
+  </div>
+  <footer class="poster__footer">
+    <div class="poster__legend">__LEGEND__</div>
+    <p>Generated from the open data in this repository · Product icons are trademarks of their respective owners, from each provider's official architecture icon set.</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -80,7 +80,7 @@
     var key = provider.iconBase && item.icon ? provider.iconBase + item.icon : null;
     var wrap = el("span", { class: "product__icon", "aria-hidden": "true" });
     if (key && data.icons[key]) {
-      wrap.innerHTML = data.icons[key];
+      wrap.appendChild(el("img", { src: data.icons[key], alt: "" }));
     } else {
       wrap.classList.add("product__icon--dot");
     }

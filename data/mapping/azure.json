@@ -2,83 +2,101 @@
   "ai-ml": [
     {
       "name": "Azure AI Bot Service",
-      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-bot-service/"
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-bot-service/",
+      "icon": "bot-services"
     },
     {
       "name": "Azure AI Search",
-      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search/"
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search/",
+      "icon": "cognitive-search"
     },
     {
       "name": "Azure Content Understanding (incl. Document Intelligence)",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/content-understanding"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/content-understanding",
+      "icon": "form-recognizers"
     },
     {
       "name": "Azure Language",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/language"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/language",
+      "icon": "language"
     },
     {
       "name": "Azure Machine Learning",
-      "url": "https://azure.microsoft.com/en-us/products/machine-learning/"
+      "url": "https://azure.microsoft.com/en-us/products/machine-learning/",
+      "icon": "azure-machine-learning"
     },
     {
       "name": "Azure Speech",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/speech"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/speech",
+      "icon": "speech-services"
     },
     {
       "name": "Azure Translator",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/translator"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/translator",
+      "icon": "translator-text"
     },
     {
       "name": "Azure Vision",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/vision"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/vision",
+      "icon": "computer-vision"
     },
     {
       "name": "Foundry Tools (formerly Azure AI services)",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools",
+      "icon": "cognitive-services"
     }
   ],
   "ai-genai": [
     {
       "name": "Azure OpenAI in Foundry Models",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/",
+      "icon": "azure-openai"
     },
     {
       "name": "Content Safety",
-      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety/"
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety/",
+      "icon": "content-safety"
     },
     {
       "name": "Microsoft Foundry",
-      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/"
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/",
+      "icon": "ai-foundry"
     }
   ],
   "application-mgmt": [
     {
       "name": "API Management",
-      "url": "https://azure.microsoft.com/en-us/products/api-management/"
+      "url": "https://azure.microsoft.com/en-us/products/api-management/",
+      "icon": "api-management-services"
     },
     {
       "name": "App Service",
-      "url": "https://azure.microsoft.com/en-us/products/app-service/"
+      "url": "https://azure.microsoft.com/en-us/products/app-service/",
+      "icon": "app-services"
     },
     {
       "name": "Azure Maps",
-      "url": "https://azure.microsoft.com/en-us/products/azure-maps/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-maps/",
+      "icon": "azure-maps-accounts"
     },
     {
       "name": "Static Web Apps",
-      "url": "https://azure.microsoft.com/en-us/products/app-service/static/"
+      "url": "https://azure.microsoft.com/en-us/products/app-service/static/",
+      "icon": "static-apps"
     }
   ],
   "application-mobile": [
     {
       "name": "Notification Hubs",
-      "url": "https://azure.microsoft.com/en-us/products/notification-hubs/"
+      "url": "https://azure.microsoft.com/en-us/products/notification-hubs/",
+      "icon": "notification-hubs"
     }
   ],
   "automation": [
     {
       "name": "Automation",
-      "url": "https://azure.microsoft.com/en-us/products/automation/"
+      "url": "https://azure.microsoft.com/en-us/products/automation/",
+      "icon": "automation-accounts"
     },
     {
       "name": "Bicep",
@@ -88,11 +106,13 @@
   "compliance": [
     {
       "name": "Azure Policy",
-      "url": "https://azure.microsoft.com/en-us/products/azure-policy/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-policy/",
+      "icon": "policy"
     },
     {
       "name": "Microsoft Purview Compliance Manager",
-      "url": "https://learn.microsoft.com/en-us/purview/compliance-manager"
+      "url": "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "icon": "compliance-center"
     },
     {
       "name": "Trust Center",
@@ -102,57 +122,69 @@
   "compute-container": [
     {
       "name": "Azure Kubernetes Service (AKS)",
-      "url": "https://azure.microsoft.com/en-us/products/kubernetes-service/"
+      "url": "https://azure.microsoft.com/en-us/products/kubernetes-service/",
+      "icon": "kubernetes-services"
     },
     {
       "name": "Azure Red Hat OpenShift",
-      "url": "https://azure.microsoft.com/en-us/products/openshift/"
+      "url": "https://azure.microsoft.com/en-us/products/openshift/",
+      "icon": "azure-red-hat-openshift"
     },
     {
       "name": "Container Apps",
-      "url": "https://azure.microsoft.com/en-us/products/container-apps/"
+      "url": "https://azure.microsoft.com/en-us/products/container-apps/",
+      "icon": "container-apps-environments"
     },
     {
       "name": "Container Instances",
-      "url": "https://azure.microsoft.com/en-us/products/container-instances/"
+      "url": "https://azure.microsoft.com/en-us/products/container-instances/",
+      "icon": "container-instances"
     },
     {
       "name": "Container Registry",
-      "url": "https://azure.microsoft.com/en-us/products/container-registry/"
+      "url": "https://azure.microsoft.com/en-us/products/container-registry/",
+      "icon": "container-registries"
     }
   ],
   "compute-faas": [
     {
       "name": "Azure Functions",
-      "url": "https://azure.microsoft.com/en-us/products/functions/"
+      "url": "https://azure.microsoft.com/en-us/products/functions/",
+      "icon": "function-apps"
     }
   ],
   "compute-server": [
     {
       "name": "Azure VMware Solution",
-      "url": "https://azure.microsoft.com/en-us/products/azure-vmware/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-vmware/",
+      "icon": "azure-vmware-solution"
     },
     {
       "name": "Batch",
-      "url": "https://azure.microsoft.com/en-us/products/batch/"
+      "url": "https://azure.microsoft.com/en-us/products/batch/",
+      "icon": "batch-accounts"
     },
     {
       "name": "Virtual Machine Scale Sets",
-      "url": "https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets/"
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets/",
+      "icon": "vm-scale-sets"
     },
     {
       "name": "Virtual Machines",
-      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/"
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/",
+      "icon": "virtual-machine"
     }
   ],
   "cost": [
     {
       "name": "Advisor",
-      "url": "https://azure.microsoft.com/en-us/products/advisor/"
+      "url": "https://azure.microsoft.com/en-us/products/advisor/",
+      "icon": "advisor"
     },
     {
       "name": "Cost Management and Billing",
-      "url": "https://azure.microsoft.com/en-us/products/cost-management/"
+      "url": "https://azure.microsoft.com/en-us/products/cost-management/",
+      "icon": "cost-management-and-billing"
     },
     {
       "name": "Pricing Calculator",
@@ -162,15 +194,18 @@
   "data-analytics": [
     {
       "name": "Analysis Services",
-      "url": "https://azure.microsoft.com/en-us/products/analysis-services/"
+      "url": "https://azure.microsoft.com/en-us/products/analysis-services/",
+      "icon": "analysis-services"
     },
     {
       "name": "Azure Databricks",
-      "url": "https://azure.microsoft.com/en-us/products/databricks/"
+      "url": "https://azure.microsoft.com/en-us/products/databricks/",
+      "icon": "azure-databricks"
     },
     {
       "name": "Data Explorer",
-      "url": "https://azure.microsoft.com/en-us/products/data-explorer/"
+      "url": "https://azure.microsoft.com/en-us/products/data-explorer/",
+      "icon": "azure-data-explorer-clusters"
     },
     {
       "name": "Microsoft Fabric",
@@ -178,61 +213,74 @@
     },
     {
       "name": "Power BI",
-      "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+      "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+      "icon": "power-bi-embedded"
     },
     {
       "name": "Stream Analytics",
-      "url": "https://azure.microsoft.com/en-us/products/stream-analytics/"
+      "url": "https://azure.microsoft.com/en-us/products/stream-analytics/",
+      "icon": "stream-analytics-jobs"
     },
     {
       "name": "Synapse Analytics",
-      "url": "https://azure.microsoft.com/en-us/products/synapse-analytics/"
+      "url": "https://azure.microsoft.com/en-us/products/synapse-analytics/",
+      "icon": "azure-synapse-analytics"
     }
   ],
   "data-big-data": [
     {
       "name": "HDInsight",
-      "url": "https://azure.microsoft.com/en-us/products/hdinsight/"
+      "url": "https://azure.microsoft.com/en-us/products/hdinsight/",
+      "icon": "hd-insight-clusters"
     }
   ],
   "data-database": [
     {
       "name": "Azure Managed Redis",
-      "url": "https://azure.microsoft.com/en-us/products/managed-redis/"
+      "url": "https://azure.microsoft.com/en-us/products/managed-redis/",
+      "icon": "azure-managed-redis"
     },
     {
       "name": "Azure SQL Database",
-      "url": "https://azure.microsoft.com/en-us/products/azure-sql/database/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-sql/database/",
+      "icon": "sql-database"
     },
     {
       "name": "Azure SQL Database serverless",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/serverless-tier-overview"
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/serverless-tier-overview",
+      "icon": "sql-database"
     },
     {
       "name": "Azure SQL Managed Instance",
-      "url": "https://azure.microsoft.com/en-us/products/azure-sql/managed-instance/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-sql/managed-instance/",
+      "icon": "sql-managed-instance"
     },
     {
       "name": "Cosmos DB",
-      "url": "https://azure.microsoft.com/en-us/products/cosmos-db/"
+      "url": "https://azure.microsoft.com/en-us/products/cosmos-db/",
+      "icon": "azure-cosmos-db"
     },
     {
       "name": "Database for MySQL",
-      "url": "https://azure.microsoft.com/en-us/products/mysql/"
+      "url": "https://azure.microsoft.com/en-us/products/mysql/",
+      "icon": "azure-database-mysql-server"
     },
     {
       "name": "Database for PostgreSQL",
-      "url": "https://azure.microsoft.com/en-us/products/postgresql/"
+      "url": "https://azure.microsoft.com/en-us/products/postgresql/",
+      "icon": "azure-database-postgresql-server"
     },
     {
       "name": "SQL Server on Azure VMs",
-      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/sql-server/"
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/sql-server/",
+      "icon": "azure-sql-vm"
     }
   ],
   "data-data-lake": [
     {
       "name": "Data Lake Storage",
-      "url": "https://azure.microsoft.com/en-us/products/storage/data-lake-storage/"
+      "url": "https://azure.microsoft.com/en-us/products/storage/data-lake-storage/",
+      "icon": "data-lake-storage-gen1"
     },
     {
       "name": "OneLake (Microsoft Fabric)",
@@ -246,37 +294,45 @@
     },
     {
       "name": "Synapse Analytics",
-      "url": "https://azure.microsoft.com/en-us/products/synapse-analytics/"
+      "url": "https://azure.microsoft.com/en-us/products/synapse-analytics/",
+      "icon": "azure-synapse-analytics"
     }
   ],
   "devops": [
     {
       "name": "Azure App Testing (formerly Azure Load Testing)",
-      "url": "https://azure.microsoft.com/en-us/products/app-testing/"
+      "url": "https://azure.microsoft.com/en-us/products/app-testing/",
+      "icon": "azure-app-testing"
     },
     {
       "name": "Azure Artifacts",
-      "url": "https://azure.microsoft.com/en-us/products/devops/artifacts/"
+      "url": "https://azure.microsoft.com/en-us/products/devops/artifacts/",
+      "icon": "azure-devops"
     },
     {
       "name": "Azure Boards",
-      "url": "https://azure.microsoft.com/en-us/products/devops/boards/"
+      "url": "https://azure.microsoft.com/en-us/products/devops/boards/",
+      "icon": "azure-devops"
     },
     {
       "name": "Azure Chaos Studio",
-      "url": "https://azure.microsoft.com/en-us/products/chaos-studio/"
+      "url": "https://azure.microsoft.com/en-us/products/chaos-studio/",
+      "icon": "azure-chaos-studio"
     },
     {
       "name": "Azure Pipelines",
-      "url": "https://azure.microsoft.com/en-us/products/devops/pipelines/"
+      "url": "https://azure.microsoft.com/en-us/products/devops/pipelines/",
+      "icon": "azure-devops"
     },
     {
       "name": "Azure Repos",
-      "url": "https://azure.microsoft.com/en-us/products/devops/repos/"
+      "url": "https://azure.microsoft.com/en-us/products/devops/repos/",
+      "icon": "azure-devops"
     },
     {
       "name": "Azure Test Plans",
-      "url": "https://azure.microsoft.com/en-us/products/devops/test-plans/"
+      "url": "https://azure.microsoft.com/en-us/products/devops/test-plans/",
+      "icon": "azure-devops"
     },
     {
       "name": "GitHub",
@@ -290,7 +346,8 @@
   "email": [
     {
       "name": "Communication Services (Email)",
-      "url": "https://azure.microsoft.com/en-us/products/communication-services/"
+      "url": "https://azure.microsoft.com/en-us/products/communication-services/",
+      "icon": "azure-communication-services"
     },
     {
       "name": "Microsoft 365",
@@ -300,7 +357,8 @@
   "etl": [
     {
       "name": "Data Factory",
-      "url": "https://azure.microsoft.com/en-us/products/data-factory/"
+      "url": "https://azure.microsoft.com/en-us/products/data-factory/",
+      "icon": "data-factories"
     },
     {
       "name": "Microsoft Purview",
@@ -310,25 +368,30 @@
   "firewall": [
     {
       "name": "Azure Firewall",
-      "url": "https://azure.microsoft.com/en-us/products/azure-firewall/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-firewall/",
+      "icon": "firewalls"
     },
     {
       "name": "Firewall Manager",
-      "url": "https://azure.microsoft.com/en-us/products/firewall-manager/"
+      "url": "https://azure.microsoft.com/en-us/products/firewall-manager/",
+      "icon": "azure-firewall-manager"
     },
     {
       "name": "Web Application Firewall",
-      "url": "https://azure.microsoft.com/en-us/products/web-application-firewall/"
+      "url": "https://azure.microsoft.com/en-us/products/web-application-firewall/",
+      "icon": "web-application-firewall-policies-waf"
     }
   ],
   "hybrid": [
     {
       "name": "Azure Arc",
-      "url": "https://azure.microsoft.com/en-us/products/azure-arc/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-arc/",
+      "icon": "azure-arc"
     },
     {
       "name": "Azure Local (formerly Azure Stack HCI)",
-      "url": "https://azure.microsoft.com/en-us/products/local/"
+      "url": "https://azure.microsoft.com/en-us/products/local/",
+      "icon": "azure-local"
     },
     {
       "name": "Azure Stack Edge",
@@ -342,11 +405,13 @@
   "identity": [
     {
       "name": "Microsoft Entra Domain Services",
-      "url": "https://learn.microsoft.com/en-us/entra/identity/domain-services/overview"
+      "url": "https://learn.microsoft.com/en-us/entra/identity/domain-services/overview",
+      "icon": "entra-domain-services"
     },
     {
       "name": "Microsoft Entra External ID (formerly Azure AD B2C)",
-      "url": "https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-external-id"
+      "url": "https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-external-id",
+      "icon": "external-id"
     },
     {
       "name": "Microsoft Entra ID (formerly Azure AD)",
@@ -356,43 +421,52 @@
   "iot": [
     {
       "name": "Azure IoT Operations",
-      "url": "https://azure.microsoft.com/en-us/products/iot-operations/"
+      "url": "https://azure.microsoft.com/en-us/products/iot-operations/",
+      "icon": "azure-iot-operations"
     },
     {
       "name": "Digital Twins",
-      "url": "https://azure.microsoft.com/en-us/products/digital-twins/"
+      "url": "https://azure.microsoft.com/en-us/products/digital-twins/",
+      "icon": "digital-twins"
     },
     {
       "name": "IoT Edge",
-      "url": "https://azure.microsoft.com/en-us/products/iot-edge/"
+      "url": "https://azure.microsoft.com/en-us/products/iot-edge/",
+      "icon": "iot-edge"
     },
     {
       "name": "IoT Hub",
-      "url": "https://azure.microsoft.com/en-us/products/iot-hub/"
+      "url": "https://azure.microsoft.com/en-us/products/iot-hub/",
+      "icon": "iot-hub"
     }
   ],
   "key-secret": [
     {
       "name": "Azure Cloud HSM",
-      "url": "https://learn.microsoft.com/en-us/azure/cloud-hsm/overview"
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-hsm/overview",
+      "icon": "dedicated-hsm"
     },
     {
       "name": "Key Vault",
-      "url": "https://azure.microsoft.com/en-us/products/key-vault/"
+      "url": "https://azure.microsoft.com/en-us/products/key-vault/",
+      "icon": "key-vaults"
     },
     {
       "name": "Key Vault Managed HSM",
-      "url": "https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview"
+      "url": "https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview",
+      "icon": "key-vaults"
     }
   ],
   "logging": [
     {
       "name": "Activity Log",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log"
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log",
+      "icon": "activity-log"
     },
     {
       "name": "Azure Monitor Logs",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs"
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs",
+      "icon": "log-analytics-workspaces"
     },
     {
       "name": "Microsoft Entra Audit Logs",
@@ -400,149 +474,180 @@
     },
     {
       "name": "Resource Logs",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/platform/resource-logs"
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/platform/resource-logs",
+      "icon": "diagnostics-settings"
     }
   ],
   "messaging": [
     {
       "name": "Event Grid",
-      "url": "https://azure.microsoft.com/en-us/products/event-grid/"
+      "url": "https://azure.microsoft.com/en-us/products/event-grid/",
+      "icon": "event-grid-topics"
     },
     {
       "name": "Event Hubs",
-      "url": "https://azure.microsoft.com/en-us/products/event-hubs/"
+      "url": "https://azure.microsoft.com/en-us/products/event-hubs/",
+      "icon": "event-hubs"
     },
     {
       "name": "Service Bus",
-      "url": "https://azure.microsoft.com/en-us/products/service-bus/"
+      "url": "https://azure.microsoft.com/en-us/products/service-bus/",
+      "icon": "azure-service-bus"
     }
   ],
   "migration": [
     {
       "name": "Azure Migrate",
-      "url": "https://azure.microsoft.com/en-us/products/azure-migrate/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-migrate/",
+      "icon": "azure-migrate"
     },
     {
       "name": "Data Box",
-      "url": "https://azure.microsoft.com/en-us/products/databox/"
+      "url": "https://azure.microsoft.com/en-us/products/databox/",
+      "icon": "data-box"
     },
     {
       "name": "Database Migration Service",
-      "url": "https://azure.microsoft.com/en-us/products/database-migration/"
+      "url": "https://azure.microsoft.com/en-us/products/database-migration/",
+      "icon": "azure-database-migration-services"
     },
     {
       "name": "File Sync",
-      "url": "https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction"
+      "url": "https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction",
+      "icon": "storage-sync-services"
     },
     {
       "name": "Import/Export",
-      "url": "https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-service"
+      "url": "https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-service",
+      "icon": "import-export-jobs"
     }
   ],
   "monitoring": [
     {
       "name": "Application Insights",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+      "icon": "application-insights"
     },
     {
       "name": "Azure Monitor",
-      "url": "https://azure.microsoft.com/en-us/products/monitor/"
+      "url": "https://azure.microsoft.com/en-us/products/monitor/",
+      "icon": "monitor"
     },
     {
       "name": "Managed Grafana",
-      "url": "https://azure.microsoft.com/en-us/products/managed-grafana/"
+      "url": "https://azure.microsoft.com/en-us/products/managed-grafana/",
+      "icon": "azure-managed-grafana"
     },
     {
       "name": "Managed Prometheus",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/metrics/prometheus-metrics-overview"
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/metrics/prometheus-metrics-overview",
+      "icon": "promethus"
     },
     {
       "name": "Network Watcher",
-      "url": "https://azure.microsoft.com/en-us/products/network-watcher/"
+      "url": "https://azure.microsoft.com/en-us/products/network-watcher/",
+      "icon": "network-watcher"
     }
   ],
   "network-cdn": [
     {
       "name": "Front Door",
-      "url": "https://azure.microsoft.com/en-us/products/frontdoor/"
+      "url": "https://azure.microsoft.com/en-us/products/frontdoor/",
+      "icon": "front-door-and-cdn-profiles"
     }
   ],
   "network-connection": [
     {
       "name": "ExpressRoute",
-      "url": "https://azure.microsoft.com/en-us/products/expressroute/"
+      "url": "https://azure.microsoft.com/en-us/products/expressroute/",
+      "icon": "expressroute-circuits"
     },
     {
       "name": "Private Link",
-      "url": "https://azure.microsoft.com/en-us/products/private-link/"
+      "url": "https://azure.microsoft.com/en-us/products/private-link/",
+      "icon": "private-link"
     },
     {
       "name": "Virtual WAN",
-      "url": "https://azure.microsoft.com/en-us/products/virtual-wan/"
+      "url": "https://azure.microsoft.com/en-us/products/virtual-wan/",
+      "icon": "virtual-wans"
     },
     {
       "name": "VPN Gateway",
-      "url": "https://azure.microsoft.com/en-us/products/vpn-gateway/"
+      "url": "https://azure.microsoft.com/en-us/products/vpn-gateway/",
+      "icon": "virtual-network-gateways"
     }
   ],
   "network-core": [
     {
       "name": "Virtual Network",
-      "url": "https://azure.microsoft.com/en-us/products/virtual-network/"
+      "url": "https://azure.microsoft.com/en-us/products/virtual-network/",
+      "icon": "virtual-networks"
     }
   ],
   "network-dns": [
     {
       "name": "DNS",
-      "url": "https://azure.microsoft.com/en-us/products/dns/"
+      "url": "https://azure.microsoft.com/en-us/products/dns/",
+      "icon": "dns-zones"
     },
     {
       "name": "Traffic Manager",
-      "url": "https://azure.microsoft.com/en-us/products/traffic-manager/"
+      "url": "https://azure.microsoft.com/en-us/products/traffic-manager/",
+      "icon": "traffic-manager-profiles"
     }
   ],
   "network-lb": [
     {
       "name": "Application Gateway",
-      "url": "https://azure.microsoft.com/en-us/products/application-gateway/"
+      "url": "https://azure.microsoft.com/en-us/products/application-gateway/",
+      "icon": "application-gateways"
     },
     {
       "name": "Cross-region Load Balancer",
-      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/cross-region-overview"
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/cross-region-overview",
+      "icon": "load-balancers"
     },
     {
       "name": "Load Balancer",
-      "url": "https://azure.microsoft.com/en-us/products/load-balancer/"
+      "url": "https://azure.microsoft.com/en-us/products/load-balancer/",
+      "icon": "load-balancers"
     }
   ],
   "network-misc": [
     {
       "name": "NAT Gateway",
-      "url": "https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview"
+      "url": "https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview",
+      "icon": "nat"
     },
     {
       "name": "Network Watcher",
-      "url": "https://azure.microsoft.com/en-us/products/network-watcher/"
+      "url": "https://azure.microsoft.com/en-us/products/network-watcher/",
+      "icon": "network-watcher"
     },
     {
       "name": "Virtual Network Manager",
-      "url": "https://azure.microsoft.com/en-us/products/virtual-network-manager/"
+      "url": "https://azure.microsoft.com/en-us/products/virtual-network-manager/",
+      "icon": "network-managers"
     }
   ],
   "optimization": [
     {
       "name": "Advisor",
-      "url": "https://azure.microsoft.com/en-us/products/advisor/"
+      "url": "https://azure.microsoft.com/en-us/products/advisor/",
+      "icon": "advisor"
     }
   ],
   "queue": [
     {
       "name": "Queue Storage",
-      "url": "https://azure.microsoft.com/en-us/products/storage/queues/"
+      "url": "https://azure.microsoft.com/en-us/products/storage/queues/",
+      "icon": "storage-queue"
     },
     {
       "name": "Service Bus",
-      "url": "https://azure.microsoft.com/en-us/products/service-bus/"
+      "url": "https://azure.microsoft.com/en-us/products/service-bus/",
+      "icon": "azure-service-bus"
     }
   ],
   "resource-mgmt": [
@@ -552,35 +657,42 @@
     },
     {
       "name": "Management Groups",
-      "url": "https://learn.microsoft.com/en-us/azure/governance/management-groups/overview"
+      "url": "https://learn.microsoft.com/en-us/azure/governance/management-groups/overview",
+      "icon": "management-groups"
     },
     {
       "name": "Microsoft Entra Tenant",
-      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/create-new-tenant"
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/create-new-tenant",
+      "icon": "tenant-properties"
     },
     {
       "name": "Resource Graph",
-      "url": "https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview"
+      "url": "https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview",
+      "icon": "resource-graph-explorer"
     },
     {
       "name": "Resource Groups",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal"
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal",
+      "icon": "resource-groups"
     }
   ],
   "sap": [
     {
       "name": "SAP on Azure",
-      "url": "https://azure.microsoft.com/en-us/solutions/sap/"
+      "url": "https://azure.microsoft.com/en-us/solutions/sap/",
+      "icon": "azure-center-for-sap"
     }
   ],
   "security": [
     {
       "name": "DDoS Protection",
-      "url": "https://azure.microsoft.com/en-us/products/ddos-protection/"
+      "url": "https://azure.microsoft.com/en-us/products/ddos-protection/",
+      "icon": "ddos-protection-plans"
     },
     {
       "name": "Defender for Cloud",
-      "url": "https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-cloud"
+      "url": "https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-cloud",
+      "icon": "microsoft-defender-for-cloud"
     },
     {
       "name": "Defender for Cloud Apps",
@@ -588,37 +700,45 @@
     },
     {
       "name": "Microsoft Sentinel",
-      "url": "https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-sentinel-siem"
+      "url": "https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-sentinel-siem",
+      "icon": "azure-sentinel"
     }
   ],
   "storage": [
     {
       "name": "Azure Backup",
-      "url": "https://azure.microsoft.com/en-us/products/backup/"
+      "url": "https://azure.microsoft.com/en-us/products/backup/",
+      "icon": "recovery-services-vaults"
     },
     {
       "name": "Blob Storage",
-      "url": "https://azure.microsoft.com/en-us/products/storage/blobs/"
+      "url": "https://azure.microsoft.com/en-us/products/storage/blobs/",
+      "icon": "blob-block"
     },
     {
       "name": "Confidential Ledger",
-      "url": "https://azure.microsoft.com/en-us/products/azure-confidential-ledger/"
+      "url": "https://azure.microsoft.com/en-us/products/azure-confidential-ledger/",
+      "icon": "confidential-ledgers"
     },
     {
       "name": "Data Lake Storage",
-      "url": "https://azure.microsoft.com/en-us/products/storage/data-lake-storage/"
+      "url": "https://azure.microsoft.com/en-us/products/storage/data-lake-storage/",
+      "icon": "data-lake-storage-gen1"
     },
     {
       "name": "Disk Storage",
-      "url": "https://azure.microsoft.com/en-us/products/storage/disks/"
+      "url": "https://azure.microsoft.com/en-us/products/storage/disks/",
+      "icon": "disks"
     },
     {
       "name": "Elastic SAN",
-      "url": "https://azure.microsoft.com/en-us/products/storage/elastic-san/"
+      "url": "https://azure.microsoft.com/en-us/products/storage/elastic-san/",
+      "icon": "elastic-san"
     },
     {
       "name": "Files",
-      "url": "https://azure.microsoft.com/en-us/products/storage/files/"
+      "url": "https://azure.microsoft.com/en-us/products/storage/files/",
+      "icon": "azure-fileshares"
     },
     {
       "name": "Managed Lustre",
@@ -626,13 +746,15 @@
     },
     {
       "name": "NetApp Files",
-      "url": "https://azure.microsoft.com/en-us/products/netapp/"
+      "url": "https://azure.microsoft.com/en-us/products/netapp/",
+      "icon": "azure-netapp-files"
     }
   ],
   "workflow": [
     {
       "name": "Logic Apps",
-      "url": "https://azure.microsoft.com/en-us/products/logic-apps/"
+      "url": "https://azure.microsoft.com/en-us/products/logic-apps/",
+      "icon": "logic-apps"
     }
   ]
 }
