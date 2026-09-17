@@ -6,16 +6,7 @@ As we can see a lot of companies today decide to go with a multi-cloud strategy.
 
 👉 **Interactive version:** open [`docs/index.html`](docs/index.html) to include/exclude cloud providers, search products and switch between dark and light themes.
 
-### Regenerating the mapping
-
-The mapping below is generated from the JSON files in [`data/`](data/). Edit those, then run:
-
-```bash
-python3 scripts/build.py                               # all providers enabled in data/providers.json
-python3 scripts/build.py --providers aws,azure,exoscale  # only these providers, in this order
-python3 scripts/build.py --exclude oracle              # everything except Oracle
-python3 scripts/render.py                              # PNG + PDF posters (dark and light, full and brief)
-```
+Everything below (README mapping, interactive page, PNG/PDF posters) is generated from the JSON files in [`data/`](data/) — see [Generating the files](#generating-the-files).
 
 Exoscale entries tagged _(Marketplace)_ are partner offerings from the [Exoscale Marketplace](https://www.exoscale.com/marketplace/); _(Roadmap)_ marks planned services, and _(Workaround)_ means no managed service exists but the use case can be covered with Exoscale building blocks plus open-source tooling. An [AWS → Exoscale service crosswalk](#aws--exoscale-service-crosswalk) follows the category mapping.
 
@@ -30,7 +21,74 @@ If you find this repository helpful, consider supporting me on Patreon:
 Download the full mapping: [PNG dark](CloudProductMapping.png) · [PNG light](CloudProductMapping-light.png) · [PDF dark](Cloud%20Product%20Mapping.pdf) · [PDF light](Cloud%20Product%20Mapping%20-%20light.pdf).
 Brief version: [PNG dark](CloudProductMappingBrief.png) · [PNG light](CloudProductMappingBrief-light.png) · [PDF dark](Cloud%20Product%20Mapping%20-%20Brief.pdf) · [PDF light](Cloud%20Product%20Mapping%20-%20Brief%20-%20light.pdf).
 
-The posters are generated from the same data ([`docs/poster.html`](docs/poster.html), [`docs/poster-brief.html`](docs/poster-brief.html)) using each provider's official architecture icons; re-export them with `python3 scripts/render.py` (needs Chromium or Chrome). Icons come from the official sets: [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/), [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/), [Google Cloud icons](https://cloud.google.com/icons), [OCI graphics for diagrams](https://docs.oracle.com/iaas/Content/General/Reference/graphicsfordiagrams.htm) (exported with `scripts/extract_oci_icons.py`) and the [Exoscale icon library](https://community.exoscale.com/tools/icon-table/). Provider logos come from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Oracle_logo.svg) (Oracle), the [Exoscale press kit](https://www.exoscale.com/static/files/press-kit.zip), [cloud.google.com](https://cloud.google.com/icons) (Google Cloud) and the AWS and Azure icon sets. Icons and logos are trademarks of their respective owners. Categories shown in the brief version are flagged with `"brief": true` in [`data/categories.json`](data/categories.json).
+The posters use each provider's official architecture icons and logos (see [Icon and logo sources](#icon-and-logo-sources)).
+
+## Generating the files
+
+### Prerequisites
+
+| Tool | Needed for |
+|---|---|
+| Python 3.9+ (standard library only) | everything |
+| [Chromium](https://www.chromium.org/) or Google Chrome | PNG/PDF posters (`scripts/render.py`); set `CHROME=/path/to/browser` if it isn't found |
+| [draw.io desktop](https://www.drawio.com/) (`drawio` CLI) | only to re-export Oracle icons |
+
+On macOS: `brew install --cask chromium drawio` (Homebrew's Chromium renders in seconds; Chrome's headless mode can be slow).
+
+### 1. Edit the data
+
+| File | Content |
+|---|---|
+| [`data/providers.json`](data/providers.json) | providers, order, colors, `"enabled"` flag, logos, `"updated"` date shown on the posters |
+| [`data/categories.json`](data/categories.json) | category order and names; `"brief": true` puts a category on the brief poster |
+| `data/mapping/<provider>.json` | products per category: `name`, `url`, `icon` (file in `icons/<provider>/`), optional `source: "marketplace"` or `status: "roadmap" \| "workaround"` |
+| [`data/crosswalk/aws-exoscale.json`](data/crosswalk/aws-exoscale.json) | AWS → Exoscale service crosswalk (`native`, `marketplace`, `workaround`, `none`) |
+
+### 2. Build the README and pages
+
+```bash
+python3 scripts/build.py                                 # providers with "enabled": true
+python3 scripts/build.py --providers aws,azure,exoscale  # only these providers, in this order
+python3 scripts/build.py --exclude oracle                # all enabled providers except Oracle
+python3 scripts/build.py --check                         # CI: fail if generated files are stale
+```
+
+This rewrites the generated sections of this README and [`docs/index.html`](docs/index.html) (interactive page), [`docs/poster.html`](docs/poster.html) and [`docs/poster-brief.html`](docs/poster-brief.html) (open with `?theme=light` or `?theme=dark`).
+
+### 3. Export the posters
+
+```bash
+python3 scripts/render.py                                   # all 8 files: full + brief, dark + light, PNG + PDF
+python3 scripts/render.py --only brief --themes dark --scale 1 --no-pdf   # quick preview
+```
+
+Outputs in the repository root: `CloudProductMapping(-light).png`, `CloudProductMappingBrief(-light).png`, `Cloud Product Mapping( - light).pdf`, `Cloud Product Mapping - Brief( - light).pdf`.
+
+### 4. (Optional) Refresh icons
+
+```bash
+python3 scripts/fetch_icon_packs.py            # download vendor icon packs into .cache/icon-packs/ (git-ignored)
+python3 scripts/extract_oci_icons.py ".cache/icon-packs/oracle/OCI-Style-Guide-for-Drawio/OCI Style Guide for Drawio/OCI Library.xml" .cache/icon-packs/oracle/svg/
+```
+
+Then copy the matching SVGs to `icons/<provider>/` and set `"icon"` in `data/mapping/<provider>.json` — or let the `provider-icon-matcher` agent do it.
+
+### Icon and logo sources
+
+Product icons: [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/), [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/), [Google Cloud icons](https://cloud.google.com/icons), [OCI graphics for diagrams](https://docs.oracle.com/iaas/Content/General/Reference/graphicsfordiagrams.htm) and the [Exoscale icon library](https://community.exoscale.com/tools/icon-table/). Logos: AWS and Azure icon sets, [cloud.google.com](https://cloud.google.com/icons) (Google Cloud), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Oracle_logo.svg) (Oracle) and the [Exoscale press kit](https://www.exoscale.com/static/files/press-kit.zip). All icons and logos are trademarks of their respective owners and are used here for architecture-diagram purposes.
+
+## Agents
+
+The repository ships [Claude Code](https://claude.com/claude-code) subagents in [`.claude/agents/`](.claude/agents/) that automate the maintenance workflow. In Claude Code, ask for them by name, e.g. _"use the cloud-portfolio-refresher agent for azure and gcp"_.
+
+| Agent | What it does | Writes |
+|---|---|---|
+| [`cloud-portfolio-refresher`](.claude/agents/cloud-portfolio-refresher.md) | Removes retired services, applies renames, fixes URLs and adds missing flagship services for AWS, Azure, GCP and Oracle, citing official lifecycle sources | `data/mapping/{aws,azure,gcp,oracle}.json` |
+| [`provider-icon-matcher`](.claude/agents/provider-icon-matcher.md) | Matches a provider's products to its official icon pack and copies the icons | `data/mapping/<provider>.json` (`icon`), `icons/<provider>/` |
+| [`exoscale-mapper`](.claude/agents/exoscale-mapper.md) | Keeps the Exoscale column and the AWS → Exoscale crosswalk complete from public sources (native, Marketplace, roadmap, workaround) and asks when a category has no mapping | `data/mapping/exoscale.json`, `data/crosswalk/`, `icons/exoscale/` |
+| [`poster-publisher`](.claude/agents/poster-publisher.md) | Runs the build and render, checks the posters visually in both themes and reports issues to the right agent | generated files only |
+
+Typical release: `cloud-portfolio-refresher` → `provider-icon-matcher` (for new products) → `exoscale-mapper` → `poster-publisher` → commit.
 
 ## Bonus 1: Monitoring Cheat Sheet
 
