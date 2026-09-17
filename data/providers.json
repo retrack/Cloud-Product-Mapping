@@ -1,0 +1,10 @@
+{
+  "_comment": "Set \"enabled\": false to exclude a provider by default; override with scripts/build.py --providers or --exclude.",
+  "providers": [
+    { "id": "aws",      "name": "AWS",      "fullName": "Amazon Web Services",           "enabled": true, "homepage": "https://aws.amazon.com/",          "color": "#FF9900" },
+    { "id": "azure",    "name": "Azure",    "fullName": "Microsoft Azure",               "enabled": true, "homepage": "https://azure.microsoft.com/",     "color": "#0089D6" },
+    { "id": "gcp",      "name": "GCP",      "fullName": "Google Cloud Platform",         "enabled": true, "homepage": "https://cloud.google.com/",        "color": "#34A853" },
+    { "id": "oracle",   "name": "Oracle",   "fullName": "Oracle Cloud Infrastructure",   "enabled": true, "homepage": "https://www.oracle.com/cloud/",    "color": "#C74634" },
+    { "id": "exoscale", "name": "Exoscale", "fullName": "Exoscale",                      "enabled": true, "homepage": "https://www.exoscale.com/",        "color": "#DA291C", "iconBase": "icons/exoscale/" }
+  ]
+}

@@ -1,0 +1,758 @@
+{
+  "ai-ml": [
+    {
+      "name": "Comprehend",
+      "url": "https://aws.amazon.com/comprehend/"
+    },
+    {
+      "name": "Forecast",
+      "url": "https://aws.amazon.com/forecast/"
+    },
+    {
+      "name": "Lex",
+      "url": "https://aws.amazon.com/lex/"
+    },
+    {
+      "name": "Neuron",
+      "url": "https://aws.amazon.com/ai/machine-learning/neuron/"
+    },
+    {
+      "name": "Personalize",
+      "url": "https://aws.amazon.com/personalize/"
+    },
+    {
+      "name": "Polly",
+      "url": "https://aws.amazon.com/polly/"
+    },
+    {
+      "name": "PyTorch",
+      "url": "https://aws.amazon.com/pytorch/"
+    },
+    {
+      "name": "Rekognition",
+      "url": "https://aws.amazon.com/rekognition/"
+    },
+    {
+      "name": "SageMaker AI",
+      "url": "https://aws.amazon.com/sagemaker/ai/"
+    },
+    {
+      "name": "TensorFlow",
+      "url": "https://aws.amazon.com/tensorflow/"
+    },
+    {
+      "name": "Textract",
+      "url": "https://aws.amazon.com/textract/"
+    },
+    {
+      "name": "Transcribe",
+      "url": "https://aws.amazon.com/transcribe/"
+    },
+    {
+      "name": "Translate",
+      "url": "https://aws.amazon.com/translate/"
+    }
+  ],
+  "ai-genai": [
+    {
+      "name": "Bedrock",
+      "url": "https://aws.amazon.com/bedrock/"
+    },
+    {
+      "name": "Bedrock AgentCore",
+      "url": "https://aws.amazon.com/bedrock/agentcore/"
+    },
+    {
+      "name": "Nova",
+      "url": "https://aws.amazon.com/nova/"
+    }
+  ],
+  "application-mgmt": [
+    {
+      "name": "Amplify",
+      "url": "https://aws.amazon.com/amplify/"
+    },
+    {
+      "name": "API Gateway",
+      "url": "https://aws.amazon.com/api-gateway/"
+    },
+    {
+      "name": "App Runner",
+      "url": "https://aws.amazon.com/apprunner/"
+    },
+    {
+      "name": "AppSync",
+      "url": "https://aws.amazon.com/appsync/"
+    },
+    {
+      "name": "Elastic Beanstalk",
+      "url": "https://aws.amazon.com/elasticbeanstalk/"
+    },
+    {
+      "name": "Serverless Application Repository",
+      "url": "https://aws.amazon.com/serverless/serverlessrepo/"
+    }
+  ],
+  "application-mobile": [
+    {
+      "name": "Amplify",
+      "url": "https://aws.amazon.com/amplify/"
+    },
+    {
+      "name": "Device Farm",
+      "url": "https://aws.amazon.com/device-farm/"
+    },
+    {
+      "name": "Publisher Services",
+      "url": "https://aps.amazon.com/aps/services/mobile-app-developers/"
+    }
+  ],
+  "automation": [
+    {
+      "name": "Cloud Development Kit (CDK)",
+      "url": "https://aws.amazon.com/cdk/"
+    },
+    {
+      "name": "CloudFormation",
+      "url": "https://aws.amazon.com/cloudformation/"
+    },
+    {
+      "name": "Systems Manager",
+      "url": "https://aws.amazon.com/systems-manager/"
+    }
+  ],
+  "compliance": [
+    {
+      "name": "Artifact",
+      "url": "https://aws.amazon.com/artifact/"
+    },
+    {
+      "name": "Audit Manager",
+      "url": "https://aws.amazon.com/audit-manager/"
+    },
+    {
+      "name": "Compliance Center",
+      "url": "https://aws.amazon.com/financial-services/security-compliance/compliance-center/"
+    },
+    {
+      "name": "Config",
+      "url": "https://aws.amazon.com/config/"
+    }
+  ],
+  "compute-container": [
+    {
+      "name": "Elastic Container Registry (ECR)",
+      "url": "https://aws.amazon.com/ecr/"
+    },
+    {
+      "name": "Elastic Container Service (ECS)",
+      "url": "https://aws.amazon.com/ecs/"
+    },
+    {
+      "name": "Elastic Kubernetes Service (EKS)",
+      "url": "https://aws.amazon.com/eks/"
+    },
+    {
+      "name": "Fargate",
+      "url": "https://aws.amazon.com/fargate/"
+    },
+    {
+      "name": "Red Hat OpenShift Service on AWS (ROSA)",
+      "url": "https://aws.amazon.com/rosa/"
+    }
+  ],
+  "compute-faas": [
+    {
+      "name": "Lambda",
+      "url": "https://aws.amazon.com/lambda/"
+    }
+  ],
+  "compute-server": [
+    {
+      "name": "Auto Scaling",
+      "url": "https://aws.amazon.com/autoscaling/"
+    },
+    {
+      "name": "Batch",
+      "url": "https://aws.amazon.com/batch/"
+    },
+    {
+      "name": "Elastic Compute Cloud (EC2)",
+      "url": "https://aws.amazon.com/ec2/"
+    },
+    {
+      "name": "Elastic VMware Service (EVS)",
+      "url": "https://aws.amazon.com/evs/"
+    },
+    {
+      "name": "Lightsail",
+      "url": "https://aws.amazon.com/lightsail/"
+    }
+  ],
+  "cost": [
+    {
+      "name": "Billing",
+      "url": "https://aws.amazon.com/aws-cost-management/aws-billing/"
+    },
+    {
+      "name": "Budgets",
+      "url": "https://aws.amazon.com/aws-cost-management/aws-budgets/"
+    },
+    {
+      "name": "Cost Anomaly Detection",
+      "url": "https://aws.amazon.com/aws-cost-management/aws-cost-anomaly-detection/"
+    },
+    {
+      "name": "Cost Categories",
+      "url": "https://aws.amazon.com/aws-cost-management/aws-cost-categories/"
+    },
+    {
+      "name": "Cost Explorer",
+      "url": "https://aws.amazon.com/aws-cost-management/aws-cost-explorer/"
+    },
+    {
+      "name": "Pricing Calculator",
+      "url": "https://calculator.aws/#/"
+    },
+    {
+      "name": "Savings Plans",
+      "url": "https://aws.amazon.com/savingsplans/"
+    }
+  ],
+  "data-analytics": [
+    {
+      "name": "Athena",
+      "url": "https://aws.amazon.com/athena/"
+    },
+    {
+      "name": "CloudSearch",
+      "url": "https://aws.amazon.com/cloudsearch/"
+    },
+    {
+      "name": "Data Firehose",
+      "url": "https://aws.amazon.com/firehose/"
+    },
+    {
+      "name": "Kinesis Data Streams",
+      "url": "https://aws.amazon.com/kinesis/data-streams/"
+    },
+    {
+      "name": "Managed Service for Apache Flink",
+      "url": "https://aws.amazon.com/managed-service-apache-flink/"
+    },
+    {
+      "name": "OpenSearch Service",
+      "url": "https://aws.amazon.com/opensearch-service/"
+    },
+    {
+      "name": "Quick (formerly QuickSight)",
+      "url": "https://aws.amazon.com/quick/"
+    },
+    {
+      "name": "SageMaker Unified Studio",
+      "url": "https://aws.amazon.com/sagemaker/unified-studio/"
+    }
+  ],
+  "data-big-data": [
+    {
+      "name": "EMR",
+      "url": "https://aws.amazon.com/emr/"
+    }
+  ],
+  "data-database": [
+    {
+      "name": "Aurora",
+      "url": "https://aws.amazon.com/rds/aurora/"
+    },
+    {
+      "name": "Aurora DSQL",
+      "url": "https://aws.amazon.com/rds/aurora/dsql/"
+    },
+    {
+      "name": "DocumentDB",
+      "url": "https://aws.amazon.com/documentdb/"
+    },
+    {
+      "name": "DynamoDB",
+      "url": "https://aws.amazon.com/dynamodb/"
+    },
+    {
+      "name": "ElastiCache",
+      "url": "https://aws.amazon.com/elasticache/"
+    },
+    {
+      "name": "Keyspaces (for Apache Cassandra)",
+      "url": "https://aws.amazon.com/keyspaces/"
+    },
+    {
+      "name": "MemoryDB",
+      "url": "https://aws.amazon.com/memorydb/"
+    },
+    {
+      "name": "Neptune",
+      "url": "https://aws.amazon.com/neptune/"
+    },
+    {
+      "name": "RDS",
+      "url": "https://aws.amazon.com/rds/"
+    },
+    {
+      "name": "SimpleDB",
+      "url": "https://aws.amazon.com/simpledb/"
+    },
+    {
+      "name": "Timestream",
+      "url": "https://aws.amazon.com/timestream/"
+    }
+  ],
+  "data-data-lake": [
+    {
+      "name": "Data Lakes on AWS (S3)",
+      "url": "https://aws.amazon.com/big-data/datalakes-and-analytics/datalakes/"
+    },
+    {
+      "name": "Lake Formation",
+      "url": "https://aws.amazon.com/lake-formation/"
+    },
+    {
+      "name": "S3 Tables",
+      "url": "https://aws.amazon.com/s3/features/tables/"
+    }
+  ],
+  "data-dwh": [
+    {
+      "name": "Redshift",
+      "url": "https://aws.amazon.com/redshift/"
+    }
+  ],
+  "devops": [
+    {
+      "name": "CodeArtifact",
+      "url": "https://aws.amazon.com/codeartifact/"
+    },
+    {
+      "name": "CodeBuild",
+      "url": "https://aws.amazon.com/codebuild/"
+    },
+    {
+      "name": "CodeCommit",
+      "url": "https://aws.amazon.com/codecommit/"
+    },
+    {
+      "name": "CodeDeploy",
+      "url": "https://aws.amazon.com/codedeploy/"
+    },
+    {
+      "name": "CodeGuru Profiler",
+      "url": "https://aws.amazon.com/codeguru/profiler/"
+    },
+    {
+      "name": "CodePipeline",
+      "url": "https://aws.amazon.com/codepipeline/"
+    },
+    {
+      "name": "DevOps Guru",
+      "url": "https://aws.amazon.com/devops-guru/"
+    },
+    {
+      "name": "Fault Injection Service (FIS)",
+      "url": "https://aws.amazon.com/fis/"
+    },
+    {
+      "name": "Kiro",
+      "url": "https://kiro.dev/"
+    },
+    {
+      "name": "Q Developer",
+      "url": "https://aws.amazon.com/q/developer/"
+    }
+  ],
+  "email": [
+    {
+      "name": "Simple Email Service (SES)",
+      "url": "https://aws.amazon.com/ses/"
+    }
+  ],
+  "etl": [
+    {
+      "name": "AppFlow",
+      "url": "https://aws.amazon.com/appflow/"
+    },
+    {
+      "name": "Glue",
+      "url": "https://aws.amazon.com/glue/"
+    }
+  ],
+  "firewall": [
+    {
+      "name": "Firewall Manager",
+      "url": "https://aws.amazon.com/firewall-manager/"
+    },
+    {
+      "name": "Network Firewall",
+      "url": "https://aws.amazon.com/network-firewall/"
+    },
+    {
+      "name": "Web Application Firewall (WAF)",
+      "url": "https://aws.amazon.com/waf/"
+    }
+  ],
+  "hybrid": [
+    {
+      "name": "ECS Anywhere",
+      "url": "https://aws.amazon.com/ecs/anywhere/"
+    },
+    {
+      "name": "EKS Anywhere",
+      "url": "https://aws.amazon.com/eks/eks-anywhere/"
+    },
+    {
+      "name": "Local Zones",
+      "url": "https://aws.amazon.com/about-aws/global-infrastructure/localzones/"
+    },
+    {
+      "name": "Outposts",
+      "url": "https://aws.amazon.com/outposts/"
+    },
+    {
+      "name": "Wavelength",
+      "url": "https://aws.amazon.com/wavelength/"
+    }
+  ],
+  "identity": [
+    {
+      "name": "Cognito",
+      "url": "https://aws.amazon.com/cognito/"
+    },
+    {
+      "name": "Directory Service",
+      "url": "https://aws.amazon.com/directoryservice/"
+    },
+    {
+      "name": "IAM Identity Center",
+      "url": "https://aws.amazon.com/iam/identity-center/"
+    },
+    {
+      "name": "Identity and Access Management (IAM)",
+      "url": "https://aws.amazon.com/iam/"
+    },
+    {
+      "name": "Resource Access Manager (RAM)",
+      "url": "https://aws.amazon.com/ram/"
+    },
+    {
+      "name": "Verified Permissions",
+      "url": "https://aws.amazon.com/verified-permissions/"
+    }
+  ],
+  "iot": [
+    {
+      "name": "IoT Core",
+      "url": "https://aws.amazon.com/iot-core/"
+    },
+    {
+      "name": "IoT Device Management",
+      "url": "https://aws.amazon.com/iot-device-management/"
+    },
+    {
+      "name": "IoT Greengrass",
+      "url": "https://aws.amazon.com/greengrass/"
+    },
+    {
+      "name": "IoT SiteWise",
+      "url": "https://aws.amazon.com/iot-sitewise/"
+    }
+  ],
+  "key-secret": [
+    {
+      "name": "Certificate Manager (ACM)",
+      "url": "https://aws.amazon.com/certificate-manager/"
+    },
+    {
+      "name": "CloudHSM",
+      "url": "https://aws.amazon.com/cloudhsm/"
+    },
+    {
+      "name": "Key Management Service (KMS)",
+      "url": "https://aws.amazon.com/kms/"
+    },
+    {
+      "name": "Private Certificate Authority",
+      "url": "https://aws.amazon.com/private-ca/"
+    },
+    {
+      "name": "Secrets Manager",
+      "url": "https://aws.amazon.com/secrets-manager/"
+    }
+  ],
+  "logging": [
+    {
+      "name": "CloudTrail",
+      "url": "https://aws.amazon.com/cloudtrail/"
+    },
+    {
+      "name": "CloudWatch Logs",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html"
+    }
+  ],
+  "messaging": [
+    {
+      "name": "End User Messaging",
+      "url": "https://aws.amazon.com/end-user-messaging/"
+    },
+    {
+      "name": "EventBridge",
+      "url": "https://aws.amazon.com/eventbridge/"
+    },
+    {
+      "name": "Managed Streaming for Apache Kafka (MSK)",
+      "url": "https://aws.amazon.com/msk/"
+    },
+    {
+      "name": "MQ",
+      "url": "https://aws.amazon.com/amazon-mq/"
+    },
+    {
+      "name": "Simple Notification Service (SNS)",
+      "url": "https://aws.amazon.com/sns/"
+    },
+    {
+      "name": "Simple Queue Service (SQS)",
+      "url": "https://aws.amazon.com/sqs/"
+    }
+  ],
+  "migration": [
+    {
+      "name": "Application Migration Service",
+      "url": "https://aws.amazon.com/application-migration-service/"
+    },
+    {
+      "name": "Data Transfer Terminal",
+      "url": "https://aws.amazon.com/data-transfer-terminal/"
+    },
+    {
+      "name": "Database Migration Service (DMS)",
+      "url": "https://aws.amazon.com/dms/"
+    },
+    {
+      "name": "DataSync",
+      "url": "https://aws.amazon.com/datasync/"
+    },
+    {
+      "name": "Snowball Edge",
+      "url": "https://aws.amazon.com/snowball/"
+    },
+    {
+      "name": "Transfer Family",
+      "url": "https://aws.amazon.com/aws-transfer-family/"
+    },
+    {
+      "name": "Transform",
+      "url": "https://aws.amazon.com/transform/"
+    }
+  ],
+  "monitoring": [
+    {
+      "name": "CloudWatch",
+      "url": "https://aws.amazon.com/cloudwatch/"
+    },
+    {
+      "name": "Managed Grafana",
+      "url": "https://aws.amazon.com/grafana/"
+    },
+    {
+      "name": "Managed Service for Prometheus",
+      "url": "https://aws.amazon.com/prometheus/"
+    },
+    {
+      "name": "X-Ray",
+      "url": "https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html"
+    }
+  ],
+  "network-cdn": [
+    {
+      "name": "CloudFront",
+      "url": "https://aws.amazon.com/cloudfront/"
+    }
+  ],
+  "network-connection": [
+    {
+      "name": "Cloud WAN",
+      "url": "https://aws.amazon.com/cloud-wan/"
+    },
+    {
+      "name": "Direct Connect",
+      "url": "https://aws.amazon.com/directconnect/"
+    },
+    {
+      "name": "PrivateLink",
+      "url": "https://aws.amazon.com/privatelink/"
+    },
+    {
+      "name": "Verified Access",
+      "url": "https://aws.amazon.com/verified-access/"
+    },
+    {
+      "name": "VPN",
+      "url": "https://aws.amazon.com/vpn/"
+    }
+  ],
+  "network-core": [
+    {
+      "name": "Virtual Private Cloud (VPC)",
+      "url": "https://aws.amazon.com/vpc/"
+    }
+  ],
+  "network-dns": [
+    {
+      "name": "Route 53",
+      "url": "https://aws.amazon.com/route53/"
+    }
+  ],
+  "network-lb": [
+    {
+      "name": "Elastic Load Balancing (ELB)",
+      "url": "https://aws.amazon.com/elasticloadbalancing/"
+    },
+    {
+      "name": "Global Accelerator",
+      "url": "https://aws.amazon.com/global-accelerator/"
+    }
+  ],
+  "network-misc": [
+    {
+      "name": "NAT Gateways",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html"
+    },
+    {
+      "name": "Transit Gateway",
+      "url": "https://aws.amazon.com/transit-gateway/"
+    },
+    {
+      "name": "VPC Lattice",
+      "url": "https://aws.amazon.com/vpc/lattice/"
+    }
+  ],
+  "optimization": [
+    {
+      "name": "Compute Optimizer",
+      "url": "https://aws.amazon.com/compute-optimizer/"
+    },
+    {
+      "name": "Cost Optimization Hub",
+      "url": "https://aws.amazon.com/aws-cost-management/cost-optimization-hub/"
+    },
+    {
+      "name": "Trusted Advisor",
+      "url": "https://aws.amazon.com/premiumsupport/technology/trusted-advisor/"
+    }
+  ],
+  "queue": [
+    {
+      "name": "Simple Queue Service (SQS)",
+      "url": "https://aws.amazon.com/sqs/"
+    }
+  ],
+  "resource-mgmt": [
+    {
+      "name": "Account",
+      "url": "https://aws.amazon.com/account/"
+    },
+    {
+      "name": "Control Tower",
+      "url": "https://aws.amazon.com/controltower/"
+    },
+    {
+      "name": "Organizations",
+      "url": "https://aws.amazon.com/organizations/"
+    },
+    {
+      "name": "Resource Access Manager (RAM)",
+      "url": "https://aws.amazon.com/ram/"
+    },
+    {
+      "name": "Service Catalog",
+      "url": "https://aws.amazon.com/servicecatalog/"
+    }
+  ],
+  "sap": [
+    {
+      "name": "SAP on AWS",
+      "url": "https://aws.amazon.com/sap/"
+    }
+  ],
+  "security": [
+    {
+      "name": "Detective",
+      "url": "https://aws.amazon.com/detective/"
+    },
+    {
+      "name": "GuardDuty",
+      "url": "https://aws.amazon.com/guardduty/"
+    },
+    {
+      "name": "Inspector",
+      "url": "https://aws.amazon.com/inspector/"
+    },
+    {
+      "name": "Macie",
+      "url": "https://aws.amazon.com/macie/"
+    },
+    {
+      "name": "Security Hub",
+      "url": "https://aws.amazon.com/security-hub/"
+    },
+    {
+      "name": "Security Lake",
+      "url": "https://aws.amazon.com/security-lake/"
+    },
+    {
+      "name": "Shield",
+      "url": "https://aws.amazon.com/shield/"
+    }
+  ],
+  "storage": [
+    {
+      "name": "Backup",
+      "url": "https://aws.amazon.com/backup/"
+    },
+    {
+      "name": "Elastic Block Store (EBS)",
+      "url": "https://aws.amazon.com/ebs/"
+    },
+    {
+      "name": "Elastic File System (EFS)",
+      "url": "https://aws.amazon.com/efs/"
+    },
+    {
+      "name": "FSx",
+      "url": "https://aws.amazon.com/fsx/"
+    },
+    {
+      "name": "S3 Glacier storage classes",
+      "url": "https://aws.amazon.com/s3/storage-classes/glacier/"
+    },
+    {
+      "name": "Simple Storage Service (S3)",
+      "url": "https://aws.amazon.com/s3/"
+    },
+    {
+      "name": "Storage Gateway",
+      "url": "https://aws.amazon.com/storagegateway/"
+    }
+  ],
+  "workflow": [
+    {
+      "name": "Managed Workflows for Apache Airflow (MWAA)",
+      "url": "https://aws.amazon.com/managed-workflows-for-apache-airflow/"
+    },
+    {
+      "name": "Simple Workflow Service (SWF)",
+      "url": "https://aws.amazon.com/swf/"
+    },
+    {
+      "name": "Step Functions",
+      "url": "https://aws.amazon.com/step-functions/"
+    }
+  ]
+}

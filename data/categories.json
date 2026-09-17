@@ -1,0 +1,164 @@
+{
+  "categories": [
+    {
+      "id": "ai-ml",
+      "name": "AI & ML"
+    },
+    {
+      "id": "ai-genai",
+      "name": "AI – Generative AI"
+    },
+    {
+      "id": "application-mgmt",
+      "name": "Application – Mgmt"
+    },
+    {
+      "id": "application-mobile",
+      "name": "Application – Mobile"
+    },
+    {
+      "id": "automation",
+      "name": "Automation"
+    },
+    {
+      "id": "compliance",
+      "name": "Compliance"
+    },
+    {
+      "id": "compute-container",
+      "name": "Compute – Container"
+    },
+    {
+      "id": "compute-faas",
+      "name": "Compute – FaaS"
+    },
+    {
+      "id": "compute-server",
+      "name": "Compute – Server"
+    },
+    {
+      "id": "cost",
+      "name": "Cost"
+    },
+    {
+      "id": "data-analytics",
+      "name": "Data – Analytics"
+    },
+    {
+      "id": "data-big-data",
+      "name": "Data – Big Data"
+    },
+    {
+      "id": "data-database",
+      "name": "Data – Database"
+    },
+    {
+      "id": "data-data-lake",
+      "name": "Data – Data Lake"
+    },
+    {
+      "id": "data-dwh",
+      "name": "Data – DWH"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps"
+    },
+    {
+      "id": "email",
+      "name": "Email"
+    },
+    {
+      "id": "etl",
+      "name": "ETL"
+    },
+    {
+      "id": "firewall",
+      "name": "Firewall"
+    },
+    {
+      "id": "hybrid",
+      "name": "Hybrid"
+    },
+    {
+      "id": "identity",
+      "name": "Identity"
+    },
+    {
+      "id": "iot",
+      "name": "IoT"
+    },
+    {
+      "id": "key-secret",
+      "name": "Key & Secret"
+    },
+    {
+      "id": "logging",
+      "name": "Logging"
+    },
+    {
+      "id": "messaging",
+      "name": "Messaging"
+    },
+    {
+      "id": "migration",
+      "name": "Migration"
+    },
+    {
+      "id": "monitoring",
+      "name": "Monitoring"
+    },
+    {
+      "id": "network-cdn",
+      "name": "Network – CDN"
+    },
+    {
+      "id": "network-connection",
+      "name": "Network – Connection"
+    },
+    {
+      "id": "network-core",
+      "name": "Network – Core"
+    },
+    {
+      "id": "network-dns",
+      "name": "Network – DNS"
+    },
+    {
+      "id": "network-lb",
+      "name": "Network – LB"
+    },
+    {
+      "id": "network-misc",
+      "name": "Network – Misc"
+    },
+    {
+      "id": "optimization",
+      "name": "Optimization"
+    },
+    {
+      "id": "queue",
+      "name": "Queue"
+    },
+    {
+      "id": "resource-mgmt",
+      "name": "Resource Mgmt"
+    },
+    {
+      "id": "sap",
+      "name": "SAP"
+    },
+    {
+      "id": "security",
+      "name": "Security"
+    },
+    {
+      "id": "storage",
+      "name": "Storage"
+    },
+    {
+      "id": "workflow",
+      "name": "Workflow"
+    }
+  ]
+}

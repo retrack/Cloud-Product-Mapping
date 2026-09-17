@@ -1,0 +1,568 @@
+{
+  "ai-ml": [
+    {
+      "name": "Cloud TPU",
+      "url": "https://cloud.google.com/tpu"
+    },
+    {
+      "name": "CX Agent Studio (formerly Dialogflow)",
+      "url": "https://cloud.google.com/gemini-enterprise-cx/cx-agent-studio"
+    },
+    {
+      "name": "Document AI",
+      "url": "https://cloud.google.com/document-ai"
+    },
+    {
+      "name": "Gemini Enterprise Agent Platform (formerly Vertex AI)",
+      "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform"
+    },
+    {
+      "name": "Natural Language AI",
+      "url": "https://cloud.google.com/natural-language"
+    },
+    {
+      "name": "Speech-to-Text",
+      "url": "https://cloud.google.com/speech-to-text"
+    },
+    {
+      "name": "Text-to-Speech",
+      "url": "https://cloud.google.com/text-to-speech"
+    },
+    {
+      "name": "Translation AI",
+      "url": "https://cloud.google.com/translate"
+    },
+    {
+      "name": "Video AI",
+      "url": "https://cloud.google.com/video-intelligence"
+    },
+    {
+      "name": "Vision AI",
+      "url": "https://cloud.google.com/vision"
+    }
+  ],
+  "ai-genai": [
+    {
+      "name": "Gemini Enterprise",
+      "url": "https://cloud.google.com/gemini-enterprise"
+    },
+    {
+      "name": "Gemini Enterprise Agent Platform (formerly Vertex AI)",
+      "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform"
+    }
+  ],
+  "application-mgmt": [
+    {
+      "name": "API Gateway",
+      "url": "https://docs.cloud.google.com/api-gateway/docs"
+    },
+    {
+      "name": "Apigee",
+      "url": "https://cloud.google.com/apigee"
+    },
+    {
+      "name": "App Engine",
+      "url": "https://cloud.google.com/appengine"
+    },
+    {
+      "name": "Cloud APIs",
+      "url": "https://cloud.google.com/apis"
+    }
+  ],
+  "application-mobile": [
+    {
+      "name": "AdMob and Firebase",
+      "url": "https://firebase.google.com/docs/admob"
+    },
+    {
+      "name": "Firebase",
+      "url": "https://firebase.google.com/"
+    }
+  ],
+  "automation": [
+    {
+      "name": "Infrastructure Manager",
+      "url": "https://docs.cloud.google.com/infrastructure-manager/docs"
+    }
+  ],
+  "compliance": [
+    {
+      "name": "Assured Workloads",
+      "url": "https://cloud.google.com/security/products/assured-workloads"
+    },
+    {
+      "name": "Compliance Reports Manager",
+      "url": "https://cloud.google.com/security/compliance/compliance-reports-manager"
+    }
+  ],
+  "compute-container": [
+    {
+      "name": "Artifact Registry",
+      "url": "https://docs.cloud.google.com/artifact-registry/docs"
+    },
+    {
+      "name": "Cloud Run",
+      "url": "https://cloud.google.com/run"
+    },
+    {
+      "name": "Google Kubernetes Engine (GKE)",
+      "url": "https://cloud.google.com/kubernetes-engine"
+    },
+    {
+      "name": "Migrate to Containers",
+      "url": "https://cloud.google.com/products/cloud-migration/containers"
+    }
+  ],
+  "compute-faas": [
+    {
+      "name": "Cloud Run functions",
+      "url": "https://cloud.google.com/functions"
+    }
+  ],
+  "compute-server": [
+    {
+      "name": "Batch",
+      "url": "https://cloud.google.com/batch"
+    },
+    {
+      "name": "Compute Engine",
+      "url": "https://cloud.google.com/products/compute"
+    },
+    {
+      "name": "VMware Engine",
+      "url": "https://cloud.google.com/vmware-engine"
+    }
+  ],
+  "cost": [
+    {
+      "name": "Active Assist (Recommender)",
+      "url": "https://docs.cloud.google.com/recommender/docs/whatis-activeassist"
+    },
+    {
+      "name": "Cost Management",
+      "url": "https://cloud.google.com/cost-management"
+    },
+    {
+      "name": "Pricing Calculator",
+      "url": "https://cloud.google.com/products/calculator"
+    }
+  ],
+  "data-analytics": [
+    {
+      "name": "BigQuery",
+      "url": "https://cloud.google.com/bigquery"
+    },
+    {
+      "name": "Data Studio (formerly Looker Studio)",
+      "url": "https://cloud.google.com/data-studio"
+    },
+    {
+      "name": "Dataflow",
+      "url": "https://cloud.google.com/products/dataflow"
+    },
+    {
+      "name": "Knowledge Catalog (formerly Dataplex)",
+      "url": "https://cloud.google.com/products/knowledge-catalog"
+    },
+    {
+      "name": "Looker",
+      "url": "https://cloud.google.com/looker"
+    }
+  ],
+  "data-big-data": [
+    {
+      "name": "Managed Service for Apache Spark (formerly Dataproc)",
+      "url": "https://cloud.google.com/products/managed-service-for-apache-spark"
+    }
+  ],
+  "data-database": [
+    {
+      "name": "AlloyDB for PostgreSQL",
+      "url": "https://cloud.google.com/products/alloydb"
+    },
+    {
+      "name": "Bigtable",
+      "url": "https://cloud.google.com/bigtable"
+    },
+    {
+      "name": "Cloud SQL",
+      "url": "https://cloud.google.com/sql"
+    },
+    {
+      "name": "Firestore",
+      "url": "https://cloud.google.com/products/firestore"
+    },
+    {
+      "name": "Memorystore",
+      "url": "https://cloud.google.com/memorystore"
+    },
+    {
+      "name": "Spanner",
+      "url": "https://cloud.google.com/spanner"
+    }
+  ],
+  "data-data-lake": [
+    {
+      "name": "Cloud Storage",
+      "url": "https://cloud.google.com/storage"
+    },
+    {
+      "name": "Data Lakehouse Solution",
+      "url": "https://cloud.google.com/solutions/data-lakehouse"
+    },
+    {
+      "name": "Lakehouse for Apache Iceberg (BigLake)",
+      "url": "https://cloud.google.com/products/lakehouse"
+    }
+  ],
+  "data-dwh": [
+    {
+      "name": "BigQuery",
+      "url": "https://cloud.google.com/bigquery"
+    }
+  ],
+  "devops": [
+    {
+      "name": "Artifact Registry",
+      "url": "https://docs.cloud.google.com/artifact-registry/docs"
+    },
+    {
+      "name": "Binary Authorization",
+      "url": "https://docs.cloud.google.com/binary-authorization/docs"
+    },
+    {
+      "name": "Cloud Build",
+      "url": "https://cloud.google.com/build"
+    },
+    {
+      "name": "Cloud Deploy",
+      "url": "https://cloud.google.com/deploy"
+    },
+    {
+      "name": "Cloud Source Repositories",
+      "url": "https://docs.cloud.google.com/source-repositories/docs"
+    },
+    {
+      "name": "Cloud Workstations",
+      "url": "https://cloud.google.com/workstations"
+    },
+    {
+      "name": "Gemini Code Assist",
+      "url": "https://codeassist.google/"
+    },
+    {
+      "name": "Google Cloud Observability",
+      "url": "https://cloud.google.com/products/observability"
+    },
+    {
+      "name": "Secure Source Manager",
+      "url": "https://cloud.google.com/products/secure-source-manager"
+    }
+  ],
+  "email": [
+    {
+      "name": "Gmail (Google Workspace)",
+      "url": "https://workspace.google.com/products/gmail/"
+    }
+  ],
+  "etl": [
+    {
+      "name": "Cloud Data Fusion",
+      "url": "https://cloud.google.com/data-fusion"
+    },
+    {
+      "name": "Datastream",
+      "url": "https://cloud.google.com/datastream"
+    }
+  ],
+  "firewall": [
+    {
+      "name": "Cloud Armor",
+      "url": "https://cloud.google.com/security/products/armor"
+    },
+    {
+      "name": "Cloud Firewall (Cloud NGFW)",
+      "url": "https://cloud.google.com/security/products/firewall"
+    }
+  ],
+  "hybrid": [
+    {
+      "name": "GKE Multi-Cloud (formerly Anthos)",
+      "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs"
+    },
+    {
+      "name": "Google Distributed Cloud",
+      "url": "https://cloud.google.com/distributed-cloud"
+    }
+  ],
+  "identity": [
+    {
+      "name": "Access Transparency and Access Approval",
+      "url": "https://cloud.google.com/security/products/access-transparency"
+    },
+    {
+      "name": "Cloud Identity",
+      "url": "https://docs.cloud.google.com/identity/docs"
+    },
+    {
+      "name": "Identity and Access Management (IAM)",
+      "url": "https://docs.cloud.google.com/iam/docs"
+    },
+    {
+      "name": "Identity Platform",
+      "url": "https://docs.cloud.google.com/identity-platform/docs"
+    }
+  ],
+  "key-secret": [
+    {
+      "name": "Certificate Authority Service",
+      "url": "https://cloud.google.com/security/products/certificate-authority-service"
+    },
+    {
+      "name": "Cloud Key Management",
+      "url": "https://cloud.google.com/security/products/security-key-management"
+    },
+    {
+      "name": "Secret Manager",
+      "url": "https://cloud.google.com/security/products/secret-manager"
+    }
+  ],
+  "logging": [
+    {
+      "name": "Cloud Audit Logs",
+      "url": "https://docs.cloud.google.com/logging/docs/audit"
+    },
+    {
+      "name": "Cloud Logging",
+      "url": "https://cloud.google.com/logging"
+    }
+  ],
+  "messaging": [
+    {
+      "name": "Eventarc",
+      "url": "https://docs.cloud.google.com/eventarc/docs"
+    },
+    {
+      "name": "Firebase Cloud Messaging (FCM)",
+      "url": "https://firebase.google.com/docs/cloud-messaging/"
+    },
+    {
+      "name": "Managed Service for Apache Kafka",
+      "url": "https://cloud.google.com/products/managed-service-for-apache-kafka"
+    },
+    {
+      "name": "Pub/Sub",
+      "url": "https://cloud.google.com/pubsub"
+    }
+  ],
+  "migration": [
+    {
+      "name": "Database Migration Service",
+      "url": "https://cloud.google.com/database-migration"
+    },
+    {
+      "name": "Migrate to Virtual Machines",
+      "url": "https://cloud.google.com/products/cloud-migration/virtual-machines"
+    },
+    {
+      "name": "Migration Center",
+      "url": "https://docs.cloud.google.com/migration-center/docs"
+    },
+    {
+      "name": "Storage Transfer Service",
+      "url": "https://cloud.google.com/storage-transfer-service"
+    },
+    {
+      "name": "Transfer Appliance",
+      "url": "https://docs.cloud.google.com/transfer-appliance/docs/4.0/overview"
+    }
+  ],
+  "monitoring": [
+    {
+      "name": "Cloud Monitoring",
+      "url": "https://cloud.google.com/monitoring"
+    },
+    {
+      "name": "Cloud Trace",
+      "url": "https://docs.cloud.google.com/trace/docs"
+    },
+    {
+      "name": "Error Reporting",
+      "url": "https://docs.cloud.google.com/error-reporting/docs/grouping-errors"
+    },
+    {
+      "name": "Firebase Performance Monitoring",
+      "url": "https://firebase.google.com/docs/perf-mon"
+    },
+    {
+      "name": "Managed Service for Prometheus",
+      "url": "https://cloud.google.com/managed-prometheus"
+    },
+    {
+      "name": "Network Intelligence Center",
+      "url": "https://cloud.google.com/network-intelligence-center"
+    }
+  ],
+  "network-cdn": [
+    {
+      "name": "Cloud CDN",
+      "url": "https://cloud.google.com/cdn"
+    }
+  ],
+  "network-connection": [
+    {
+      "name": "Cloud Interconnect",
+      "url": "https://docs.cloud.google.com/network-connectivity/docs/interconnect"
+    },
+    {
+      "name": "Cloud Router",
+      "url": "https://docs.cloud.google.com/network-connectivity/docs/router"
+    },
+    {
+      "name": "Cloud VPN",
+      "url": "https://docs.cloud.google.com/network-connectivity/docs/vpn"
+    },
+    {
+      "name": "Network Connectivity Center",
+      "url": "https://cloud.google.com/network-connectivity-center"
+    },
+    {
+      "name": "Private Service Connect",
+      "url": "https://cloud.google.com/private-service-connect"
+    }
+  ],
+  "network-core": [
+    {
+      "name": "Virtual Private Cloud (VPC)",
+      "url": "https://cloud.google.com/vpc"
+    }
+  ],
+  "network-dns": [
+    {
+      "name": "Cloud DNS",
+      "url": "https://cloud.google.com/dns"
+    },
+    {
+      "name": "Cloud Domains",
+      "url": "https://docs.cloud.google.com/domains/docs"
+    }
+  ],
+  "network-lb": [
+    {
+      "name": "Cloud Load Balancing",
+      "url": "https://cloud.google.com/load-balancing"
+    },
+    {
+      "name": "Cloud Service Mesh (formerly Traffic Director)",
+      "url": "https://cloud.google.com/products/service-mesh"
+    }
+  ],
+  "network-misc": [
+    {
+      "name": "Cloud NAT",
+      "url": "https://docs.cloud.google.com/nat/docs"
+    },
+    {
+      "name": "Network Intelligence Center",
+      "url": "https://cloud.google.com/network-intelligence-center"
+    },
+    {
+      "name": "Network Service Tiers",
+      "url": "https://docs.cloud.google.com/network-tiers/docs/overview"
+    }
+  ],
+  "optimization": [
+    {
+      "name": "Active Assist (Recommender)",
+      "url": "https://docs.cloud.google.com/recommender/docs/whatis-activeassist"
+    }
+  ],
+  "queue": [
+    {
+      "name": "Cloud Tasks",
+      "url": "https://docs.cloud.google.com/tasks/docs"
+    }
+  ],
+  "resource-mgmt": [
+    {
+      "name": "Cloud Asset Inventory",
+      "url": "https://cloud.google.com/asset-inventory"
+    },
+    {
+      "name": "Organization",
+      "url": "https://docs.cloud.google.com/resource-manager/docs/creating-managing-organization"
+    },
+    {
+      "name": "Projects",
+      "url": "https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects"
+    },
+    {
+      "name": "Resource Manager",
+      "url": "https://docs.cloud.google.com/resource-manager/docs"
+    }
+  ],
+  "sap": [
+    {
+      "name": "SAP on Google Cloud",
+      "url": "https://cloud.google.com/solutions/sap"
+    }
+  ],
+  "security": [
+    {
+      "name": "Cloud Armor",
+      "url": "https://cloud.google.com/security/products/armor"
+    },
+    {
+      "name": "Google Security Operations (formerly Chronicle)",
+      "url": "https://cloud.google.com/security/products/security-operations"
+    },
+    {
+      "name": "Security Command Center",
+      "url": "https://cloud.google.com/security/products/security-command-center"
+    },
+    {
+      "name": "Sensitive Data Protection",
+      "url": "https://cloud.google.com/security/products/sensitive-data-protection"
+    }
+  ],
+  "storage": [
+    {
+      "name": "Backup and DR Service",
+      "url": "https://cloud.google.com/backup-disaster-recovery"
+    },
+    {
+      "name": "Cloud Storage",
+      "url": "https://cloud.google.com/storage"
+    },
+    {
+      "name": "Filestore",
+      "url": "https://cloud.google.com/filestore"
+    },
+    {
+      "name": "Hyperdisk",
+      "url": "https://docs.cloud.google.com/compute/docs/disks/hyperdisks"
+    },
+    {
+      "name": "Managed Lustre",
+      "url": "https://cloud.google.com/products/managed-lustre"
+    },
+    {
+      "name": "Persistent Disk",
+      "url": "https://cloud.google.com/persistent-disk"
+    }
+  ],
+  "workflow": [
+    {
+      "name": "Application Integration",
+      "url": "https://cloud.google.com/application-integration"
+    },
+    {
+      "name": "Managed Service for Apache Airflow (formerly Cloud Composer)",
+      "url": "https://cloud.google.com/products/managed-service-for-apache-airflow"
+    },
+    {
+      "name": "Workflows",
+      "url": "https://cloud.google.com/workflows"
+    }
+  ]
+}
