@@ -187,13 +187,18 @@ def build_readme(selected, categories, mapping, crosswalks):
 # --------------------------------------------------------------------------- Site
 
 
+MIME = {".svg": "image/svg+xml", ".png": "image/png"}
+
+
 def icon_uri(provider, name):
-    """Return a data: URI for icons/<provider>/<name>.svg, or None if there is no such icon."""
+    """Return a data: URI for icons/<provider>/<name> (".svg" unless name has an extension), or None."""
     base = provider.get("iconBase")
-    path = ROOT / f"{base}{name}.svg" if base and name else None
-    if not path or not path.exists():
+    if not base or not name:
         return None
-    return "data:image/svg+xml;base64," + base64.b64encode(path.read_bytes()).decode("ascii")
+    path = ROOT / (base + name if Path(name).suffix else f"{base}{name}.svg")
+    if not path.exists():
+        return None
+    return f"data:{MIME[path.suffix]};base64," + base64.b64encode(path.read_bytes()).decode("ascii")
 
 
 def inline_icons(selected, mapping, crosswalks):
@@ -269,17 +274,31 @@ def poster_tile(provider, item):
     return f'<div class="{cls}">{art}<span class="tile__label">{label}</span>{tag}</div>'
 
 
+def poster_provider_head(provider, columns):
+    """Logo mark (if any) above the provider's wordmark, or its name when there is no wordmark."""
+    name = html.escape(provider["fullName"] if columns < 4 else provider["name"])
+    logo = icon_uri(provider, provider.get("logo"))
+    wordmark = icon_uri(provider, provider.get("wordmark"))
+    wordmark_dark = icon_uri(provider, provider.get("wordmarkDark")) or wordmark
+    parts = []
+    if logo:
+        parts.append(f'<img class="provider__logo" src="{logo}" alt="">')
+    if wordmark:
+        size = "provider__wordmark--small" if logo else ""
+        parts.append(
+            f'<img class="provider__wordmark {size} only-light" src="{wordmark}" alt="{name}">'
+            f'<img class="provider__wordmark {size} only-dark" src="{wordmark_dark}" alt="">'
+        )
+    else:
+        parts.append(f'<span class="provider__name">{name}</span>')
+    return "".join(parts)
+
+
 def build_poster(selected, categories, mapping, brief=False):
     cats = [c for c in categories if c.get("brief") or not brief]
     cells = ['<div class="grid__corner"></div>']
     for p in selected:
-        logo = icon_uri(p, p.get("logo"))
-        mark = f'<img class="provider__logo" src="{logo}" alt="">' if logo else ""
-        mark = f'<span class="provider__mark">{mark}</span>'
-        cells.append(
-            f'<div class="provider" style="--provider:{p["color"]}">{mark}'
-            f'<span class="provider__name">{html.escape(p["fullName"] if len(selected) < 4 else p["name"])}</span></div>'
-        )
+        cells.append(f'<div class="provider" style="--provider:{p["color"]}">{poster_provider_head(p, len(selected))}</div>')
     rows = 0
     for cat in cats:
         items = [mapping[p["id"]].get(cat["id"], []) for p in selected]

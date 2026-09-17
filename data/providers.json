@@ -1,11 +1,12 @@
 {
   "_comment": "Set \"enabled\": false to exclude a provider by default; override with scripts/build.py --providers or --exclude.",
+  "_logos": "logo = mark shown above the name; wordmark(+Dark) replaces the name text. Names without extension are .svg.",
   "updated": "September 2026",
   "providers": [
     { "id": "aws", "name": "AWS", "fullName": "Amazon Web Services", "enabled": true, "homepage": "https://aws.amazon.com/", "color": "#FF9900", "iconBase": "icons/aws/", "logo": "_logo" },
     { "id": "azure", "name": "Azure", "fullName": "Microsoft Azure", "enabled": true, "homepage": "https://azure.microsoft.com/", "color": "#0089D6", "iconBase": "icons/azure/", "logo": "_logo" },
-    { "id": "gcp", "name": "GCP", "fullName": "Google Cloud Platform", "enabled": true, "homepage": "https://cloud.google.com/", "color": "#34A853", "iconBase": "icons/gcp/", "logo": "_logo" },
-    { "id": "oracle", "name": "Oracle", "fullName": "Oracle Cloud Infrastructure", "enabled": true, "homepage": "https://www.oracle.com/cloud/", "color": "#C74634", "iconBase": "icons/oracle/", "logo": "_logo" },
-    { "id": "exoscale", "name": "Exoscale", "fullName": "Exoscale", "enabled": true, "homepage": "https://www.exoscale.com/", "color": "#DA291C", "iconBase": "icons/exoscale/", "logo": "exo-logo" }
+    { "id": "gcp", "name": "GCP", "fullName": "Google Cloud Platform", "enabled": true, "homepage": "https://cloud.google.com/", "color": "#34A853", "iconBase": "icons/gcp/", "logo": "_logo.png", "wordmark": "_wordmark", "wordmarkDark": "_wordmark-dark" },
+    { "id": "oracle", "name": "Oracle", "fullName": "Oracle Cloud Infrastructure", "enabled": true, "homepage": "https://www.oracle.com/cloud/", "color": "#C74634", "iconBase": "icons/oracle/", "wordmark": "_wordmark" },
+    { "id": "exoscale", "name": "Exoscale", "fullName": "Exoscale", "enabled": true, "homepage": "https://www.exoscale.com/", "color": "#DA291C", "iconBase": "icons/exoscale/", "wordmark": "_wordmark", "wordmarkDark": "_wordmark-dark" }
   ]
 }
