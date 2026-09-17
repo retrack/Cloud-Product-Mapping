@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud Product Mapping</title>
+<meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1017" media="(prefers-color-scheme: dark)">
+<meta name="description" content="__TITLE__ — interactive map of equivalent cloud services, with provider include/exclude.">
+<script>
+  // Apply the saved or system theme before first paint to avoid a flash.
+  (function () {
+    var t = null;
+    try { t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("cpm-theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") {
+      t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<style>
+/*__STYLES__*/
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar__inner">
+    <div class="brand">
+      <h1 class="brand__title">Cloud Product Mapping</h1>
+      <p class="brand__subtitle" id="subtitle"></p>
+    </div>
+    <div class="controls">
+      <label class="search">
+        <span class="visually-hidden">Search products</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search products or categories…" autocomplete="off">
+      </label>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle light/dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="topbar__inner topbar__providers">
+    <fieldset class="providers" id="providers">
+      <legend class="visually-hidden">Cloud providers to include</legend>
+    </fieldset>
+    <div class="legend" id="legend"></div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="viewbar" id="viewbar" hidden>
+    <div class="tabs" role="tablist" aria-label="View" id="tabs"></div>
+    <div class="status-filters" id="status-filters" hidden></div>
+  </div>
+  <div class="matrix" id="matrix" role="table" aria-label="Cloud product mapping"></div>
+  <div class="crosswalk" id="crosswalk" role="table" hidden></div>
+  <p class="empty" id="empty" hidden>No products match your filters.</p>
+</main>
+
+<footer class="footer">
+  Generated from <code>data/</code> by <code>scripts/build.py</code>. Exoscale icons from the
+  <a href="https://community.exoscale.com/tools/icon-table/">official Exoscale icon library</a>.
+</footer>
+
+<script>
+window.CPM_DATA = /*__DATA__*/null;
+</script>
+<script>
+/*__APP__*/
+</script>
+</body>
+</html>

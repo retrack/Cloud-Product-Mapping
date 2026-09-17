@@ -1,0 +1,630 @@
+{
+  "ai-ml": [
+    {
+      "name": "Data Science",
+      "url": "https://www.oracle.com/artificial-intelligence/data-science/",
+      "icon": "data-science"
+    },
+    {
+      "name": "Digital Assistant",
+      "url": "https://www.oracle.com/chatbots/",
+      "icon": "digital-assistant"
+    },
+    {
+      "name": "Document Understanding",
+      "url": "https://www.oracle.com/artificial-intelligence/document-understanding/",
+      "icon": "artificial-intelligence"
+    },
+    {
+      "name": "Language",
+      "url": "https://www.oracle.com/artificial-intelligence/language/",
+      "icon": "artificial-intelligence"
+    },
+    {
+      "name": "Speech",
+      "url": "https://www.oracle.com/artificial-intelligence/speech/",
+      "icon": "artificial-intelligence"
+    },
+    {
+      "name": "Vision",
+      "url": "https://www.oracle.com/artificial-intelligence/vision/",
+      "icon": "artificial-intelligence"
+    }
+  ],
+  "ai-genai": [
+    {
+      "name": "Enterprise AI (Generative AI & AI Agents)",
+      "url": "https://www.oracle.com/artificial-intelligence/enterprise-ai/",
+      "icon": "artificial-intelligence"
+    }
+  ],
+  "application-mgmt": [
+    {
+      "name": "APEX Application Development",
+      "url": "https://www.oracle.com/application-development/apex/",
+      "icon": "apex"
+    },
+    {
+      "name": "API Management (API Gateway)",
+      "url": "https://www.oracle.com/cloud/cloud-native/api-management/",
+      "icon": "api-gateway"
+    },
+    {
+      "name": "WebLogic Server for OCI",
+      "url": "https://docs.oracle.com/en/cloud/paas/weblogic-cloud/index.html"
+    },
+    {
+      "name": "WebLogic Server for OKE",
+      "url": "https://docs.oracle.com/en/cloud/paas/weblogic-container/index.html"
+    }
+  ],
+  "application-mobile": [
+    {
+      "name": "Visual Builder",
+      "url": "https://www.oracle.com/application-development/visual-builder/",
+      "icon": "visual-builder"
+    }
+  ],
+  "automation": [
+    {
+      "name": "OS Management Hub",
+      "url": "https://www.oracle.com/cloud/compute/os-management/"
+    },
+    {
+      "name": "Resource Manager",
+      "url": "https://www.oracle.com/cloud/cloud-native/resource-manager/",
+      "icon": "resource-manager"
+    }
+  ],
+  "compliance": [
+    {
+      "name": "OCI Cloud Guard",
+      "url": "https://www.oracle.com/security/cloud-security/cloud-guard/",
+      "icon": "cloud-guard"
+    },
+    {
+      "name": "Security Zones",
+      "url": "https://www.oracle.com/security/cloud-security/security-zones/",
+      "icon": "security-zone"
+    }
+  ],
+  "compute-container": [
+    {
+      "name": "Container Instances",
+      "url": "https://www.oracle.com/cloud/cloud-native/container-instances/",
+      "icon": "container"
+    },
+    {
+      "name": "Container Registry",
+      "url": "https://www.oracle.com/cloud/cloud-native/container-registry/",
+      "icon": "container-registry"
+    },
+    {
+      "name": "Kubernetes Engine (OKE)",
+      "url": "https://www.oracle.com/cloud/cloud-native/kubernetes-engine/",
+      "icon": "oke"
+    }
+  ],
+  "compute-faas": [
+    {
+      "name": "OCI Functions",
+      "url": "https://www.oracle.com/cloud/cloud-native/functions/",
+      "icon": "functions"
+    }
+  ],
+  "compute-server": [
+    {
+      "name": "Compute",
+      "url": "https://www.oracle.com/cloud/compute/",
+      "icon": "vm"
+    },
+    {
+      "name": "Oracle Cloud VMware Solution",
+      "url": "https://www.oracle.com/cloud/compute/vmware/"
+    }
+  ],
+  "cost": [
+    {
+      "name": "Budgets",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/budgetsoverview.htm"
+    },
+    {
+      "name": "Cost Analysis",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm"
+    },
+    {
+      "name": "Cost Estimator",
+      "url": "https://www.oracle.com/cloud/costestimator.html"
+    },
+    {
+      "name": "Oracle Support Rewards",
+      "url": "https://www.oracle.com/cloud/rewards/"
+    }
+  ],
+  "data-analytics": [
+    {
+      "name": "Analytics Cloud",
+      "url": "https://www.oracle.com/analytics/"
+    },
+    {
+      "name": "Fusion Data Intelligence (formerly Fusion Analytics Warehouse)",
+      "url": "https://www.oracle.com/fusion-data-intelligence/"
+    },
+    {
+      "name": "Search with OpenSearch",
+      "url": "https://www.oracle.com/cloud/search/",
+      "icon": "opensearch"
+    }
+  ],
+  "data-big-data": [
+    {
+      "name": "Big Data Service",
+      "url": "https://www.oracle.com/big-data/big-data-service/",
+      "icon": "big-data"
+    },
+    {
+      "name": "Data Flow",
+      "url": "https://www.oracle.com/big-data/data-flow/",
+      "icon": "data-flow"
+    }
+  ],
+  "data-database": [
+    {
+      "name": "Autonomous AI Database",
+      "url": "https://www.oracle.com/autonomous-database/",
+      "icon": "autonomous-db"
+    },
+    {
+      "name": "Autonomous AI JSON Database",
+      "url": "https://www.oracle.com/autonomous-database/autonomous-json-database/",
+      "icon": "autonomous-db"
+    },
+    {
+      "name": "Autonomous AI Transaction Processing",
+      "url": "https://www.oracle.com/autonomous-database/autonomous-transaction-processing/",
+      "icon": "atp"
+    },
+    {
+      "name": "Base Database Service",
+      "url": "https://www.oracle.com/database/base-database-service/",
+      "icon": "db-system"
+    },
+    {
+      "name": "Database with PostgreSQL",
+      "url": "https://www.oracle.com/cloud/postgresql/",
+      "icon": "database"
+    },
+    {
+      "name": "Exadata Database Service",
+      "url": "https://www.oracle.com/engineered-systems/exadata/database-service/",
+      "icon": "exadata"
+    },
+    {
+      "name": "MySQL HeatWave",
+      "url": "https://www.oracle.com/mysql/",
+      "icon": "mysql"
+    },
+    {
+      "name": "NoSQL Database",
+      "url": "https://www.oracle.com/database/nosql/",
+      "icon": "nosql"
+    },
+    {
+      "name": "OCI Cache",
+      "url": "https://www.oracle.com/cloud/cache/",
+      "icon": "database"
+    },
+    {
+      "name": "Oracle AI Database@AWS",
+      "url": "https://www.oracle.com/cloud/aws/",
+      "icon": "exadata"
+    },
+    {
+      "name": "Oracle AI Database@Azure",
+      "url": "https://www.oracle.com/cloud/azure/oracle-database-at-azure/",
+      "icon": "exadata"
+    },
+    {
+      "name": "Oracle AI Database@Google Cloud",
+      "url": "https://www.oracle.com/cloud/google/oracle-database-at-google-cloud/",
+      "icon": "exadata"
+    }
+  ],
+  "data-data-lake": [
+    {
+      "name": "Autonomous AI Lakehouse",
+      "url": "https://www.oracle.com/autonomous-database/autonomous-ai-lakehouse/",
+      "icon": "adw"
+    },
+    {
+      "name": "MySQL HeatWave Lakehouse",
+      "url": "https://www.oracle.com/mysql/lakehouse/",
+      "icon": "mysql"
+    }
+  ],
+  "data-dwh": [
+    {
+      "name": "Autonomous AI Database",
+      "url": "https://www.oracle.com/autonomous-database/",
+      "icon": "autonomous-db"
+    },
+    {
+      "name": "Autonomous AI Lakehouse (formerly Autonomous Data Warehouse)",
+      "url": "https://www.oracle.com/autonomous-database/autonomous-ai-lakehouse/",
+      "icon": "adw"
+    },
+    {
+      "name": "MySQL HeatWave",
+      "url": "https://www.oracle.com/mysql/",
+      "icon": "mysql"
+    }
+  ],
+  "devops": [
+    {
+      "name": "DevOps Service",
+      "url": "https://www.oracle.com/cloud/cloud-native/devops-service/",
+      "icon": "devops"
+    },
+    {
+      "name": "Visual Builder Studio",
+      "url": "https://www.oracle.com/application-development/visual-builder-studio/",
+      "icon": "visual-builder"
+    }
+  ],
+  "email": [
+    {
+      "name": "Email Delivery",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Email/Concepts/overview.htm",
+      "icon": "email-delivery"
+    }
+  ],
+  "etl": [
+    {
+      "name": "Data Integration",
+      "url": "https://www.oracle.com/integration/data-integration/",
+      "icon": "data-integration"
+    },
+    {
+      "name": "GoldenGate",
+      "url": "https://www.oracle.com/integration/goldengate/",
+      "icon": "goldengate"
+    },
+    {
+      "name": "Oracle Integration",
+      "url": "https://www.oracle.com/integration/application-integration/",
+      "icon": "integration"
+    }
+  ],
+  "firewall": [
+    {
+      "name": "Network Firewall",
+      "url": "https://www.oracle.com/cloud/networking/network-firewall/",
+      "icon": "firewall"
+    },
+    {
+      "name": "OCI Web Application Firewall",
+      "url": "https://www.oracle.com/security/cloud-security/web-application-firewall/",
+      "icon": "waf"
+    }
+  ],
+  "hybrid": [
+    {
+      "name": "Cloud@Customer",
+      "url": "https://www.oracle.com/cloud/cloud-at-customer/"
+    },
+    {
+      "name": "Dedicated Region Cloud@Customer",
+      "url": "https://www.oracle.com/cloud/cloud-at-customer/dedicated-region/",
+      "icon": "dedicated-region"
+    },
+    {
+      "name": "Exadata Cloud@Customer",
+      "url": "https://www.oracle.com/engineered-systems/exadata/cloud-at-customer/",
+      "icon": "exadata-cc"
+    },
+    {
+      "name": "Roving Edge Infrastructure",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Rover/overview.htm",
+      "icon": "roving-edge"
+    }
+  ],
+  "identity": [
+    {
+      "name": "Identity and Access Management with Identity Domains",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Identity/home.htm",
+      "icon": "iam"
+    }
+  ],
+  "iot": [
+    {
+      "name": "IoT Platform",
+      "url": "https://www.oracle.com/cloud/cloud-native/iot-platform/"
+    }
+  ],
+  "key-secret": [
+    {
+      "name": "Certificates",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/certificates/home.htm",
+      "icon": "certificates"
+    },
+    {
+      "name": "Vault",
+      "url": "https://www.oracle.com/security/cloud-security/key-management/",
+      "icon": "vault"
+    }
+  ],
+  "logging": [
+    {
+      "name": "Audit",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm",
+      "icon": "audit"
+    },
+    {
+      "name": "Log Analytics",
+      "url": "https://www.oracle.com/manageability/log-analytics/",
+      "icon": "logging-analytics"
+    },
+    {
+      "name": "Logging",
+      "url": "https://www.oracle.com/application-development/logging/",
+      "icon": "logging"
+    }
+  ],
+  "messaging": [
+    {
+      "name": "Events",
+      "url": "https://www.oracle.com/cloud/events-service/",
+      "icon": "events"
+    },
+    {
+      "name": "Notifications",
+      "url": "https://www.oracle.com/cloud/cloud-native/notifications/",
+      "icon": "notifications"
+    },
+    {
+      "name": "Queue",
+      "url": "https://www.oracle.com/cloud/queue/",
+      "icon": "queue"
+    },
+    {
+      "name": "Streaming",
+      "url": "https://www.oracle.com/cloud/streaming/",
+      "icon": "streaming"
+    }
+  ],
+  "migration": [
+    {
+      "name": "Data Transfer (Roving Edge Infrastructure)",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Rover/overview.htm",
+      "icon": "roving-edge"
+    },
+    {
+      "name": "Database Migration Service",
+      "url": "https://www.oracle.com/database/cloud-migration/"
+    },
+    {
+      "name": "Oracle Cloud Migrations",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/cloud-migration/home.htm"
+    },
+    {
+      "name": "Zero Downtime Migration",
+      "url": "https://www.oracle.com/database/zero-downtime-migration/"
+    }
+  ],
+  "monitoring": [
+    {
+      "name": "Application Performance Monitoring",
+      "url": "https://www.oracle.com/manageability/application-performance-monitoring/",
+      "icon": "apm"
+    },
+    {
+      "name": "Console Dashboards",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Dashboards/home.htm"
+    },
+    {
+      "name": "Inter-Region Latency",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/inter_region_latency.htm"
+    },
+    {
+      "name": "Management Agent",
+      "url": "https://docs.oracle.com/en-us/iaas/management-agents/home.htm"
+    },
+    {
+      "name": "Monitoring",
+      "url": "https://www.oracle.com/cloud/cloud-native/monitoring/",
+      "icon": "monitoring"
+    },
+    {
+      "name": "Network Visualizer",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/network_visualizer.htm"
+    },
+    {
+      "name": "Virtual Test Access Points",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm",
+      "icon": "vtap"
+    }
+  ],
+  "network-connection": [
+    {
+      "name": "FastConnect",
+      "url": "https://www.oracle.com/cloud/networking/fastconnect/"
+    },
+    {
+      "name": "Site-to-Site VPN",
+      "url": "https://www.oracle.com/cloud/networking/site-to-site-vpn/"
+    }
+  ],
+  "network-core": [
+    {
+      "name": "Local VCN Peering",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/localVCNpeering.htm"
+    },
+    {
+      "name": "Remote VCN Peering",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/remoteVCNpeering.htm",
+      "icon": "remote-peering-gateway"
+    },
+    {
+      "name": "Virtual Cloud Network",
+      "url": "https://www.oracle.com/cloud/networking/virtual-cloud-network/",
+      "icon": "vcn"
+    }
+  ],
+  "network-dns": [
+    {
+      "name": "DNS",
+      "url": "https://www.oracle.com/cloud/networking/dns/",
+      "icon": "dns"
+    },
+    {
+      "name": "Private DNS",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/DNS/Tasks/privatedns.htm",
+      "icon": "dns"
+    },
+    {
+      "name": "Traffic Management",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/TrafficManagement/Concepts/overview.htm",
+      "icon": "dns"
+    }
+  ],
+  "network-lb": [
+    {
+      "name": "Load Balancer",
+      "url": "https://www.oracle.com/cloud/networking/flexible-load-balancer/",
+      "icon": "load-balancer"
+    },
+    {
+      "name": "Network Load Balancer",
+      "url": "https://www.oracle.com/cloud/networking/flexible-network-load-balancer/",
+      "icon": "load-balancer"
+    }
+  ],
+  "network-misc": [
+    {
+      "name": "Dynamic Routing Gateway",
+      "url": "https://www.oracle.com/cloud/networking/dynamic-routing-gateway/",
+      "icon": "drg"
+    },
+    {
+      "name": "IP Address Insights",
+      "url": "https://www.oracle.com/cloud/networking/ip-address-insights/"
+    },
+    {
+      "name": "NAT Gateway",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/NATgateway.htm",
+      "icon": "nat-gateway"
+    },
+    {
+      "name": "Service Gateway",
+      "url": "https://www.oracle.com/cloud/networking/service-gateway/",
+      "icon": "service-gateway"
+    },
+    {
+      "name": "Web Application Acceleration",
+      "url": "https://www.oracle.com/cloud/networking/web-application-accelerator/"
+    }
+  ],
+  "optimization": [
+    {
+      "name": "Cloud Advisor",
+      "url": "https://www.oracle.com/cloud/cost-management-and-governance/cloud-advisor/",
+      "icon": "cloud-advisor"
+    },
+    {
+      "name": "Ops Insights",
+      "url": "https://www.oracle.com/manageability/ops-insights/",
+      "icon": "ops-insights"
+    }
+  ],
+  "queue": [
+    {
+      "name": "Queue",
+      "url": "https://www.oracle.com/cloud/queue/",
+      "icon": "queue"
+    }
+  ],
+  "resource-mgmt": [
+    {
+      "name": "Compartments",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Identity/compartments/managingcompartments.htm",
+      "icon": "compartments"
+    },
+    {
+      "name": "Organization Management",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/General/organization/home.htm",
+      "icon": "organization"
+    },
+    {
+      "name": "Resource Manager",
+      "url": "https://www.oracle.com/cloud/cloud-native/resource-manager/",
+      "icon": "resource-manager"
+    },
+    {
+      "name": "Tagging",
+      "url": "https://docs.oracle.com/en-us/iaas/Content/Tagging/home.htm",
+      "icon": "tagging"
+    }
+  ],
+  "sap": [
+    {
+      "name": "Oracle Cloud for SAP",
+      "url": "https://www.oracle.com/sap/cloud/"
+    }
+  ],
+  "security": [
+    {
+      "name": "Bastion",
+      "url": "https://www.oracle.com/security/cloud-security/bastion/",
+      "icon": "bastion"
+    },
+    {
+      "name": "Data Safe",
+      "url": "https://www.oracle.com/security/database-security/data-safe/",
+      "icon": "data-safe"
+    },
+    {
+      "name": "OCI Cloud Guard",
+      "url": "https://www.oracle.com/security/cloud-security/cloud-guard/",
+      "icon": "cloud-guard"
+    },
+    {
+      "name": "Vulnerability Scanning",
+      "url": "https://www.oracle.com/security/cloud-security/vulnerability-scanning-service/",
+      "icon": "vulnerability-scanning"
+    }
+  ],
+  "storage": [
+    {
+      "name": "Archive Storage",
+      "url": "https://www.oracle.com/cloud/storage/archive-storage/",
+      "icon": "object-storage"
+    },
+    {
+      "name": "Block Volume",
+      "url": "https://www.oracle.com/cloud/storage/block-volumes/",
+      "icon": "block-storage"
+    },
+    {
+      "name": "File Storage",
+      "url": "https://www.oracle.com/cloud/storage/file-storage/",
+      "icon": "file-storage"
+    },
+    {
+      "name": "File Storage with Lustre",
+      "url": "https://www.oracle.com/cloud/storage/file-storage-with-lustre/",
+      "icon": "file-storage"
+    },
+    {
+      "name": "Object Storage",
+      "url": "https://www.oracle.com/cloud/storage/object-storage/",
+      "icon": "object-storage"
+    }
+  ],
+  "workflow": [
+    {
+      "name": "Oracle Integration (Process Automation)",
+      "url": "https://www.oracle.com/integration/application-integration/",
+      "icon": "integration"
+    }
+  ]
+}

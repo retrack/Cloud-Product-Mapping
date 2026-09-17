@@ -1,0 +1,196 @@
+{
+  "ai-ml": [
+    { "name": "GPU Instances", "url": "https://www.exoscale.com/gpu/", "icon": "exo-gpu" },
+    { "name": "Open-source MLOps on GPU Instances / SKS", "url": "https://www.exoscale.com/gpu/", "icon": "exo-gpu", "status": "workaround" }
+  ],
+  "ai-genai": [
+    { "name": "Dedicated Inference", "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/", "icon": "exo-ai-dinf" },
+    { "name": "Managed Inference", "url": "https://www.exoscale.com/ai-cloud-infrastructure/managed-inference/", "icon": "exo-ai-minf" },
+    { "name": "Managed Vector Databases", "url": "https://www.exoscale.com/dbaas/vector-databases/", "icon": "exo-ai-vdbs" },
+    { "name": "DigLM", "url": "https://www.exoscale.com/marketplace/listing/diglm/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "application-mgmt": [
+    { "name": "Open-source API gateway on SKS / Compute", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" },
+    { "name": "SKS + developer portal (App Runner / Beanstalk-style)", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" }
+  ],
+  "automation": [
+    { "name": "API", "url": "https://community.exoscale.com/reference/api/", "icon": "exo-cloud" },
+    { "name": "CLI (exo)", "url": "https://community.exoscale.com/tools/command-line-interface/", "icon": "exo-cli" },
+    { "name": "Crossplane Provider", "url": "https://github.com/exoscale/provider-exoscale", "icon": "exo-cldntv-1" },
+    { "name": "Packer Plugin", "url": "https://github.com/exoscale/packer-plugin-exoscale", "icon": "exo-template" },
+    { "name": "Pulumi Provider", "url": "https://www.pulumi.com/registry/packages/exoscale/", "icon": "exo-cldntv-2" },
+    { "name": "SDKs (Go, Python)", "url": "https://www.exoscale.com/integration/", "icon": "exo-cli" },
+    { "name": "Terraform Provider", "url": "https://registry.terraform.io/providers/exoscale/exoscale/latest", "icon": "exo-quick" }
+  ],
+  "compliance": [
+    { "name": "Compliance Certifications", "url": "https://www.exoscale.com/compliance/", "icon": "exo-compliance" },
+    { "name": "Health Data Hosting (HDS)", "url": "https://www.exoscale.com/compliance/hds/", "icon": "exo-health-data" },
+    { "name": "Shared Responsibility Model", "url": "https://www.exoscale.com/security/", "icon": "exo-shared-resp" },
+    { "name": "360vue Compliance Platform", "url": "https://www.exoscale.com/marketplace/listing/360vue-compliance-platform/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "RegData Protection Suite", "url": "https://www.exoscale.com/marketplace/listing/regdata-data-protection/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "compute-container": [
+    { "name": "Karpenter for SKS", "url": "https://www.exoscale.com/sks/karpenter/", "icon": "exo-scale" },
+    { "name": "Scalable Kubernetes Service (SKS)", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks" },
+    { "name": "8gears Container Registry (Harbor)", "url": "https://www.exoscale.com/marketplace/listing/container-registry/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "APPUiO Managed OpenShift", "url": "https://www.exoscale.com/marketplace/listing/appuio-container-platform/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "Kubernetes Platform by Elastisys", "url": "https://www.exoscale.com/marketplace/listing/compliant-kubernetes-by-elastisys/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "compute-faas": [
+    { "name": "Serverless", "icon": "exo-quick", "status": "roadmap" },
+    { "name": "SKS + Knative / OpenFaaS", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" }
+  ],
+  "compute-server": [
+    { "name": "Anti-Affinity Groups", "url": "https://community.exoscale.com/product/compute/instances/how-to/anti-affinity/", "icon": "exo-vm" },
+    { "name": "Compute Instances", "url": "https://www.exoscale.com/compute/", "icon": "exo-vm" },
+    { "name": "Custom Templates", "url": "https://www.exoscale.com/templates/", "icon": "exo-template" },
+    { "name": "Dedicated Hypervisors", "url": "https://community.exoscale.com/product/compute/dedicated-hypervisors/", "icon": "exo-dedicated-hv" },
+    { "name": "GPU Instances", "url": "https://www.exoscale.com/gpu/", "icon": "exo-gpu" },
+    { "name": "Instance Pools", "url": "https://community.exoscale.com/product/compute/instances/how-to/instance-pools/", "icon": "exo-vmpool" },
+    { "name": "Microsoft SQL Server PAYG", "url": "https://www.exoscale.com/marketplace/listing/microsoft-sql-server-payg/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "cost": [
+    { "name": "Pricing", "url": "https://www.exoscale.com/pricing/", "icon": "exo-price" },
+    { "name": "Pricing Calculator", "url": "https://www.exoscale.com/calculator/", "icon": "exo-price" },
+    { "name": "Volume Discount", "url": "https://www.exoscale.com/pricing/volume-discount/", "icon": "exo-license" }
+  ],
+  "data-analytics": [
+    { "name": "Managed ClickHouse", "url": "https://www.exoscale.com/dbaas/clickhouse/", "icon": "exo-db-clickhouse" },
+    { "name": "Managed OpenSearch", "url": "https://www.exoscale.com/dbaas/opensearch/", "icon": "exo-db-opensearch" },
+    { "name": "Matomo (Glasskube)", "url": "https://www.exoscale.com/marketplace/listing/glasskube-matomo/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "Metabase (Glasskube)", "url": "https://www.exoscale.com/marketplace/listing/glasskube-metabase/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "data-big-data": [
+    { "name": "Data Platform", "icon": "exo-dbaas", "status": "roadmap" },
+    { "name": "Spark on SKS", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" }
+  ],
+  "data-database": [
+    { "name": "DBaaS", "url": "https://www.exoscale.com/dbaas/", "icon": "exo-dbaas" },
+    { "name": "Managed ClickHouse", "url": "https://www.exoscale.com/dbaas/clickhouse/", "icon": "exo-db-clickhouse" },
+    { "name": "Managed MySQL", "url": "https://www.exoscale.com/dbaas/mysql/", "icon": "exo-db-mysql" },
+    { "name": "Managed OpenSearch", "url": "https://www.exoscale.com/dbaas/opensearch/", "icon": "exo-db-opensearch" },
+    { "name": "Managed PostgreSQL", "url": "https://www.exoscale.com/dbaas/postgresql/", "icon": "exo-db-postgresql" },
+    { "name": "Managed Valkey", "url": "https://www.exoscale.com/dbaas/valkey/", "icon": "exo-db-valkey" },
+    { "name": "pgvector (Vector Search)", "url": "https://www.exoscale.com/dbaas/pgvector/", "icon": "exo-ai-vdbs" },
+    { "name": "Cassandra / graph databases on Compute", "url": "https://www.exoscale.com/compute/", "icon": "exo-vm", "status": "workaround" }
+  ],
+  "data-data-lake": [
+    { "name": "Data Platform", "icon": "exo-dbaas", "status": "roadmap" },
+    { "name": "Object Storage + open-source lakehouse tooling", "url": "https://www.exoscale.com/object-storage/", "icon": "exo-s3cmp", "status": "workaround" }
+  ],
+  "data-dwh": [
+    { "name": "Data Platform", "icon": "exo-dbaas", "status": "roadmap" },
+    { "name": "Managed ClickHouse + Object Storage", "url": "https://www.exoscale.com/dbaas/clickhouse/", "icon": "exo-db-clickhouse", "status": "workaround" }
+  ],
+  "devops": [
+    { "name": "Forgejo by Servala", "url": "https://www.exoscale.com/marketplace/listing/forgejo-by-servala/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "GitLab Enterprise by Servala", "url": "https://www.exoscale.com/marketplace/listing/gitlab-by-servala/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "SOKKAN AI-development Cockpit", "url": "https://www.exoscale.com/marketplace/listing/sokkan/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "CI/CD runners on Compute / SKS", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" }
+  ],
+  "etl": [
+    { "name": "Data Platform", "icon": "exo-dbaas", "status": "roadmap" },
+    { "name": "Open-source ETL tooling on SKS / Compute", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" }
+  ],
+  "firewall": [
+    { "name": "Security Groups", "url": "https://community.exoscale.com/product/networking/security-group/", "icon": "exo-secgrp" },
+    { "name": "BunkerWeb WAF", "url": "https://www.exoscale.com/marketplace/listing/bunkerweb-community/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "Check Point CloudGuard", "url": "https://www.exoscale.com/marketplace/listing/check-point-cloudguard-iaas-byol/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "FortiGate Virtual Appliances", "url": "https://www.exoscale.com/marketplace/listing/fortigate-virtual-appliances-byol/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "IPFire", "url": "https://www.exoscale.com/marketplace/listing/lwl-ipfire-open-source-firewall-payg/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "hybrid": [
+    { "name": "Dedicated Hypervisors", "url": "https://community.exoscale.com/product/compute/dedicated-hypervisors/", "icon": "exo-dedicated-hv" },
+    { "name": "Exoscale EDGE", "url": "https://www.exoscale.com/edge/", "icon": "exo-cloud" },
+    { "name": "Private Connect", "url": "https://community.exoscale.com/product/networking/private-connect/", "icon": "exo-privcon" },
+    { "name": "Virtual Private Cloud", "url": "https://www.exoscale.com/virtual-private-cloud/", "icon": "exo-vpc" }
+  ],
+  "identity": [
+    { "name": "IAM", "url": "https://community.exoscale.com/product/security/iam/", "icon": "exo-iam" },
+    { "name": "Two-Factor Authentication", "url": "https://www.exoscale.com/virtual-private-cloud/", "icon": "exo-2fa" },
+    { "name": "Keycloak by Servala", "url": "https://www.exoscale.com/marketplace/listing/keycloak-by-servala/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "iot": [
+    { "name": "Self-hosted MQTT broker on SKS / Compute", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" }
+  ],
+  "key-secret": [
+    { "name": "Key Management Service (KMS)", "url": "https://community.exoscale.com/product/security/kms/", "icon": "exo-shield" },
+    { "name": "HashiCorp Vault (Glasskube)", "url": "https://www.exoscale.com/marketplace/listing/glasskube-vault/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "logging": [
+    { "name": "Audit Trail", "url": "https://community.exoscale.com/platform/audit-trail/", "icon": "exo-check" },
+    { "name": "Managed OpenSearch", "url": "https://www.exoscale.com/dbaas/opensearch/", "icon": "exo-db-opensearch" },
+    { "name": "SKS Kubernetes Audit", "url": "https://community.exoscale.com/product/compute/containers/how-to/kubernetes-audit/", "icon": "exo-sks" }
+  ],
+  "messaging": [
+    { "name": "Managed Kafka", "url": "https://www.exoscale.com/dbaas/kafka/", "icon": "exo-db-kafka" },
+    { "name": "Object Storage Data Events", "url": "https://community.exoscale.com/product/storage/object-storage/how-to/data-events/", "icon": "exo-object-storage" }
+  ],
+  "migration": [
+    { "name": "DBaaS Migration (PostgreSQL, MySQL, Valkey)", "url": "https://community.exoscale.com/product/dbaas/service-specific/postgresql/how-to/postgresql-migration/", "icon": "exo-dbaas" },
+    { "name": "Custom Templates (VM image import)", "url": "https://community.exoscale.com/product/compute/instances/how-to/custom-templates/", "icon": "exo-template", "status": "workaround" },
+    { "name": "S3-compatible transfer tools (rclone, AWS CLI)", "url": "https://community.exoscale.com/product/storage/object-storage/how-to/awscli/", "icon": "exo-transfer", "status": "workaround" }
+  ],
+  "monitoring": [
+    { "name": "Database Observability", "url": "https://www.exoscale.com/dbaas/database-observability/", "icon": "exo-dbaas" },
+    { "name": "Managed Grafana", "url": "https://www.exoscale.com/grafana/", "icon": "exo-db-grafana" },
+    { "name": "Managed Thanos", "url": "https://www.exoscale.com/dbaas/thanos/", "icon": "exo-db-thanos" },
+    { "name": "Icinga2", "url": "https://www.exoscale.com/marketplace/listing/icinga2-master-debian-payg/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "Distributed tracing: OSS stack with Grafana + Thanos", "url": "https://www.exoscale.com/grafana/", "icon": "exo-db-grafana", "status": "workaround" }
+  ],
+  "network-cdn": [
+    { "name": "CDN", "url": "https://www.exoscale.com/cdn/", "icon": "exo-cdn" }
+  ],
+  "network-connection": [
+    { "name": "Private Connect", "url": "https://community.exoscale.com/product/networking/private-connect/", "icon": "exo-privcon" },
+    { "name": "Anapaya EDGE (SCION)", "url": "https://www.exoscale.com/marketplace/listing/anapaya-edge/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "VeloCloud SD-WAN Virtual Edge", "url": "https://www.exoscale.com/marketplace/listing/velocloud-sd-wan-virtual-edge-byol/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "network-core": [
+    { "name": "Elastic IP", "url": "https://community.exoscale.com/product/networking/eip/", "icon": "exo-eip" },
+    { "name": "IPv6", "url": "https://community.exoscale.com/product/networking/ip/", "icon": "exo-ipv6" },
+    { "name": "Private Networks", "url": "https://community.exoscale.com/product/networking/private-network/", "icon": "exo-privnet" },
+    { "name": "Virtual Private Cloud", "url": "https://www.exoscale.com/virtual-private-cloud/", "icon": "exo-vpc" }
+  ],
+  "network-dns": [
+    { "name": "DNS", "url": "https://www.exoscale.com/dns/", "icon": "exo-dns" }
+  ],
+  "network-lb": [
+    { "name": "Elastic IP (managed health checks)", "url": "https://community.exoscale.com/product/networking/eip/", "icon": "exo-eip" },
+    { "name": "Network Load Balancer", "url": "https://community.exoscale.com/product/networking/nlb/", "icon": "exo-nlb" },
+    { "name": "F5 BIG-IP Virtual Appliances", "url": "https://www.exoscale.com/marketplace/listing/f5-big-ip-virtual-appliances-byol/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "network-misc": [
+    { "name": "VyOS Universal Router", "url": "https://www.exoscale.com/marketplace/listing/vyos-universal-router/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "queue": [
+    { "name": "Managed Kafka", "url": "https://www.exoscale.com/dbaas/kafka/", "icon": "exo-db-kafka" },
+    { "name": "Managed Valkey", "url": "https://www.exoscale.com/dbaas/valkey/", "icon": "exo-db-valkey" },
+    { "name": "RabbitMQ / ActiveMQ on Compute", "url": "https://www.exoscale.com/compute/", "icon": "exo-vm", "status": "workaround" }
+  ],
+  "resource-mgmt": [
+    { "name": "Labels", "url": "https://community.exoscale.com/product/compute/instances/how-to/labels/", "icon": "exo-template" },
+    { "name": "Organization Policy", "url": "https://community.exoscale.com/reference/api/iam/organization-policy/", "icon": "exo-iam" },
+    { "name": "Organizations", "url": "https://community.exoscale.com/platform/organization/", "icon": "exo-admin" },
+    { "name": "Portal", "url": "https://portal.exoscale.com/", "icon": "exo-admin" }
+  ],
+  "security": [
+    { "name": "Encryption", "url": "https://www.exoscale.com/compliance/encryption/", "icon": "exo-shield" },
+    { "name": "Security Model & Bug Bounty", "url": "https://www.exoscale.com/security/", "icon": "exo-shield" },
+    { "name": "ANANTIS TrapEye", "url": "https://www.exoscale.com/marketplace/listing/anantis-trapeye/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "Offensity by A1 Digital", "url": "https://www.exoscale.com/marketplace/listing/offensity/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "Panop Exposure Management", "url": "https://www.exoscale.com/marketplace/listing/panop-autonomous-exposure-management/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "storage": [
+    { "name": "Backup Solutions", "url": "https://www.exoscale.com/backup/", "icon": "exo-storage" },
+    { "name": "Block Storage", "url": "https://www.exoscale.com/block-storage/", "icon": "exo-block-storage" },
+    { "name": "Object Storage (S3-compatible)", "url": "https://www.exoscale.com/object-storage/", "icon": "exo-s3cmp" },
+    { "name": "Object Storage Classes (Warm / Cold)", "url": "https://www.exoscale.com/object-storage/classes/", "icon": "exo-obj-sto-cold" },
+    { "name": "Snapshots", "url": "https://community.exoscale.com/product/compute/instances/how-to/snapshot/", "icon": "exo-snapshot" },
+    { "name": "Acronis Cyber Protect", "url": "https://www.exoscale.com/marketplace/listing/acronis-cyber-protect/", "icon": "exo-mktplc", "source": "marketplace" },
+    { "name": "QuTScloud Cloud NAS", "url": "https://www.exoscale.com/marketplace/listing/qnap-qutscloud/", "icon": "exo-mktplc", "source": "marketplace" }
+  ],
+  "workflow": [
+    { "name": "Open-source workflow engines (n8n, Argo Workflows) on SKS", "url": "https://www.exoscale.com/sks/", "icon": "exo-sks", "status": "workaround" }
+  ]
+}

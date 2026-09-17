@@ -1,0 +1,1464 @@
+{
+  "_comment": "AWS → Exoscale service crosswalk. status: native | marketplace | workaround | none. Based on an internal catalog, sanitized for publication.",
+  "from": "aws",
+  "to": "exoscale",
+  "rows": [
+    {
+      "category": "Compute",
+      "service": "Amazon EC2",
+      "url": "https://aws.amazon.com/ec2/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        },
+        {
+          "name": "Instance Pools",
+          "url": "https://community.exoscale.com/product/compute/instances/how-to/instance-pools/",
+          "icon": "exo-vmpool"
+        },
+        {
+          "name": "Custom Templates",
+          "url": "https://community.exoscale.com/product/compute/instances/how-to/custom-templates/",
+          "icon": "exo-template"
+        }
+      ]
+    },
+    {
+      "category": "Compute",
+      "service": "Amazon EC2 GPU instances",
+      "url": "https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "GPU Instances",
+          "url": "https://www.exoscale.com/gpu/",
+          "icon": "exo-gpu"
+        }
+      ]
+    },
+    {
+      "category": "Compute",
+      "service": "Amazon Lightsail",
+      "url": "https://aws.amazon.com/lightsail/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        },
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ]
+    },
+    {
+      "category": "Compute",
+      "service": "AWS Lambda",
+      "url": "https://aws.amazon.com/lambda/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Serverless",
+          "icon": "exo-quick",
+          "status": "roadmap"
+        },
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ],
+      "note": "Serverless is on the roadmap; today run functions on SKS with an open-source FaaS framework (e.g. Knative, OpenFaaS)."
+    },
+    {
+      "category": "Compute",
+      "service": "AWS Elastic Beanstalk",
+      "url": "https://aws.amazon.com/elasticbeanstalk/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ],
+      "note": "Deploy applications on Kubernetes instead of a PaaS wrapper around VMs."
+    },
+    {
+      "category": "Compute",
+      "service": "AWS App Runner",
+      "url": "https://aws.amazon.com/apprunner/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ],
+      "note": "SKS combined with a developer portal / service catalogue."
+    },
+    {
+      "category": "Compute",
+      "service": "AWS Batch",
+      "url": "https://aws.amazon.com/batch/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        },
+        {
+          "name": "Karpenter for SKS",
+          "url": "https://www.exoscale.com/sks/karpenter/",
+          "icon": "exo-scale"
+        }
+      ],
+      "note": "Kubernetes Jobs with Karpenter autoscaling."
+    },
+    {
+      "category": "Compute",
+      "service": "AWS Outposts",
+      "url": "https://aws.amazon.com/outposts/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Compute",
+      "service": "AWS Local Zones",
+      "url": "https://aws.amazon.com/about-aws/global-infrastructure/localzones/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Compute",
+      "service": "AWS Wavelength",
+      "url": "https://aws.amazon.com/wavelength/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Exoscale EDGE",
+          "url": "https://www.exoscale.com/edge/",
+          "icon": "exo-cloud"
+        }
+      ],
+      "note": "Exoscale EDGE brings a small Exoscale zone to 5G networks."
+    },
+    {
+      "category": "Containers",
+      "service": "Amazon EKS",
+      "url": "https://aws.amazon.com/eks/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ]
+    },
+    {
+      "category": "Containers",
+      "service": "Amazon ECS",
+      "url": "https://aws.amazon.com/ecs/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ],
+      "note": "Kubernetes rather than a proprietary orchestrator."
+    },
+    {
+      "category": "Containers",
+      "service": "AWS Fargate",
+      "url": "https://aws.amazon.com/fargate/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        },
+        {
+          "name": "Karpenter for SKS",
+          "url": "https://www.exoscale.com/sks/karpenter/",
+          "icon": "exo-scale"
+        }
+      ],
+      "note": "Managed control plane with autoscaled nodes; no per-pod serverless billing."
+    },
+    {
+      "category": "Containers",
+      "service": "Amazon ECR",
+      "url": "https://aws.amazon.com/ecr/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "8gears Container Registry",
+          "url": "https://www.exoscale.com/marketplace/listing/container-registry/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Containers",
+      "service": "Red Hat OpenShift Service on AWS (ROSA)",
+      "url": "https://aws.amazon.com/rosa/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "APPUiO Managed OpenShift",
+          "url": "https://www.exoscale.com/marketplace/listing/appuio-container-platform/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Storage",
+      "service": "Amazon S3",
+      "url": "https://aws.amazon.com/s3/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Object Storage",
+          "url": "https://www.exoscale.com/object-storage/",
+          "icon": "exo-s3cmp"
+        }
+      ],
+      "note": "S3-compatible API."
+    },
+    {
+      "category": "Storage",
+      "service": "Amazon EBS",
+      "url": "https://aws.amazon.com/ebs/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Block Storage",
+          "url": "https://www.exoscale.com/block-storage/",
+          "icon": "exo-block-storage"
+        }
+      ]
+    },
+    {
+      "category": "Storage",
+      "service": "Amazon EFS",
+      "url": "https://aws.amazon.com/efs/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Storage",
+      "service": "AWS Backup",
+      "url": "https://aws.amazon.com/backup/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "Acronis Cyber Protect",
+          "url": "https://www.exoscale.com/marketplace/listing/acronis-cyber-protect/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        },
+        {
+          "name": "Backup Solutions",
+          "url": "https://www.exoscale.com/backup/",
+          "icon": "exo-storage"
+        }
+      ]
+    },
+    {
+      "category": "Storage",
+      "service": "Amazon FSx for Windows File Server",
+      "url": "https://aws.amazon.com/fsx/windows/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Windows Server file shares on Compute Instances."
+    },
+    {
+      "category": "Storage",
+      "service": "Amazon FSx for Lustre",
+      "url": "https://aws.amazon.com/fsx/lustre/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Storage",
+      "service": "Amazon FSx for NetApp ONTAP",
+      "url": "https://aws.amazon.com/fsx/netapp-ontap/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Storage",
+      "service": "AWS Storage Gateway",
+      "url": "https://aws.amazon.com/storagegateway/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon RDS",
+      "url": "https://aws.amazon.com/rds/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed PostgreSQL",
+          "url": "https://www.exoscale.com/dbaas/postgresql/",
+          "icon": "exo-db-postgresql"
+        },
+        {
+          "name": "Managed MySQL",
+          "url": "https://www.exoscale.com/dbaas/mysql/",
+          "icon": "exo-db-mysql"
+        }
+      ],
+      "note": "PostgreSQL and MySQL engines."
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon Aurora",
+      "url": "https://aws.amazon.com/rds/aurora/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed PostgreSQL",
+          "url": "https://www.exoscale.com/dbaas/postgresql/",
+          "icon": "exo-db-postgresql"
+        },
+        {
+          "name": "Managed MySQL",
+          "url": "https://www.exoscale.com/dbaas/mysql/",
+          "icon": "exo-db-mysql"
+        }
+      ]
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon DynamoDB",
+      "url": "https://aws.amazon.com/dynamodb/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Managed Valkey",
+          "url": "https://www.exoscale.com/dbaas/valkey/",
+          "icon": "exo-db-valkey"
+        },
+        {
+          "name": "Managed PostgreSQL",
+          "url": "https://www.exoscale.com/dbaas/postgresql/",
+          "icon": "exo-db-postgresql"
+        }
+      ],
+      "note": "No managed wide-column/document store; use Valkey for key-value or PostgreSQL JSONB."
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon ElastiCache",
+      "url": "https://aws.amazon.com/elasticache/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed Valkey",
+          "url": "https://www.exoscale.com/dbaas/valkey/",
+          "icon": "exo-db-valkey"
+        }
+      ]
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon MemoryDB",
+      "url": "https://aws.amazon.com/memorydb/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed Valkey",
+          "url": "https://www.exoscale.com/dbaas/valkey/",
+          "icon": "exo-db-valkey"
+        }
+      ]
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon OpenSearch Service",
+      "url": "https://aws.amazon.com/opensearch-service/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed OpenSearch",
+          "url": "https://www.exoscale.com/dbaas/opensearch/",
+          "icon": "exo-db-opensearch"
+        }
+      ]
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon DocumentDB",
+      "url": "https://aws.amazon.com/documentdb/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon Keyspaces",
+      "url": "https://aws.amazon.com/keyspaces/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Self-managed Apache Cassandra on Compute Instances."
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon Neptune",
+      "url": "https://aws.amazon.com/neptune/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Self-managed graph database on Compute Instances."
+    },
+    {
+      "category": "Databases",
+      "service": "Amazon Timestream",
+      "url": "https://aws.amazon.com/timestream/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed Thanos",
+          "url": "https://www.exoscale.com/dbaas/thanos/",
+          "icon": "exo-db-thanos"
+        }
+      ],
+      "note": "Prometheus-compatible time-series storage."
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "Amazon VPC",
+      "url": "https://aws.amazon.com/vpc/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Virtual Private Cloud",
+          "url": "https://www.exoscale.com/virtual-private-cloud/",
+          "icon": "exo-vpc"
+        },
+        {
+          "name": "Private Networks",
+          "url": "https://community.exoscale.com/product/networking/private-network/",
+          "icon": "exo-privnet"
+        },
+        {
+          "name": "Security Groups",
+          "url": "https://community.exoscale.com/product/networking/security-group/",
+          "icon": "exo-secgrp"
+        }
+      ]
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "Amazon CloudFront",
+      "url": "https://aws.amazon.com/cloudfront/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "CDN",
+          "url": "https://www.exoscale.com/cdn/",
+          "icon": "exo-cdn"
+        }
+      ]
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "Amazon Route 53",
+      "url": "https://aws.amazon.com/route53/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "DNS",
+          "url": "https://www.exoscale.com/dns/",
+          "icon": "exo-dns"
+        }
+      ]
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "AWS Direct Connect",
+      "url": "https://aws.amazon.com/directconnect/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Private Connect",
+          "url": "https://community.exoscale.com/product/networking/private-connect/",
+          "icon": "exo-privcon"
+        }
+      ]
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "Elastic Load Balancing",
+      "url": "https://aws.amazon.com/elasticloadbalancing/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Network Load Balancer",
+          "url": "https://community.exoscale.com/product/networking/nlb/",
+          "icon": "exo-nlb"
+        }
+      ],
+      "note": "Layer 4 load balancing within a zone; for L7 run an ingress controller on SKS."
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "AWS Transit Gateway",
+      "url": "https://aws.amazon.com/transit-gateway/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "AWS PrivateLink",
+      "url": "https://aws.amazon.com/privatelink/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Private Networks",
+          "url": "https://community.exoscale.com/product/networking/private-network/",
+          "icon": "exo-privnet"
+        }
+      ],
+      "note": "Connect services over Private Networks."
+    },
+    {
+      "category": "Networking & CDN",
+      "service": "AWS Global Accelerator",
+      "url": "https://aws.amazon.com/global-accelerator/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Generative AI",
+      "service": "Amazon Bedrock",
+      "url": "https://aws.amazon.com/bedrock/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/managed-inference/",
+          "icon": "exo-ai-minf"
+        },
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "Open-weight models (e.g. from Hugging Face) or your own models, OpenAI-compatible API."
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon SageMaker",
+      "url": "https://aws.amazon.com/sagemaker/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "GPU Instances",
+          "url": "https://www.exoscale.com/gpu/",
+          "icon": "exo-gpu"
+        },
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ],
+      "note": "GPU Instances or SKS with open-source MLOps tooling."
+    },
+    {
+      "category": "Generative AI",
+      "service": "Amazon Q",
+      "url": "https://aws.amazon.com/q/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon Rekognition",
+      "url": "https://aws.amazon.com/rekognition/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "No managed API; serve an equivalent open-weight model on Dedicated Inference."
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon Polly",
+      "url": "https://aws.amazon.com/polly/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "No managed API; serve an equivalent open-weight model on Dedicated Inference."
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon Transcribe",
+      "url": "https://aws.amazon.com/transcribe/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "No managed API; serve an equivalent open-weight model on Dedicated Inference."
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon Comprehend",
+      "url": "https://aws.amazon.com/comprehend/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "No managed API; serve an equivalent open-weight model on Dedicated Inference."
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon Textract",
+      "url": "https://aws.amazon.com/textract/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "No managed API; serve an equivalent open-weight model on Dedicated Inference."
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon Personalize",
+      "url": "https://aws.amazon.com/personalize/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "No managed API; serve an equivalent open-weight model on Dedicated Inference."
+    },
+    {
+      "category": "AI & Machine Learning",
+      "service": "Amazon Forecast",
+      "url": "https://aws.amazon.com/forecast/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Dedicated Inference",
+          "url": "https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/",
+          "icon": "exo-ai-dinf"
+        }
+      ],
+      "note": "No managed API; serve an equivalent open-weight model on Dedicated Inference."
+    },
+    {
+      "category": "Analytics",
+      "service": "Amazon Athena",
+      "url": "https://aws.amazon.com/athena/",
+      "status": "none",
+      "exoscale": [
+        {
+          "name": "Data Platform",
+          "icon": "exo-dbaas",
+          "status": "roadmap"
+        }
+      ],
+      "note": "Data Platform is on the roadmap."
+    },
+    {
+      "category": "Analytics",
+      "service": "Amazon EMR",
+      "url": "https://aws.amazon.com/emr/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ],
+      "note": "Spark and friends on Kubernetes."
+    },
+    {
+      "category": "Analytics",
+      "service": "Amazon Redshift",
+      "url": "https://aws.amazon.com/redshift/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed ClickHouse",
+          "url": "https://www.exoscale.com/dbaas/clickhouse/",
+          "icon": "exo-db-clickhouse"
+        },
+        {
+          "name": "Object Storage",
+          "url": "https://www.exoscale.com/object-storage/",
+          "icon": "exo-s3cmp"
+        }
+      ],
+      "note": "Columnar analytics with ClickHouse, Object Storage for the lake tier."
+    },
+    {
+      "category": "Analytics",
+      "service": "AWS Glue",
+      "url": "https://aws.amazon.com/glue/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        },
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Open-source ETL tooling on SKS or Compute."
+    },
+    {
+      "category": "Analytics",
+      "service": "Amazon Kinesis",
+      "url": "https://aws.amazon.com/kinesis/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Managed Kafka",
+          "url": "https://www.exoscale.com/dbaas/kafka/",
+          "icon": "exo-db-kafka"
+        }
+      ],
+      "note": "Kafka-based streaming."
+    },
+    {
+      "category": "Analytics",
+      "service": "Amazon MSK",
+      "url": "https://aws.amazon.com/msk/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed Kafka",
+          "url": "https://www.exoscale.com/dbaas/kafka/",
+          "icon": "exo-db-kafka"
+        }
+      ]
+    },
+    {
+      "category": "Analytics",
+      "service": "Amazon QuickSight",
+      "url": "https://aws.amazon.com/quicksight/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "Metabase",
+          "url": "https://www.exoscale.com/marketplace/listing/glasskube-metabase/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Analytics",
+      "service": "AWS Lake Formation",
+      "url": "https://aws.amazon.com/lake-formation/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Object Storage",
+          "url": "https://www.exoscale.com/object-storage/",
+          "icon": "exo-s3cmp"
+        },
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Object Storage with open-source lakehouse tooling on Compute."
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS IAM",
+      "url": "https://aws.amazon.com/iam/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "IAM",
+          "url": "https://community.exoscale.com/product/security/iam/",
+          "icon": "exo-iam"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS IAM Identity Center",
+      "url": "https://aws.amazon.com/iam/identity-center/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "IAM",
+          "url": "https://community.exoscale.com/product/security/iam/",
+          "icon": "exo-iam"
+        },
+        {
+          "name": "Keycloak by Servala",
+          "url": "https://www.exoscale.com/marketplace/listing/keycloak-by-servala/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ],
+      "note": "Single sign-on via an identity provider such as Keycloak."
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS KMS",
+      "url": "https://aws.amazon.com/kms/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Key Management Service (KMS)",
+          "url": "https://community.exoscale.com/product/security/kms/",
+          "icon": "exo-shield"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS Secrets Manager",
+      "url": "https://aws.amazon.com/secrets-manager/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "HashiCorp Vault",
+          "url": "https://www.exoscale.com/marketplace/listing/glasskube-vault/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS Shield",
+      "url": "https://aws.amazon.com/shield/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS WAF",
+      "url": "https://aws.amazon.com/waf/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "BunkerWeb WAF",
+          "url": "https://www.exoscale.com/marketplace/listing/bunkerweb-community/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "Amazon GuardDuty",
+      "url": "https://aws.amazon.com/guardduty/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "ANANTIS TrapEye",
+          "url": "https://www.exoscale.com/marketplace/listing/anantis-trapeye/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS Security Hub",
+      "url": "https://aws.amazon.com/security-hub/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "Panop",
+          "url": "https://www.exoscale.com/marketplace/listing/panop-autonomous-exposure-management/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "Amazon Inspector",
+      "url": "https://aws.amazon.com/inspector/",
+      "status": "none",
+      "exoscale": [],
+      "note": "Use a third-party vulnerability scanner."
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "Amazon Macie",
+      "url": "https://aws.amazon.com/macie/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Open-source data-discovery tooling on Compute."
+    },
+    {
+      "category": "Security & Compliance",
+      "service": "AWS Network Firewall",
+      "url": "https://aws.amazon.com/network-firewall/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "FortiGate",
+          "url": "https://www.exoscale.com/marketplace/listing/fortigate-virtual-appliances-byol/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        },
+        {
+          "name": "Check Point CloudGuard",
+          "url": "https://www.exoscale.com/marketplace/listing/check-point-cloudguard-iaas-byol/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        },
+        {
+          "name": "Security Groups",
+          "url": "https://community.exoscale.com/product/networking/security-group/",
+          "icon": "exo-secgrp"
+        }
+      ]
+    },
+    {
+      "category": "Management & Governance",
+      "service": "Amazon CloudWatch",
+      "url": "https://aws.amazon.com/cloudwatch/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Managed Grafana",
+          "url": "https://www.exoscale.com/grafana/",
+          "icon": "exo-db-grafana"
+        },
+        {
+          "name": "Managed Thanos",
+          "url": "https://www.exoscale.com/dbaas/thanos/",
+          "icon": "exo-db-thanos"
+        }
+      ],
+      "note": "Bring your own exporters into Grafana and Thanos."
+    },
+    {
+      "category": "Management & Governance",
+      "service": "AWS CloudTrail",
+      "url": "https://aws.amazon.com/cloudtrail/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Audit Trail",
+          "url": "https://community.exoscale.com/platform/audit-trail/",
+          "icon": "exo-check"
+        }
+      ]
+    },
+    {
+      "category": "Management & Governance",
+      "service": "AWS Organizations",
+      "url": "https://aws.amazon.com/organizations/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Organizations",
+          "url": "https://community.exoscale.com/platform/organization/",
+          "icon": "exo-admin"
+        }
+      ],
+      "note": "Fewer governance controls than AWS Organizations."
+    },
+    {
+      "category": "Management & Governance",
+      "service": "AWS Control Tower",
+      "url": "https://aws.amazon.com/controltower/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Management & Governance",
+      "service": "AWS Systems Manager",
+      "url": "https://aws.amazon.com/systems-manager/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Configuration management tooling such as Ansible, Puppet or Chef."
+    },
+    {
+      "category": "Management & Governance",
+      "service": "AWS Config",
+      "url": "https://aws.amazon.com/config/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Management & Governance",
+      "service": "AWS Well-Architected Tool",
+      "url": "https://aws.amazon.com/well-architected-tool/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Management & Governance",
+      "service": "AWS Cost Explorer & Budgets",
+      "url": "https://aws.amazon.com/aws-cost-management/aws-cost-explorer/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Developer Tools",
+      "service": "AWS CloudFormation",
+      "url": "https://aws.amazon.com/cloudformation/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Terraform Provider",
+          "url": "https://registry.terraform.io/providers/exoscale/exoscale/latest",
+          "icon": "exo-quick"
+        },
+        {
+          "name": "CLI (exo)",
+          "url": "https://community.exoscale.com/tools/command-line-interface/",
+          "icon": "exo-cli"
+        }
+      ]
+    },
+    {
+      "category": "Developer Tools",
+      "service": "AWS CDK",
+      "url": "https://aws.amazon.com/cdk/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Pulumi Provider",
+          "url": "https://www.pulumi.com/registry/packages/exoscale/",
+          "icon": "exo-cldntv-2"
+        },
+        {
+          "name": "Terraform Provider",
+          "url": "https://registry.terraform.io/providers/exoscale/exoscale/latest",
+          "icon": "exo-quick"
+        }
+      ]
+    },
+    {
+      "category": "Developer Tools",
+      "service": "AWS CodePipeline",
+      "url": "https://aws.amazon.com/codepipeline/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "GitLab by Servala",
+          "url": "https://www.exoscale.com/marketplace/listing/gitlab-by-servala/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        },
+        {
+          "name": "Forgejo by Servala",
+          "url": "https://www.exoscale.com/marketplace/listing/forgejo-by-servala/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ],
+      "note": "Git forge with CI/CD; runners on Compute or SKS."
+    },
+    {
+      "category": "Developer Tools",
+      "service": "AWS CodeBuild",
+      "url": "https://aws.amazon.com/codebuild/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "GitLab by Servala",
+          "url": "https://www.exoscale.com/marketplace/listing/gitlab-by-servala/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        },
+        {
+          "name": "Forgejo by Servala",
+          "url": "https://www.exoscale.com/marketplace/listing/forgejo-by-servala/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ],
+      "note": "Git forge with CI/CD; runners on Compute or SKS."
+    },
+    {
+      "category": "Developer Tools",
+      "service": "AWS CodeDeploy",
+      "url": "https://aws.amazon.com/codedeploy/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "GitLab by Servala",
+          "url": "https://www.exoscale.com/marketplace/listing/gitlab-by-servala/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        },
+        {
+          "name": "Forgejo by Servala",
+          "url": "https://www.exoscale.com/marketplace/listing/forgejo-by-servala/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ],
+      "note": "Git forge with CI/CD; runners on Compute or SKS."
+    },
+    {
+      "category": "Developer Tools",
+      "service": "AWS X-Ray",
+      "url": "https://aws.amazon.com/xray/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Managed Grafana",
+          "url": "https://www.exoscale.com/grafana/",
+          "icon": "exo-db-grafana"
+        },
+        {
+          "name": "Managed Thanos",
+          "url": "https://www.exoscale.com/dbaas/thanos/",
+          "icon": "exo-db-thanos"
+        }
+      ],
+      "note": "Prometheus / Thanos / Grafana stack."
+    },
+    {
+      "category": "Application Integration",
+      "service": "Amazon SQS",
+      "url": "https://aws.amazon.com/sqs/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed Kafka",
+          "url": "https://www.exoscale.com/dbaas/kafka/",
+          "icon": "exo-db-kafka"
+        },
+        {
+          "name": "Managed Valkey",
+          "url": "https://www.exoscale.com/dbaas/valkey/",
+          "icon": "exo-db-valkey"
+        }
+      ]
+    },
+    {
+      "category": "Application Integration",
+      "service": "Amazon SNS",
+      "url": "https://aws.amazon.com/sns/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Application Integration",
+      "service": "Amazon EventBridge",
+      "url": "https://aws.amazon.com/eventbridge/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "Managed Kafka",
+          "url": "https://www.exoscale.com/dbaas/kafka/",
+          "icon": "exo-db-kafka"
+        }
+      ]
+    },
+    {
+      "category": "Application Integration",
+      "service": "AWS Step Functions",
+      "url": "https://aws.amazon.com/step-functions/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        }
+      ],
+      "note": "Open-source workflow engines (e.g. n8n, Argo Workflows) on SKS."
+    },
+    {
+      "category": "Application Integration",
+      "service": "Amazon API Gateway",
+      "url": "https://aws.amazon.com/api-gateway/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        },
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Open-source API gateway on SKS or Compute."
+    },
+    {
+      "category": "Application Integration",
+      "service": "AWS AppSync",
+      "url": "https://aws.amazon.com/appsync/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        },
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Open-source GraphQL gateway on SKS or Compute."
+    },
+    {
+      "category": "Application Integration",
+      "service": "Amazon MQ",
+      "url": "https://aws.amazon.com/amazon-mq/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        },
+        {
+          "name": "Managed Kafka",
+          "url": "https://www.exoscale.com/dbaas/kafka/",
+          "icon": "exo-db-kafka"
+        }
+      ],
+      "note": "RabbitMQ or ActiveMQ on Compute, or Managed Kafka."
+    },
+    {
+      "category": "Internet of Things",
+      "service": "AWS IoT Core",
+      "url": "https://aws.amazon.com/iot-core/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "SKS",
+          "url": "https://www.exoscale.com/sks/",
+          "icon": "exo-sks"
+        },
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Self-hosted MQTT broker on SKS or Compute."
+    },
+    {
+      "category": "Internet of Things",
+      "service": "AWS IoT Greengrass",
+      "url": "https://aws.amazon.com/greengrass/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Internet of Things",
+      "service": "AWS IoT Device Management",
+      "url": "https://aws.amazon.com/iot-device-management/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Internet of Things",
+      "service": "AWS IoT SiteWise",
+      "url": "https://aws.amazon.com/iot-sitewise/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Compute Instances",
+          "url": "https://www.exoscale.com/compute/",
+          "icon": "exo-vm"
+        }
+      ],
+      "note": "Open-source industrial IoT tooling on Compute."
+    },
+    {
+      "category": "Migration & Transfer",
+      "service": "AWS Application Migration Service",
+      "url": "https://aws.amazon.com/application-migration-service/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Custom Templates",
+          "url": "https://community.exoscale.com/product/compute/instances/how-to/custom-templates/",
+          "icon": "exo-template"
+        }
+      ],
+      "note": "Import VM images as Custom Templates."
+    },
+    {
+      "category": "Migration & Transfer",
+      "service": "AWS Database Migration Service",
+      "url": "https://aws.amazon.com/dms/",
+      "status": "native",
+      "exoscale": [
+        {
+          "name": "DBaaS Migration",
+          "url": "https://community.exoscale.com/product/dbaas/service-specific/postgresql/how-to/postgresql-migration/",
+          "icon": "exo-dbaas"
+        }
+      ],
+      "note": "Online migration into Managed PostgreSQL, MySQL and Valkey."
+    },
+    {
+      "category": "Migration & Transfer",
+      "service": "AWS DataSync",
+      "url": "https://aws.amazon.com/datasync/",
+      "status": "workaround",
+      "exoscale": [
+        {
+          "name": "Object Storage",
+          "url": "https://www.exoscale.com/object-storage/",
+          "icon": "exo-s3cmp"
+        }
+      ],
+      "note": "S3-compatible transfer tools (rclone, AWS CLI)."
+    },
+    {
+      "category": "Migration & Transfer",
+      "service": "AWS Snow Family",
+      "url": "https://aws.amazon.com/snow/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Business Applications",
+      "service": "Amazon SES",
+      "url": "https://aws.amazon.com/ses/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Business Applications",
+      "service": "Amazon Connect",
+      "url": "https://aws.amazon.com/connect/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Business Applications",
+      "service": "Amazon WorkSpaces",
+      "url": "https://aws.amazon.com/workspaces/",
+      "status": "marketplace",
+      "exoscale": [
+        {
+          "name": "oneclick VDI & DaaS",
+          "url": "https://www.exoscale.com/marketplace/listing/oneclick-vdi-daas/",
+          "icon": "exo-mktplc",
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "category": "Business Applications",
+      "service": "Amazon AppStream 2.0",
+      "url": "https://aws.amazon.com/appstream2/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Business Applications",
+      "service": "AWS Wickr",
+      "url": "https://aws.amazon.com/wickr/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Specialized",
+      "service": "Amazon Braket",
+      "url": "https://aws.amazon.com/braket/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Specialized",
+      "service": "AWS Ground Station",
+      "url": "https://aws.amazon.com/ground-station/",
+      "status": "none",
+      "exoscale": []
+    },
+    {
+      "category": "Specialized",
+      "service": "Amazon Managed Blockchain",
+      "url": "https://aws.amazon.com/managed-blockchain/",
+      "status": "none",
+      "exoscale": []
+    }
+  ]
+}
